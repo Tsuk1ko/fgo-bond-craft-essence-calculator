@@ -18,6 +18,8 @@
               popper-class="servant-type-tooltip"
               placement="top"
               :disabled="disableTooltip"
+              :enterable="false"
+              :hide-after="0"
               :content="getTypeTooltip(s.selectedTypes)"
             >
               <ServantImg :name="s.name" @click="onServantClick(s.id)" />
