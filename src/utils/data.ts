@@ -1,6 +1,23 @@
 import data from '@/assets/data.json';
-import { uniq } from 'es-toolkit';
 
 export const { typeList, servantList } = data;
 
-export const classList = uniq(servantList.map(s => s.class));
+export const classList = [
+  'Saber',
+  'Archer',
+  'Lancer',
+  'Rider',
+  'Caster',
+  'Assassin',
+  'Berserker',
+  'Shielder',
+  'Ruler',
+  'Avenger',
+  'MoonCancer',
+  'Alterego',
+  'Foreigner',
+  'Pretender',
+  'Beast',
+];
+
+export const classSortIndex = Object.fromEntries(classList.map((v, i) => [v, i]));

@@ -44,7 +44,13 @@ const fetchData = async (type: number, url: string) => {
 
 const starMap = await fetchStarData();
 
-const typeList = ['特性：持有灵衣之人', '特性：秩序的女性', '属性：秩序·善'];
+const typeList = [
+  '特性：兽科',
+  '特性：活在当下的人类',
+  '属性：秩序·善',
+  '特性：持有灵衣之人',
+  '特性：秩序的女性',
+];
 
 const dataList = await Promise.all(
   typeList.map((type, i) => fetchData(i, `https://fgo.wiki/w/${encodeURIComponent(type)}`)),

@@ -1,149 +1,38 @@
 {
   "typeList": [
+    "特性：兽科",
+    "特性：活在当下的人类",
+    "属性：秩序·善",
     "特性：持有灵衣之人",
-    "特性：秩序的女性",
-    "属性：秩序·善"
+    "特性：秩序的女性"
   ],
   "servantList": [
-    {
-      "id": 2,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant002.jpg",
-      "types": [
-        0,
-        1,
-        2
-      ]
-    },
-    {
-      "id": 3,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant003.jpg",
-      "types": [
-        0,
-        1
-      ]
-    },
-    {
-      "id": 5,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant005.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 6,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant006.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 8,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant008.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 68,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant068.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 76,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant076.jpg",
-      "types": [
-        0
-      ]
-    },
     {
       "id": 91,
       "star": 5,
       "class": "Saber",
       "name": "Servant091.jpg",
       "types": [
-        0
-      ]
-    },
-    {
-      "id": 121,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant121.jpg",
-      "types": [
         0,
-        2
+        3
       ]
     },
     {
-      "id": 123,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant123.jpg",
-      "types": [
-        0,
-        2
-      ]
-    },
-    {
-      "id": 126,
-      "star": 3,
-      "class": "Saber",
-      "name": "Servant126.jpg",
-      "types": [
-        0,
-        2
-      ]
-    },
-    {
-      "id": 160,
+      "id": 234,
       "star": 5,
       "class": "Saber",
-      "name": "Servant160.jpg",
+      "name": "Servant234.jpg",
       "types": [
         0,
-        2
+        2,
+        4
       ]
     },
     {
-      "id": 213,
+      "id": 270,
       "star": 5,
       "class": "Saber",
-      "name": "Servant213.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 227,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant227.jpg",
-      "types": [
-        0,
-        2
-      ]
-    },
-    {
-      "id": 293,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant293.jpg",
+      "name": "Servant270.jpg",
       "types": [
         0
       ]
@@ -154,79 +43,33 @@
       "class": "Saber",
       "name": "Servant299.jpg",
       "types": [
-        0
+        0,
+        3
       ]
     },
     {
-      "id": 343,
-      "star": 5,
+      "id": 310,
+      "star": 4,
       "class": "Saber",
-      "name": "Servant343.jpg",
+      "name": "Servant310.jpg",
       "types": [
-        0,
-        2
+        0
       ]
     },
     {
-      "id": 11,
+      "id": 14,
       "star": 4,
       "class": "Archer",
-      "name": "Servant011.jpg",
+      "name": "Servant014.jpg",
       "types": [
         0
       ]
     },
     {
-      "id": 13,
-      "star": 3,
-      "class": "Archer",
-      "name": "Servant013.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 15,
-      "star": 3,
-      "class": "Archer",
-      "name": "Servant015.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 84,
-      "star": 5,
-      "class": "Archer",
-      "name": "Servant084.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 122,
+      "id": 391,
       "star": 4,
       "class": "Archer",
-      "name": "Servant122.jpg",
-      "types": [
-        0,
-        2
-      ]
-    },
-    {
-      "id": 156,
-      "star": 5,
-      "class": "Archer",
-      "name": "Servant156.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 294,
-      "star": 1,
-      "class": "Archer",
-      "name": "Servant294.jpg",
+      "name": "Servant391.jpg",
       "types": [
         0
       ]
@@ -237,68 +80,27 @@
       "class": "Lancer",
       "name": "Servant070.jpg",
       "types": [
-        0
-      ]
-    },
-    {
-      "id": 85,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant085.jpg",
-      "types": [
         0,
-        2
+        3
       ]
     },
     {
-      "id": 143,
+      "id": 128,
       "star": 5,
       "class": "Lancer",
-      "name": "Servant143.jpg",
+      "name": "Servant128.jpg",
       "types": [
         0
       ]
     },
     {
-      "id": 183,
-      "star": 4,
+      "id": 148,
+      "star": 3,
       "class": "Lancer",
-      "name": "Servant183.jpg",
+      "name": "Servant148.jpg",
       "types": [
         0,
-        1,
-        2
-      ]
-    },
-    {
-      "id": 196,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant196.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 252,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant252.jpg",
-      "types": [
-        0,
-        1,
-        2
-      ]
-    },
-    {
-      "id": 266,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant266.jpg",
-      "types": [
-        0,
-        1,
-        2
+        1
       ]
     },
     {
@@ -307,7 +109,8 @@
       "class": "Lancer",
       "name": "Servant300.jpg",
       "types": [
-        0
+        0,
+        3
       ]
     },
     {
@@ -316,274 +119,88 @@
       "class": "Lancer",
       "name": "Servant312.jpg",
       "types": [
-        0
+        0,
+        3
       ]
     },
     {
-      "id": 313,
+      "id": 347,
       "star": 4,
       "class": "Lancer",
-      "name": "Servant313.jpg",
+      "name": "Servant347.jpg",
       "types": [
         0,
         2
       ]
     },
     {
-      "id": 428,
+      "id": 419,
       "star": 4,
       "class": "Lancer",
-      "name": "Servant428.jpg",
+      "name": "Servant419.jpg",
       "types": [
         0
       ]
     },
     {
-      "id": 23,
+      "id": 433,
+      "star": 5,
+      "class": "Lancer",
+      "name": "Servant433.jpg",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 205,
+      "star": 5,
+      "class": "Rider",
+      "name": "Servant205.jpg",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 231,
       "star": 3,
       "class": "Rider",
-      "name": "Servant023.jpg",
+      "name": "Servant231.jpg",
       "types": [
         0
       ]
     },
     {
-      "id": 25,
-      "star": 2,
-      "class": "Rider",
-      "name": "Servant025.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 27,
-      "star": 3,
-      "class": "Rider",
-      "name": "Servant027.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 94,
+      "id": 332,
       "star": 4,
       "class": "Rider",
-      "name": "Servant094.jpg",
+      "name": "Servant332.jpg",
       "types": [
         0
       ]
     },
     {
-      "id": 99,
+      "id": 62,
       "star": 5,
-      "class": "Rider",
-      "name": "Servant099.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 206,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant206.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 253,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant253.jpg",
-      "types": [
-        0,
-        1,
-        2
-      ]
-    },
-    {
-      "id": 257,
-      "star": 1,
-      "class": "Rider",
-      "name": "Servant257.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 273,
-      "star": 3,
-      "class": "Rider",
-      "name": "Servant273.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 277,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant277.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 296,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant296.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 79,
-      "star": 3,
       "class": "Caster",
-      "name": "Servant079.jpg",
+      "name": "Servant062.jpg",
       "types": [
         0
       ]
     },
     {
-      "id": 100,
+      "id": 307,
+      "star": 5,
+      "class": "Caster",
+      "name": "Servant307.jpg",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 340,
       "star": 4,
       "class": "Caster",
-      "name": "Servant100.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 120,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant120.jpg",
-      "types": [
-        0,
-        1,
-        2
-      ]
-    },
-    {
-      "id": 136,
-      "star": 5,
-      "class": "Caster",
-      "name": "Servant136.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 145,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant145.jpg",
-      "types": [
-        0,
-        2
-      ]
-    },
-    {
-      "id": 150,
-      "star": 5,
-      "class": "Caster",
-      "name": "Servant150.jpg",
-      "types": [
-        0,
-        2
-      ]
-    },
-    {
-      "id": 249,
-      "star": 3,
-      "class": "Caster",
-      "name": "Servant249.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 43,
-      "star": 2,
-      "class": "Assassin",
-      "name": "Servant043.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 86,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant086.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 112,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant112.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 117,
-      "star": 3,
-      "class": "Assassin",
-      "name": "Servant117.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 124,
-      "star": 3,
-      "class": "Assassin",
-      "name": "Servant124.jpg",
-      "types": [
-        0,
-        1
-      ]
-    },
-    {
-      "id": 159,
-      "star": 4,
-      "class": "Assassin",
-      "name": "Servant159.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 189,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant189.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 210,
-      "star": 3,
-      "class": "Assassin",
-      "name": "Servant210.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 235,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant235.jpg",
+      "name": "Servant340.jpg",
       "types": [
         0
       ]
@@ -595,63 +212,24 @@
       "name": "Servant314.jpg",
       "types": [
         0,
-        1
+        3,
+        4
       ]
     },
     {
-      "id": 359,
-      "star": 4,
-      "class": "Assassin",
-      "name": "Servant359.jpg",
-      "types": [
-        0,
-        1
-      ]
-    },
-    {
-      "id": 360,
-      "star": 4,
-      "class": "Assassin",
-      "name": "Servant360.jpg",
-      "types": [
-        0,
-        1
-      ]
-    },
-    {
-      "id": 361,
-      "star": 4,
-      "class": "Assassin",
-      "name": "Servant361.jpg",
-      "types": [
-        0,
-        1
-      ]
-    },
-    {
-      "id": 371,
+      "id": 365,
       "star": 5,
       "class": "Assassin",
-      "name": "Servant371.jpg",
+      "name": "Servant365.jpg",
       "types": [
         0
       ]
     },
     {
-      "id": 51,
-      "star": 5,
+      "id": 53,
+      "star": 1,
       "class": "Berserker",
-      "name": "Servant051.jpg",
-      "types": [
-        0,
-        2
-      ]
-    },
-    {
-      "id": 56,
-      "star": 3,
-      "class": "Berserker",
-      "name": "Servant056.jpg",
+      "name": "Servant053.jpg",
       "types": [
         0
       ]
@@ -662,27 +240,8 @@
       "class": "Berserker",
       "name": "Servant058.jpg",
       "types": [
-        0
-      ]
-    },
-    {
-      "id": 98,
-      "star": 5,
-      "class": "Berserker",
-      "name": "Servant098.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 171,
-      "star": 4,
-      "class": "Berserker",
-      "name": "Servant171.jpg",
-      "types": [
         0,
-        1,
-        2
+        3
       ]
     },
     {
@@ -691,36 +250,26 @@
       "class": "Berserker",
       "name": "Servant174.jpg",
       "types": [
-        0
-      ]
-    },
-    {
-      "id": 247,
-      "star": 5,
-      "class": "Berserker",
-      "name": "Servant247.jpg",
-      "types": [
         0,
-        2
+        3
       ]
     },
     {
-      "id": 261,
-      "star": 5,
+      "id": 202,
+      "star": 4,
       "class": "Berserker",
-      "name": "Servant261.jpg",
+      "name": "Servant202.jpg",
       "types": [
         0
       ]
     },
     {
-      "id": 309,
-      "star": 5,
+      "id": 282,
+      "star": 4,
       "class": "Berserker",
-      "name": "Servant309.jpg",
+      "name": "Servant282.jpg",
       "types": [
-        0,
-        1
+        0
       ]
     },
     {
@@ -729,97 +278,63 @@
       "class": "Berserker",
       "name": "Servant355.jpg",
       "types": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": 429,
+      "star": 5,
+      "class": "Berserker",
+      "name": "Servant429.jpg",
+      "types": [
         0
       ]
     },
     {
-      "id": 59,
+      "id": 440,
       "star": 5,
-      "class": "Ruler",
-      "name": "Servant059.jpg",
+      "class": "Berserker",
+      "name": "Servant440.jpg",
       "types": [
-        0,
-        1,
-        2
+        0
       ]
     },
     {
-      "id": 93,
+      "id": 265,
       "star": 5,
       "class": "Ruler",
-      "name": "Servant093.jpg",
+      "name": "Servant265.jpg",
       "types": [
         0,
-        2
+        4
       ]
     },
     {
-      "id": 233,
+      "id": 390,
+      "star": 5,
+      "class": "Ruler",
+      "name": "Servant390.jpg",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 147,
       "star": 4,
-      "class": "Ruler",
-      "name": "Servant233.jpg",
-      "types": [
-        0,
-        1,
-        2
-      ]
-    },
-    {
-      "id": 305,
-      "star": 5,
-      "class": "Ruler",
-      "name": "Servant305.jpg",
-      "types": [
-        0,
-        1,
-        2
-      ]
-    },
-    {
-      "id": 357,
-      "star": 5,
-      "class": "Ruler",
-      "name": "Servant357.jpg",
+      "class": "Avenger",
+      "name": "Servant147.jpg",
       "types": [
         0
       ]
     },
     {
-      "id": 364,
+      "id": 158,
       "star": 4,
-      "class": "Ruler",
-      "name": "Servant364.jpg",
-      "types": [
-        0,
-        1
-      ]
-    },
-    {
-      "id": 96,
-      "star": 5,
       "class": "Avenger",
-      "name": "Servant096.jpg",
+      "name": "Servant158.jpg",
       "types": [
         0
-      ]
-    },
-    {
-      "id": 106,
-      "star": 5,
-      "class": "Avenger",
-      "name": "Servant106.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 268,
-      "star": 5,
-      "class": "Avenger",
-      "name": "Servant268.jpg",
-      "types": [
-        0,
-        1
       ]
     },
     {
@@ -828,26 +343,9 @@
       "class": "Avenger",
       "name": "Servant388.jpg",
       "types": [
-        0
-      ]
-    },
-    {
-      "id": 164,
-      "star": 4,
-      "class": "Alterego",
-      "name": "Servant164.jpg",
-      "types": [
         0,
-        1
-      ]
-    },
-    {
-      "id": 209,
-      "star": 5,
-      "class": "Alterego",
-      "name": "Servant209.jpg",
-      "types": [
-        0
+        1,
+        3
       ]
     },
     {
@@ -857,64 +355,55 @@
       "name": "Servant238.jpg",
       "types": [
         0,
-        1,
-        2
+        2,
+        3,
+        4
       ]
     },
     {
-      "id": 297,
+      "id": 376,
       "star": 5,
       "class": "Alterego",
-      "name": "Servant297.jpg",
+      "name": "Servant376.jpg",
       "types": [
         0
       ]
     },
     {
-      "id": 426,
+      "id": 285,
       "star": 5,
-      "class": "Alterego",
-      "name": "Servant426.jpg",
+      "class": "MoonCancer",
+      "name": "Servant285.jpg",
       "types": [
         0,
-        1,
-        2
+        4
       ]
     },
     {
-      "id": 220,
+      "id": 421,
       "star": 5,
       "class": "MoonCancer",
-      "name": "Servant220.jpg",
+      "name": "Servant421.jpg",
       "types": [
         0
       ]
     },
     {
-      "id": 418,
-      "star": 5,
+      "id": 422,
+      "star": 4,
       "class": "MoonCancer",
-      "name": "Servant418.jpg",
+      "name": "Servant422.jpg",
       "types": [
         0,
-        1,
-        2
+        2,
+        4
       ]
     },
     {
-      "id": 393,
+      "id": 334,
       "star": 5,
       "class": "Foreigner",
-      "name": "Servant393.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 316,
-      "star": 5,
-      "class": "Pretender",
-      "name": "Servant316.jpg",
+      "name": "Servant334.jpg",
       "types": [
         0
       ]
@@ -925,96 +414,35 @@
       "class": "Pretender",
       "name": "Servant441.jpg",
       "types": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": 377,
+      "star": 5,
+      "class": "Beast",
+      "name": "Servant377.jpg",
+      "types": [
         0
       ]
     },
     {
-      "id": 1,
-      "star": 4,
-      "class": "Shielder",
-      "name": "Servant001.jpg",
-      "types": [
-        0,
-        1,
-        2
-      ]
-    },
-    {
-      "id": 4,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant004.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 234,
+      "id": 302,
       "star": 5,
       "class": "Saber",
-      "name": "Servant234.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 245,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant245.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 337,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant337.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 354,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant354.jpg",
+      "name": "Servant302.jpg",
       "types": [
         1
       ]
     },
     {
-      "id": 434,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant434.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 69,
+      "id": 137,
       "star": 4,
       "class": "Archer",
-      "name": "Servant069.jpg",
+      "name": "Servant137.jpg",
       "types": [
         1
-      ]
-    },
-    {
-      "id": 129,
-      "star": 5,
-      "class": "Archer",
-      "name": "Servant129.jpg",
-      "types": [
-        1,
-        2
       ]
     },
     {
@@ -1024,7 +452,8 @@
       "name": "Servant142.jpg",
       "types": [
         1,
-        2
+        2,
+        4
       ]
     },
     {
@@ -1033,36 +462,17 @@
       "class": "Archer",
       "name": "Servant200.jpg",
       "types": [
-        1
+        1,
+        4
       ]
     },
     {
-      "id": 216,
-      "star": 5,
-      "class": "Archer",
-      "name": "Servant216.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 271,
+      "id": 286,
       "star": 4,
       "class": "Archer",
-      "name": "Servant271.jpg",
+      "name": "Servant286.jpg",
       "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 325,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant325.jpg",
-      "types": [
-        1,
-        2
+        1
       ]
     },
     {
@@ -1071,87 +481,20 @@
       "class": "Archer",
       "name": "Servant383.jpg",
       "types": [
-        1
-      ]
-    },
-    {
-      "id": 399,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant399.jpg",
-      "types": [
         1,
-        2
+        4
       ]
     },
     {
-      "id": 78,
+      "id": 183,
       "star": 4,
       "class": "Lancer",
-      "name": "Servant078.jpg",
+      "name": "Servant183.jpg",
       "types": [
         1,
-        2
-      ]
-    },
-    {
-      "id": 119,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant119.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 181,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant181.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 214,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant214.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 228,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant228.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 232,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant232.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 256,
-      "star": 2,
-      "class": "Lancer",
-      "name": "Servant256.jpg",
-      "types": [
-        1,
-        2
+        2,
+        3,
+        4
       ]
     },
     {
@@ -1160,75 +503,8 @@
       "class": "Lancer",
       "name": "Servant283.jpg",
       "types": [
-        1
-      ]
-    },
-    {
-      "id": 288,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant288.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 368,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant368.jpg",
-      "types": [
         1,
-        2
-      ]
-    },
-    {
-      "id": 29,
-      "star": 4,
-      "class": "Rider",
-      "name": "Servant029.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 30,
-      "star": 4,
-      "class": "Rider",
-      "name": "Servant030.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 73,
-      "star": 4,
-      "class": "Rider",
-      "name": "Servant073.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 144,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant144.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 179,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant179.jpg",
-      "types": [
-        1
+        4
       ]
     },
     {
@@ -1238,65 +514,36 @@
       "name": "Servant182.jpg",
       "types": [
         1,
-        2
+        2,
+        4
       ]
     },
     {
-      "id": 349,
+      "id": 241,
       "star": 5,
       "class": "Rider",
-      "name": "Servant349.jpg",
+      "name": "Servant241.jpg",
       "types": [
         1
       ]
     },
     {
-      "id": 406,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant406.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 67,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant067.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 113,
+      "id": 37,
       "star": 5,
       "class": "Caster",
-      "name": "Servant113.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 130,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant130.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 169,
-      "star": 5,
-      "class": "Caster",
-      "name": "Servant169.jpg",
+      "name": "Servant037.jpg",
       "types": [
         1
+      ]
+    },
+    {
+      "id": 136,
+      "star": 5,
+      "class": "Caster",
+      "name": "Servant136.jpg",
+      "types": [
+        1,
+        3
       ]
     },
     {
@@ -1306,89 +553,24 @@
       "name": "Servant236.jpg",
       "types": [
         1,
-        2
+        2,
+        4
       ]
     },
     {
-      "id": 330,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant330.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 358,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant358.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 385,
+      "id": 415,
       "star": 5,
       "class": "Caster",
-      "name": "Servant385.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 110,
-      "star": 3,
-      "class": "Assassin",
-      "name": "Servant110.jpg",
+      "name": "Servant415.jpg",
       "types": [
         1
       ]
     },
     {
-      "id": 139,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant139.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 170,
+      "id": 92,
       "star": 4,
       "class": "Assassin",
-      "name": "Servant170.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 177,
-      "star": 4,
-      "class": "Assassin",
-      "name": "Servant177.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 199,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant199.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 230,
-      "star": 4,
-      "class": "Assassin",
-      "name": "Servant230.jpg",
+      "name": "Servant092.jpg",
       "types": [
         1
       ]
@@ -1400,27 +582,27 @@
       "name": "Servant243.jpg",
       "types": [
         1,
-        2
+        2,
+        4
       ]
     },
     {
-      "id": 97,
+      "id": 371,
       "star": 5,
-      "class": "Berserker",
-      "name": "Servant097.jpg",
+      "class": "Assassin",
+      "name": "Servant371.jpg",
       "types": [
         1,
-        2
+        3
       ]
     },
     {
-      "id": 135,
+      "id": 414,
       "star": 4,
-      "class": "Ruler",
-      "name": "Servant135.jpg",
+      "class": "Berserker",
+      "name": "Servant414.jpg",
       "types": [
-        1,
-        2
+        1
       ]
     },
     {
@@ -1430,45 +612,20 @@
       "name": "Servant242.jpg",
       "types": [
         1,
-        2
+        2,
+        4
       ]
     },
     {
-      "id": 265,
+      "id": 305,
       "star": 5,
       "class": "Ruler",
-      "name": "Servant265.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 320,
-      "star": 4,
-      "class": "Ruler",
-      "name": "Servant320.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 374,
-      "star": 5,
-      "class": "Ruler",
-      "name": "Servant374.jpg",
+      "name": "Servant305.jpg",
       "types": [
         1,
-        2
-      ]
-    },
-    {
-      "id": 438,
-      "star": 5,
-      "class": "Ruler",
-      "name": "Servant438.jpg",
-      "types": [
-        1,
-        2
+        2,
+        3,
+        4
       ]
     },
     {
@@ -1477,46 +634,17 @@
       "class": "Avenger",
       "name": "Servant356.jpg",
       "types": [
-        1
+        1,
+        4
       ]
     },
     {
-      "id": 403,
-      "star": 5,
-      "class": "Avenger",
-      "name": "Servant403.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 163,
+      "id": 336,
       "star": 5,
       "class": "Alterego",
-      "name": "Servant163.jpg",
+      "name": "Servant336.jpg",
       "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 190,
-      "star": 4,
-      "class": "Alterego",
-      "name": "Servant190.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 191,
-      "star": 4,
-      "class": "Alterego",
-      "name": "Servant191.jpg",
-      "types": [
-        1,
-        2
+        1
       ]
     },
     {
@@ -1526,7 +654,8 @@
       "name": "Servant416.jpg",
       "types": [
         1,
-        2
+        2,
+        4
       ]
     },
     {
@@ -1536,55 +665,20 @@
       "name": "Servant244.jpg",
       "types": [
         1,
-        2
+        2,
+        4
       ]
     },
     {
-      "id": 285,
+      "id": 418,
       "star": 5,
       "class": "MoonCancer",
-      "name": "Servant285.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 422,
-      "star": 4,
-      "class": "MoonCancer",
-      "name": "Servant422.jpg",
+      "name": "Servant418.jpg",
       "types": [
         1,
-        2
-      ]
-    },
-    {
-      "id": 222,
-      "star": 4,
-      "class": "Foreigner",
-      "name": "Servant222.jpg",
-      "types": [
-        1,
-        2
-      ]
-    },
-    {
-      "id": 289,
-      "star": 5,
-      "class": "Foreigner",
-      "name": "Servant289.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 373,
-      "star": 5,
-      "class": "Foreigner",
-      "name": "Servant373.jpg",
-      "types": [
-        1,
-        2
+        2,
+        3,
+        4
       ]
     },
     {
@@ -1594,27 +688,41 @@
       "name": "Servant413.jpg",
       "types": [
         1,
-        2
+        2,
+        4
       ]
     },
     {
-      "id": 372,
+      "id": 1,
       "star": 4,
-      "class": "Pretender",
-      "name": "Servant372.jpg",
+      "class": "Shielder",
+      "name": "Servant001.jpg",
       "types": [
         1,
-        2
+        2,
+        3,
+        4
       ]
     },
     {
-      "id": 431,
+      "id": 2,
       "star": 5,
-      "class": "Pretender",
-      "name": "Servant431.jpg",
+      "class": "Saber",
+      "name": "Servant002.jpg",
       "types": [
-        1,
-        2
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 4,
+      "star": 4,
+      "class": "Saber",
+      "name": "Servant004.jpg",
+      "types": [
+        2,
+        4
       ]
     },
     {
@@ -1636,6 +744,66 @@
       ]
     },
     {
+      "id": 121,
+      "star": 4,
+      "class": "Saber",
+      "name": "Servant121.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 123,
+      "star": 4,
+      "class": "Saber",
+      "name": "Servant123.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 126,
+      "star": 3,
+      "class": "Saber",
+      "name": "Servant126.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 160,
+      "star": 5,
+      "class": "Saber",
+      "name": "Servant160.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 227,
+      "star": 4,
+      "class": "Saber",
+      "name": "Servant227.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 245,
+      "star": 4,
+      "class": "Saber",
+      "name": "Servant245.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
       "id": 254,
       "star": 1,
       "class": "Saber",
@@ -1651,6 +819,26 @@
       "name": "Servant301.jpg",
       "types": [
         2
+      ]
+    },
+    {
+      "id": 337,
+      "star": 5,
+      "class": "Saber",
+      "name": "Servant337.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 343,
+      "star": 5,
+      "class": "Saber",
+      "name": "Servant343.jpg",
+      "types": [
+        2,
+        3
       ]
     },
     {
@@ -1681,6 +869,36 @@
       ]
     },
     {
+      "id": 434,
+      "star": 4,
+      "class": "Saber",
+      "name": "Servant434.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 122,
+      "star": 4,
+      "class": "Archer",
+      "name": "Servant122.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 129,
+      "star": 5,
+      "class": "Archer",
+      "name": "Servant129.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
       "id": 207,
       "star": 4,
       "class": "Archer",
@@ -1699,12 +917,72 @@
       ]
     },
     {
+      "id": 271,
+      "star": 4,
+      "class": "Archer",
+      "name": "Servant271.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 325,
+      "star": 4,
+      "class": "Archer",
+      "name": "Servant325.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 399,
+      "star": 4,
+      "class": "Archer",
+      "name": "Servant399.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
       "id": 427,
       "star": 5,
       "class": "Archer",
       "name": "Servant427.jpg",
       "types": [
         2
+      ]
+    },
+    {
+      "id": 78,
+      "star": 4,
+      "class": "Lancer",
+      "name": "Servant078.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 85,
+      "star": 5,
+      "class": "Lancer",
+      "name": "Servant085.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 119,
+      "star": 5,
+      "class": "Lancer",
+      "name": "Servant119.jpg",
+      "types": [
+        2,
+        4
       ]
     },
     {
@@ -1717,12 +995,95 @@
       ]
     },
     {
-      "id": 347,
+      "id": 181,
       "star": 4,
       "class": "Lancer",
-      "name": "Servant347.jpg",
+      "name": "Servant181.jpg",
       "types": [
-        2
+        2,
+        4
+      ]
+    },
+    {
+      "id": 214,
+      "star": 4,
+      "class": "Lancer",
+      "name": "Servant214.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 228,
+      "star": 4,
+      "class": "Lancer",
+      "name": "Servant228.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 232,
+      "star": 5,
+      "class": "Lancer",
+      "name": "Servant232.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 252,
+      "star": 4,
+      "class": "Lancer",
+      "name": "Servant252.jpg",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 256,
+      "star": 2,
+      "class": "Lancer",
+      "name": "Servant256.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 266,
+      "star": 4,
+      "class": "Lancer",
+      "name": "Servant266.jpg",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 313,
+      "star": 4,
+      "class": "Lancer",
+      "name": "Servant313.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 368,
+      "star": 5,
+      "class": "Lancer",
+      "name": "Servant368.jpg",
+      "types": [
+        2,
+        4
       ]
     },
     {
@@ -1753,12 +1114,63 @@
       ]
     },
     {
+      "id": 29,
+      "star": 4,
+      "class": "Rider",
+      "name": "Servant029.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 30,
+      "star": 4,
+      "class": "Rider",
+      "name": "Servant030.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 73,
+      "star": 4,
+      "class": "Rider",
+      "name": "Servant073.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
       "id": 115,
       "star": 4,
       "class": "Rider",
       "name": "Servant115.jpg",
       "types": [
         2
+      ]
+    },
+    {
+      "id": 144,
+      "star": 5,
+      "class": "Rider",
+      "name": "Servant144.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 253,
+      "star": 5,
+      "class": "Rider",
+      "name": "Servant253.jpg",
+      "types": [
+        2,
+        3,
+        4
       ]
     },
     {
@@ -1771,12 +1183,185 @@
       ]
     },
     {
+      "id": 406,
+      "star": 5,
+      "class": "Rider",
+      "name": "Servant406.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 67,
+      "star": 4,
+      "class": "Caster",
+      "name": "Servant067.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 113,
+      "star": 5,
+      "class": "Caster",
+      "name": "Servant113.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 120,
+      "star": 4,
+      "class": "Caster",
+      "name": "Servant120.jpg",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 130,
+      "star": 4,
+      "class": "Caster",
+      "name": "Servant130.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 145,
+      "star": 4,
+      "class": "Caster",
+      "name": "Servant145.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 150,
+      "star": 5,
+      "class": "Caster",
+      "name": "Servant150.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 330,
+      "star": 4,
+      "class": "Caster",
+      "name": "Servant330.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 385,
+      "star": 5,
+      "class": "Caster",
+      "name": "Servant385.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
       "id": 81,
       "star": 3,
       "class": "Assassin",
       "name": "Servant081.jpg",
       "types": [
         2
+      ]
+    },
+    {
+      "id": 177,
+      "star": 4,
+      "class": "Assassin",
+      "name": "Servant177.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 51,
+      "star": 5,
+      "class": "Berserker",
+      "name": "Servant051.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 97,
+      "star": 5,
+      "class": "Berserker",
+      "name": "Servant097.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 171,
+      "star": 4,
+      "class": "Berserker",
+      "name": "Servant171.jpg",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 247,
+      "star": 5,
+      "class": "Berserker",
+      "name": "Servant247.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 59,
+      "star": 5,
+      "class": "Ruler",
+      "name": "Servant059.jpg",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 93,
+      "star": 5,
+      "class": "Ruler",
+      "name": "Servant093.jpg",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 135,
+      "star": 4,
+      "class": "Ruler",
+      "name": "Servant135.jpg",
+      "types": [
+        2,
+        4
       ]
     },
     {
@@ -1789,12 +1374,790 @@
       ]
     },
     {
+      "id": 233,
+      "star": 4,
+      "class": "Ruler",
+      "name": "Servant233.jpg",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 374,
+      "star": 5,
+      "class": "Ruler",
+      "name": "Servant374.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 438,
+      "star": 5,
+      "class": "Ruler",
+      "name": "Servant438.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
       "id": 328,
       "star": 4,
       "class": "Avenger",
       "name": "Servant328.jpg",
       "types": [
         2
+      ]
+    },
+    {
+      "id": 163,
+      "star": 5,
+      "class": "Alterego",
+      "name": "Servant163.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 190,
+      "star": 4,
+      "class": "Alterego",
+      "name": "Servant190.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 191,
+      "star": 4,
+      "class": "Alterego",
+      "name": "Servant191.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 426,
+      "star": 5,
+      "class": "Alterego",
+      "name": "Servant426.jpg",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 222,
+      "star": 4,
+      "class": "Foreigner",
+      "name": "Servant222.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 373,
+      "star": 5,
+      "class": "Foreigner",
+      "name": "Servant373.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 372,
+      "star": 4,
+      "class": "Pretender",
+      "name": "Servant372.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 431,
+      "star": 5,
+      "class": "Pretender",
+      "name": "Servant431.jpg",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 3,
+      "star": 4,
+      "class": "Saber",
+      "name": "Servant003.jpg",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 5,
+      "star": 4,
+      "class": "Saber",
+      "name": "Servant005.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 6,
+      "star": 4,
+      "class": "Saber",
+      "name": "Servant006.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 8,
+      "star": 5,
+      "class": "Saber",
+      "name": "Servant008.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 68,
+      "star": 5,
+      "class": "Saber",
+      "name": "Servant068.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 76,
+      "star": 5,
+      "class": "Saber",
+      "name": "Servant076.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 213,
+      "star": 5,
+      "class": "Saber",
+      "name": "Servant213.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 293,
+      "star": 4,
+      "class": "Saber",
+      "name": "Servant293.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 11,
+      "star": 4,
+      "class": "Archer",
+      "name": "Servant011.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 13,
+      "star": 3,
+      "class": "Archer",
+      "name": "Servant013.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 15,
+      "star": 3,
+      "class": "Archer",
+      "name": "Servant015.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 84,
+      "star": 5,
+      "class": "Archer",
+      "name": "Servant084.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 156,
+      "star": 5,
+      "class": "Archer",
+      "name": "Servant156.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 294,
+      "star": 1,
+      "class": "Archer",
+      "name": "Servant294.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 143,
+      "star": 5,
+      "class": "Lancer",
+      "name": "Servant143.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 196,
+      "star": 5,
+      "class": "Lancer",
+      "name": "Servant196.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 428,
+      "star": 4,
+      "class": "Lancer",
+      "name": "Servant428.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 23,
+      "star": 3,
+      "class": "Rider",
+      "name": "Servant023.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 25,
+      "star": 2,
+      "class": "Rider",
+      "name": "Servant025.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 27,
+      "star": 3,
+      "class": "Rider",
+      "name": "Servant027.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 94,
+      "star": 4,
+      "class": "Rider",
+      "name": "Servant094.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 99,
+      "star": 5,
+      "class": "Rider",
+      "name": "Servant099.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 206,
+      "star": 5,
+      "class": "Rider",
+      "name": "Servant206.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 257,
+      "star": 1,
+      "class": "Rider",
+      "name": "Servant257.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 273,
+      "star": 3,
+      "class": "Rider",
+      "name": "Servant273.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 277,
+      "star": 5,
+      "class": "Rider",
+      "name": "Servant277.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 296,
+      "star": 5,
+      "class": "Rider",
+      "name": "Servant296.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 79,
+      "star": 3,
+      "class": "Caster",
+      "name": "Servant079.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 100,
+      "star": 4,
+      "class": "Caster",
+      "name": "Servant100.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 249,
+      "star": 3,
+      "class": "Caster",
+      "name": "Servant249.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 43,
+      "star": 2,
+      "class": "Assassin",
+      "name": "Servant043.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 86,
+      "star": 5,
+      "class": "Assassin",
+      "name": "Servant086.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 112,
+      "star": 5,
+      "class": "Assassin",
+      "name": "Servant112.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 117,
+      "star": 3,
+      "class": "Assassin",
+      "name": "Servant117.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 124,
+      "star": 3,
+      "class": "Assassin",
+      "name": "Servant124.jpg",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 159,
+      "star": 4,
+      "class": "Assassin",
+      "name": "Servant159.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 189,
+      "star": 5,
+      "class": "Assassin",
+      "name": "Servant189.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 210,
+      "star": 3,
+      "class": "Assassin",
+      "name": "Servant210.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 235,
+      "star": 5,
+      "class": "Assassin",
+      "name": "Servant235.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 359,
+      "star": 4,
+      "class": "Assassin",
+      "name": "Servant359.jpg",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 360,
+      "star": 4,
+      "class": "Assassin",
+      "name": "Servant360.jpg",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 361,
+      "star": 4,
+      "class": "Assassin",
+      "name": "Servant361.jpg",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 56,
+      "star": 3,
+      "class": "Berserker",
+      "name": "Servant056.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 98,
+      "star": 5,
+      "class": "Berserker",
+      "name": "Servant098.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 261,
+      "star": 5,
+      "class": "Berserker",
+      "name": "Servant261.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 309,
+      "star": 5,
+      "class": "Berserker",
+      "name": "Servant309.jpg",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 357,
+      "star": 5,
+      "class": "Ruler",
+      "name": "Servant357.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 364,
+      "star": 4,
+      "class": "Ruler",
+      "name": "Servant364.jpg",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 96,
+      "star": 5,
+      "class": "Avenger",
+      "name": "Servant096.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 106,
+      "star": 5,
+      "class": "Avenger",
+      "name": "Servant106.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 268,
+      "star": 5,
+      "class": "Avenger",
+      "name": "Servant268.jpg",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 164,
+      "star": 4,
+      "class": "Alterego",
+      "name": "Servant164.jpg",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 209,
+      "star": 5,
+      "class": "Alterego",
+      "name": "Servant209.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 297,
+      "star": 5,
+      "class": "Alterego",
+      "name": "Servant297.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 220,
+      "star": 5,
+      "class": "MoonCancer",
+      "name": "Servant220.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 393,
+      "star": 5,
+      "class": "Foreigner",
+      "name": "Servant393.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 316,
+      "star": 5,
+      "class": "Pretender",
+      "name": "Servant316.jpg",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 354,
+      "star": 4,
+      "class": "Saber",
+      "name": "Servant354.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 69,
+      "star": 4,
+      "class": "Archer",
+      "name": "Servant069.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 216,
+      "star": 5,
+      "class": "Archer",
+      "name": "Servant216.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 288,
+      "star": 4,
+      "class": "Lancer",
+      "name": "Servant288.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 179,
+      "star": 5,
+      "class": "Rider",
+      "name": "Servant179.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 349,
+      "star": 5,
+      "class": "Rider",
+      "name": "Servant349.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 169,
+      "star": 5,
+      "class": "Caster",
+      "name": "Servant169.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 358,
+      "star": 4,
+      "class": "Caster",
+      "name": "Servant358.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 110,
+      "star": 3,
+      "class": "Assassin",
+      "name": "Servant110.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 139,
+      "star": 5,
+      "class": "Assassin",
+      "name": "Servant139.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 170,
+      "star": 4,
+      "class": "Assassin",
+      "name": "Servant170.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 199,
+      "star": 5,
+      "class": "Assassin",
+      "name": "Servant199.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 230,
+      "star": 4,
+      "class": "Assassin",
+      "name": "Servant230.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 320,
+      "star": 4,
+      "class": "Ruler",
+      "name": "Servant320.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 403,
+      "star": 5,
+      "class": "Avenger",
+      "name": "Servant403.jpg",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 289,
+      "star": 5,
+      "class": "Foreigner",
+      "name": "Servant289.jpg",
+      "types": [
+        4
       ]
     }
   ]

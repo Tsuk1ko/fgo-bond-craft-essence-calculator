@@ -1,7 +1,7 @@
 <template>
   <div class="servant-selector" :class="{ 'multi-select-mode': multiSelectMode }">
     <el-scrollbar>
-      <div class="servant-group" v-for="(group, className) in groupedServants" :key="className">
+      <div class="servant-group" v-for="[className, group] in groupedServants" :key="className">
         <div class="servant-group-title">
           <ClassIcon :name="className" />
           {{ className }}
@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import { groupBy } from 'es-toolkit';
-import { servantList, typeList } from '@/utils/data';
+import { classSortIndex, servantList, typeList } from '@/utils/data';
 import ClassIcon from './ClassIcon.vue';
 import ServantImg from './ServantImg.vue';
 
@@ -76,17 +76,23 @@ const filteredServants = computed(() =>
     .map(s => ({
       ...s,
       selectedTypes: selectedTypes.size ? s.types.filter(t => selectedTypes.has(t)) : s.types,
-    }))
-    .sort((a, b) =>
-      a.selectedTypes.length === b.selectedTypes.length || disableFilter
-        ? b.star - a.star
-        : b.selectedTypes.length - a.selectedTypes.length,
-    ),
+    })),
 );
 
 const getTypeTooltip = (types: number[]): string => types.map(t => typeList[t]).join('\n');
 
-const groupedServants = computed(() => groupBy(filteredServants.value, s => s.class));
+const groupedServants = computed(() => {
+  const groups = Object.entries(groupBy(filteredServants.value, s => s.class));
+  groups.sort(([a], [b]) => classSortIndex[a] - classSortIndex[b]);
+  groups.forEach(([, servants]) => {
+    servants.sort((a, b) =>
+      a.selectedTypes.length === b.selectedTypes.length || disableFilter
+        ? b.star - a.star
+        : b.selectedTypes.length - a.selectedTypes.length,
+    );
+  });
+  return groups;
+});
 
 const multiSelectMode = ref(false);
 const selectedServants = ref<Set<number>>(new Set());
