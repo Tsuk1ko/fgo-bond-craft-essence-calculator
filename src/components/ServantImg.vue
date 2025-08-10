@@ -1,15 +1,16 @@
 <template>
   <img class="servant-img" :src="src" :alt="name" />
 </template>
-  
-<script setup lang='ts'>
-const { name } = defineProps<{
-  name: string;
+
+<script setup lang="ts">
+const { id, name } = defineProps<{
+  id: number;
+  name?: string;
 }>();
 
-const src = computed(() => `assets/servant/${name}`);
+const src = computed(() => `assets/servant/Servant${id.toString().padStart(3, '0')}.jpg`);
 </script>
-  
+
 <style scoped lang="scss">
 .servant-img {
   width: 64px;

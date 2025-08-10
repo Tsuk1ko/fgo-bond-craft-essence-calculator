@@ -11,9 +11,7 @@
         <TypeFilter :selected="selectedTypes" />
       </el-form-item>
       <el-form-item class="options-label" label="设置">
-        <el-check-tag v-model:checked="selectHideServantMode" style="--el-font-size-base: 16px"
-          >选择隐藏从者</el-check-tag
-        >
+        <el-check-tag v-model:checked="selectHideServantMode">隐藏从者</el-check-tag>
       </el-form-item>
     </el-form>
     <ServantSelector
@@ -66,13 +64,17 @@ watch(selectHideServantMode, v => {
 .container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   padding: 32px 64px;
   width: 100%;
   height: 100%;
 
+  :deep(.el-form-item) {
+    margin-bottom: 8px;
+  }
+
   :deep(.el-form-item__label-wrap) {
-    --el-form-label-font-size: 20px;
+    --el-form-label-font-size: 18px;
     align-items: center;
     font-weight: bold;
   }

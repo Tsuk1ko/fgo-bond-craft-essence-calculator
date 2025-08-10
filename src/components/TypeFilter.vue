@@ -25,7 +25,6 @@ const onChange = (value: number) => {
 
 <style lang="scss" scoped>
 .type-filter {
-  --el-font-size-base: 16px;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;

@@ -3,6 +3,7 @@
     <ClassIcon
       v-for="name in classList"
       :key="name"
+      :title="name"
       :name
       :class="{ selected: selected.has(name) }"
       @click="toggleClass(name)"
@@ -32,10 +33,12 @@ const toggleClass = (name: string) => {
 }
 
 .class-icon {
+  --class-icon-size: 32px;
   cursor: pointer;
+  transition: filter 0.2s;
 
   &:not(.selected) {
-    filter: brightness(0.6);
+    filter: brightness(0.65);
   }
 }
 </style>

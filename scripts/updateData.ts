@@ -1,26 +1,68 @@
 import { write } from 'bun';
 import { load } from 'cheerio';
-import { uniqBy } from 'es-toolkit';
+import { keyBy, uniqBy } from 'es-toolkit';
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import PromisePool from '@supercharge/promise-pool';
 import { tinyPNG } from './utils/tinypng';
 
-const fetchStarData = async (): Promise<Record<number, number>> => {
+const fetchCharacterListData = async () => {
+  console.log('fetching character data');
   const html = await (
     await fetch('https://fgo.wiki/w/%E8%8B%B1%E7%81%B5%E5%9B%BE%E9%89%B4')
   ).text();
-  const table = /var raw_str = "([^"]+)"/.exec(html)![1].split('\\n');
-  table.shift();
-  return Object.fromEntries(table.map(line => line.split(',').slice(0, 2).map(Number)));
+  const rawData = /var raw_str = "(.+?)";/.exec(html)![1].split('\\n');
+  rawData.shift();
+  const overrideData: Record<number, Record<string, string>> = Object.fromEntries(
+    /override_data = "(.+?)";/
+      .exec(html)![1]
+      .split('\\n\\n')
+      .map(data => {
+        const obj = Object.fromEntries(data.split('\\n').map(line => line.split('=')));
+        return [obj.id, obj];
+      }),
+  );
+  return rawData.map(line => {
+    const [id, star] = line.split(',').slice(0, 2).map(Number);
+    const extend = overrideData[id];
+    return { id, star, name: extend.name_cn, nameLink: extend.name_link };
+  });
 };
 
+const characterList = await fetchCharacterListData();
+const charMapById = keyBy(characterList, v => v.id);
+const charMapByNameLink = keyBy(characterList, v => v.nameLink);
+
 const fetchData = async (type: number, url: string) => {
+  console.log('fetching:', url);
   const $ = load(await (await fetch(url)).text());
   const $row = $('.tabber__panel[data-title^="持有该"]').first().find('tbody tr:not(.nodesktop)');
+  const $comment = $('#mw-content-text ul:contains(仅有):contains(持有) li');
+
+  const commentMap: Record<number, string | undefined> = {};
+  $comment.each((i, el) => {
+    const $li = $(el);
+    const text = $li.text();
+    const startI = text.indexOf('仅有') + 2;
+    const endI = text.indexOf('持有');
+    const comment = text.slice(startI, endI);
+    if (!comment) return;
+    $li.find('a').each((i, el) => {
+      const $a = $(el);
+      const nameLink = $a.text();
+      const id = charMapByNameLink[nameLink]?.id;
+      if (id) commentMap[id] = comment;
+    });
+  });
 
   const classImgMap: Record<string, string> = {};
-  const servantList: Array<{ cls: string; imgName: string; imgUrl: string }> = [];
+  const servantList: Array<{
+    id: number;
+    cls: string;
+    imgName: string;
+    imgUrl: string;
+    typeComment?: string;
+  }> = [];
 
   $row.each((i, el) => {
     const $tr = $(el);
@@ -35,14 +77,13 @@ const fetchData = async (type: number, url: string) => {
       const $img = $(el);
       const imgName = $img.attr('alt')!;
       const imgUrl = $img.attr('data-src')!;
-      servantList.push({ cls: className, imgName, imgUrl });
+      const id = parseInt(/\d+/.exec(imgName)![0]);
+      servantList.push({ id, cls: className, imgName, imgUrl, typeComment: commentMap[id] });
     });
   });
 
   return { type, classImgMap, servantList };
 };
-
-const starMap = await fetchStarData();
 
 const typeList = [
   '特性：兽科',
@@ -96,18 +137,25 @@ await PromisePool.withConcurrency(8)
   });
 
 const servantMap: Record<
-  string,
-  { id: number; class: string; star: number; name: string; types: number[] }
+  number,
+  {
+    id: number;
+    class: string;
+    star: number;
+    name: string;
+    types: number[];
+    typeComments?: Record<number, string>;
+  }
 > = Object.fromEntries(
   servantList.map(s => {
-    const id = parseInt(/\d+/.exec(s.imgName)![0]);
+    const charData = charMapById[s.id];
     return [
-      s.imgName,
+      s.id,
       {
-        id,
-        star: starMap[id] ?? 0,
+        id: s.id,
         class: s.cls,
-        name: s.imgName,
+        star: charData.star,
+        name: charData.name,
         types: [],
       },
     ];
@@ -115,14 +163,19 @@ const servantMap: Record<
 );
 
 dataList.forEach(({ type, servantList }) => {
-  servantList.forEach(({ imgName }) => {
-    servantMap[imgName].types.push(type);
+  servantList.forEach(({ id, typeComment }) => {
+    const servant = servantMap[id];
+    servant.types.push(type);
+    if (typeComment) {
+      if (!servant.typeComments) servant.typeComments = {};
+      servant.typeComments[type] = typeComment;
+    }
   });
 });
 
 const dataJson = {
   typeList,
-  servantList: Object.values(servantMap),
+  servantList: Object.values(servantMap).sort((a, b) => a.id - b.id),
 };
 
 await write(dataJsonPath, JSON.stringify(dataJson, null, 2));

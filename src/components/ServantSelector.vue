@@ -12,6 +12,7 @@
             class="type-num"
             :key="s.name"
             :value="s.selectedTypes.length"
+            :type="hasTypeComment(s) ? 'warning' : undefined"
             :hidden="disableBadge || s.selectedTypes.length <= 1"
           >
             <el-tooltip
@@ -20,9 +21,14 @@
               :disabled="disableTooltip"
               :enterable="false"
               :hide-after="0"
-              :content="getTypeTooltip(s.selectedTypes)"
             >
-              <ServantImg :name="s.name" @click="onServantClick(s.id)" />
+              <template #content>
+                <div class="type-title">{{ s.name }}</div>
+                <div v-for="{ text, comment } in getTypeTooltip(s)" :key="text">
+                  {{ text }}<span class="type-comment" v-if="comment">{{ comment }}</span>
+                </div>
+              </template>
+              <ServantImg :id="s.id" :name="s.name" @click="onServantClick(s.id)" />
             </el-tooltip>
             <el-checkbox
               v-if="multiSelectMode"
@@ -39,7 +45,7 @@
 
 <script setup lang="ts">
 import { groupBy } from 'es-toolkit';
-import { classSortIndex, servantList, typeList } from '@/utils/data';
+import { classSortIndex, servantList, typeList, type Servant } from '@/utils/data';
 import ClassIcon from './ClassIcon.vue';
 import ServantImg from './ServantImg.vue';
 
@@ -79,7 +85,17 @@ const filteredServants = computed(() =>
     })),
 );
 
-const getTypeTooltip = (types: number[]): string => types.map(t => typeList[t]).join('\n');
+type ExtendedServant = Servant & { selectedTypes: number[] };
+
+const getTypeTooltip = ({ selectedTypes, typeComments }: ExtendedServant) =>
+  selectedTypes.map(i => {
+    const text = typeList[i];
+    const comment = typeComments?.[i];
+    return { text, comment };
+  });
+
+const hasTypeComment = ({ selectedTypes, typeComments }: ExtendedServant) =>
+  typeComments && selectedTypes.some(i => i in typeComments);
 
 const groupedServants = computed(() => {
   const groups = Object.entries(groupBy(filteredServants.value, s => s.class));
@@ -169,8 +185,20 @@ defineExpose({
   }
 }
 
+.type-title {
+  color: var(--el-color-primary);
+  filter: brightness(1.3);
+  font-weight: bold;
+}
+
 .type-num {
   line-height: 1;
+}
+
+.type-comment {
+  margin-left: 8px;
+  color: var(--el-color-warning);
+  filter: brightness(1.2);
 }
 
 .multi-select-mode {
@@ -182,11 +210,5 @@ defineExpose({
       opacity: 0.8;
     }
   }
-}
-</style>
-
-<style lang="scss">
-.servant-type-tooltip {
-  white-space: pre-wrap;
 }
 </style>

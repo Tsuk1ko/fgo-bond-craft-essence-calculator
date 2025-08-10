@@ -8,695 +8,10 @@
   ],
   "servantList": [
     {
-      "id": 91,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant091.jpg",
-      "types": [
-        0,
-        3
-      ]
-    },
-    {
-      "id": 234,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant234.jpg",
-      "types": [
-        0,
-        2,
-        4
-      ]
-    },
-    {
-      "id": 270,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant270.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 299,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant299.jpg",
-      "types": [
-        0,
-        3
-      ]
-    },
-    {
-      "id": 310,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant310.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 14,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant014.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 391,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant391.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 70,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant070.jpg",
-      "types": [
-        0,
-        3
-      ]
-    },
-    {
-      "id": 128,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant128.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 148,
-      "star": 3,
-      "class": "Lancer",
-      "name": "Servant148.jpg",
-      "types": [
-        0,
-        1
-      ]
-    },
-    {
-      "id": 300,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant300.jpg",
-      "types": [
-        0,
-        3
-      ]
-    },
-    {
-      "id": 312,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant312.jpg",
-      "types": [
-        0,
-        3
-      ]
-    },
-    {
-      "id": 347,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant347.jpg",
-      "types": [
-        0,
-        2
-      ]
-    },
-    {
-      "id": 419,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant419.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 433,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant433.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 205,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant205.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 231,
-      "star": 3,
-      "class": "Rider",
-      "name": "Servant231.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 332,
-      "star": 4,
-      "class": "Rider",
-      "name": "Servant332.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 62,
-      "star": 5,
-      "class": "Caster",
-      "name": "Servant062.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 307,
-      "star": 5,
-      "class": "Caster",
-      "name": "Servant307.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 340,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant340.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 314,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant314.jpg",
-      "types": [
-        0,
-        3,
-        4
-      ]
-    },
-    {
-      "id": 365,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant365.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 53,
-      "star": 1,
-      "class": "Berserker",
-      "name": "Servant053.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 58,
-      "star": 4,
-      "class": "Berserker",
-      "name": "Servant058.jpg",
-      "types": [
-        0,
-        3
-      ]
-    },
-    {
-      "id": 174,
-      "star": 1,
-      "class": "Berserker",
-      "name": "Servant174.jpg",
-      "types": [
-        0,
-        3
-      ]
-    },
-    {
-      "id": 202,
-      "star": 4,
-      "class": "Berserker",
-      "name": "Servant202.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 282,
-      "star": 4,
-      "class": "Berserker",
-      "name": "Servant282.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 355,
-      "star": 5,
-      "class": "Berserker",
-      "name": "Servant355.jpg",
-      "types": [
-        0,
-        3
-      ]
-    },
-    {
-      "id": 429,
-      "star": 5,
-      "class": "Berserker",
-      "name": "Servant429.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 440,
-      "star": 5,
-      "class": "Berserker",
-      "name": "Servant440.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 265,
-      "star": 5,
-      "class": "Ruler",
-      "name": "Servant265.jpg",
-      "types": [
-        0,
-        4
-      ]
-    },
-    {
-      "id": 390,
-      "star": 5,
-      "class": "Ruler",
-      "name": "Servant390.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 147,
-      "star": 4,
-      "class": "Avenger",
-      "name": "Servant147.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 158,
-      "star": 4,
-      "class": "Avenger",
-      "name": "Servant158.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 388,
-      "star": 4,
-      "class": "Avenger",
-      "name": "Servant388.jpg",
-      "types": [
-        0,
-        1,
-        3
-      ]
-    },
-    {
-      "id": 238,
-      "star": 5,
-      "class": "Alterego",
-      "name": "Servant238.jpg",
-      "types": [
-        0,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "id": 376,
-      "star": 5,
-      "class": "Alterego",
-      "name": "Servant376.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 285,
-      "star": 5,
-      "class": "MoonCancer",
-      "name": "Servant285.jpg",
-      "types": [
-        0,
-        4
-      ]
-    },
-    {
-      "id": 421,
-      "star": 5,
-      "class": "MoonCancer",
-      "name": "Servant421.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 422,
-      "star": 4,
-      "class": "MoonCancer",
-      "name": "Servant422.jpg",
-      "types": [
-        0,
-        2,
-        4
-      ]
-    },
-    {
-      "id": 334,
-      "star": 5,
-      "class": "Foreigner",
-      "name": "Servant334.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 441,
-      "star": 5,
-      "class": "Pretender",
-      "name": "Servant441.jpg",
-      "types": [
-        0,
-        3
-      ]
-    },
-    {
-      "id": 377,
-      "star": 5,
-      "class": "Beast",
-      "name": "Servant377.jpg",
-      "types": [
-        0
-      ]
-    },
-    {
-      "id": 302,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant302.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 137,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant137.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 142,
-      "star": 5,
-      "class": "Archer",
-      "name": "Servant142.jpg",
-      "types": [
-        1,
-        2,
-        4
-      ]
-    },
-    {
-      "id": 200,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant200.jpg",
-      "types": [
-        1,
-        4
-      ]
-    },
-    {
-      "id": 286,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant286.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 383,
-      "star": 5,
-      "class": "Archer",
-      "name": "Servant383.jpg",
-      "types": [
-        1,
-        4
-      ]
-    },
-    {
-      "id": 183,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant183.jpg",
-      "types": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "id": 283,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant283.jpg",
-      "types": [
-        1,
-        4
-      ]
-    },
-    {
-      "id": 182,
-      "star": 4,
-      "class": "Rider",
-      "name": "Servant182.jpg",
-      "types": [
-        1,
-        2,
-        4
-      ]
-    },
-    {
-      "id": 241,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant241.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 37,
-      "star": 5,
-      "class": "Caster",
-      "name": "Servant037.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 136,
-      "star": 5,
-      "class": "Caster",
-      "name": "Servant136.jpg",
-      "types": [
-        1,
-        3
-      ]
-    },
-    {
-      "id": 236,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant236.jpg",
-      "types": [
-        1,
-        2,
-        4
-      ]
-    },
-    {
-      "id": 415,
-      "star": 5,
-      "class": "Caster",
-      "name": "Servant415.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 92,
-      "star": 4,
-      "class": "Assassin",
-      "name": "Servant092.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 243,
-      "star": 4,
-      "class": "Assassin",
-      "name": "Servant243.jpg",
-      "types": [
-        1,
-        2,
-        4
-      ]
-    },
-    {
-      "id": 371,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant371.jpg",
-      "types": [
-        1,
-        3
-      ]
-    },
-    {
-      "id": 414,
-      "star": 4,
-      "class": "Berserker",
-      "name": "Servant414.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 242,
-      "star": 4,
-      "class": "Ruler",
-      "name": "Servant242.jpg",
-      "types": [
-        1,
-        2,
-        4
-      ]
-    },
-    {
-      "id": 305,
-      "star": 5,
-      "class": "Ruler",
-      "name": "Servant305.jpg",
-      "types": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "id": 356,
-      "star": 4,
-      "class": "Avenger",
-      "name": "Servant356.jpg",
-      "types": [
-        1,
-        4
-      ]
-    },
-    {
-      "id": 336,
-      "star": 5,
-      "class": "Alterego",
-      "name": "Servant336.jpg",
-      "types": [
-        1
-      ]
-    },
-    {
-      "id": 416,
-      "star": 5,
-      "class": "Alterego",
-      "name": "Servant416.jpg",
-      "types": [
-        1,
-        2,
-        4
-      ]
-    },
-    {
-      "id": 244,
-      "star": 5,
-      "class": "MoonCancer",
-      "name": "Servant244.jpg",
-      "types": [
-        1,
-        2,
-        4
-      ]
-    },
-    {
-      "id": 418,
-      "star": 5,
-      "class": "MoonCancer",
-      "name": "Servant418.jpg",
-      "types": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "id": 413,
-      "star": 5,
-      "class": "Foreigner",
-      "name": "Servant413.jpg",
-      "types": [
-        1,
-        2,
-        4
-      ]
-    },
-    {
       "id": 1,
-      "star": 4,
       "class": "Shielder",
-      "name": "Servant001.jpg",
+      "star": 4,
+      "name": "玛修・基列莱特",
       "types": [
         1,
         2,
@@ -706,418 +21,148 @@
     },
     {
       "id": 2,
-      "star": 5,
       "class": "Saber",
-      "name": "Servant002.jpg",
+      "star": 5,
+      "name": "阿尔托莉雅・潘德拉贡",
       "types": [
         2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 3,
+      "class": "Saber",
+      "star": 4,
+      "name": "阿尔托莉雅・潘德拉贡〔Alter〕",
+      "types": [
         3,
         4
       ]
     },
     {
       "id": 4,
-      "star": 4,
       "class": "Saber",
-      "name": "Servant004.jpg",
+      "star": 4,
+      "name": "阿尔托莉雅・潘德拉贡〔Lily〕",
       "types": [
         2,
         4
+      ]
+    },
+    {
+      "id": 5,
+      "class": "Saber",
+      "star": 4,
+      "name": "尼禄・克劳狄乌斯",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 6,
+      "class": "Saber",
+      "star": 4,
+      "name": "齐格飞",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 8,
+      "class": "Saber",
+      "star": 5,
+      "name": "阿蒂拉",
+      "types": [
+        3
       ]
     },
     {
       "id": 9,
+      "class": "Saber",
       "star": 3,
-      "class": "Saber",
-      "name": "Servant009.jpg",
+      "name": "吉尔・德・雷",
       "types": [
         2
       ]
     },
     {
-      "id": 101,
+      "id": 11,
+      "class": "Archer",
       "star": 4,
-      "class": "Saber",
-      "name": "Servant101.jpg",
+      "name": "卫宫",
       "types": [
-        2
-      ]
-    },
-    {
-      "id": 121,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant121.jpg",
-      "types": [
-        2,
         3
       ]
     },
     {
-      "id": 123,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant123.jpg",
-      "types": [
-        2,
-        3
-      ]
-    },
-    {
-      "id": 126,
+      "id": 13,
+      "class": "Archer",
       "star": 3,
-      "class": "Saber",
-      "name": "Servant126.jpg",
+      "name": "罗宾汉",
       "types": [
-        2,
         3
       ]
     },
     {
-      "id": 160,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant160.jpg",
-      "types": [
-        2,
-        3
-      ]
-    },
-    {
-      "id": 227,
+      "id": 14,
+      "class": "Archer",
       "star": 4,
-      "class": "Saber",
-      "name": "Servant227.jpg",
+      "name": "阿塔兰忒",
       "types": [
-        2,
-        3
+        0
       ]
     },
     {
-      "id": 245,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant245.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 254,
-      "star": 1,
-      "class": "Saber",
-      "name": "Servant254.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 301,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant301.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 337,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant337.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 343,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant343.jpg",
-      "types": [
-        2,
-        3
-      ]
-    },
-    {
-      "id": 344,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant344.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 363,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant363.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 396,
+      "id": 15,
+      "class": "Archer",
       "star": 3,
-      "class": "Saber",
-      "name": "Servant396.jpg",
+      "name": "尤瑞艾莉",
       "types": [
-        2
-      ]
-    },
-    {
-      "id": 434,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant434.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 122,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant122.jpg",
-      "types": [
-        2,
         3
       ]
     },
     {
-      "id": 129,
-      "star": 5,
-      "class": "Archer",
-      "name": "Servant129.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 207,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant207.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 246,
+      "id": 23,
+      "class": "Rider",
       "star": 3,
-      "class": "Archer",
-      "name": "Servant246.jpg",
+      "name": "美杜莎",
       "types": [
-        2
-      ]
-    },
-    {
-      "id": 271,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant271.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 325,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant325.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 399,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant399.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 427,
-      "star": 5,
-      "class": "Archer",
-      "name": "Servant427.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 78,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant078.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 85,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant085.jpg",
-      "types": [
-        2,
         3
-      ]
-    },
-    {
-      "id": 119,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant119.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 140,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant140.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 181,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant181.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 214,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant214.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 228,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant228.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 232,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant232.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 252,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant252.jpg",
-      "types": [
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "id": 256,
-      "star": 2,
-      "class": "Lancer",
-      "name": "Servant256.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 266,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant266.jpg",
-      "types": [
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "id": 313,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant313.jpg",
-      "types": [
-        2,
-        3
-      ]
-    },
-    {
-      "id": 368,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant368.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 381,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant381.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 439,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant439.jpg",
-      "types": [
-        2
       ]
     },
     {
       "id": 24,
-      "star": 2,
       "class": "Rider",
-      "name": "Servant024.jpg",
+      "star": 2,
+      "name": "乔尔乔斯",
       "types": [
         2
       ]
     },
     {
-      "id": 29,
-      "star": 4,
+      "id": 25,
       "class": "Rider",
-      "name": "Servant029.jpg",
+      "star": 2,
+      "name": "爱德华・蒂奇",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 27,
+      "class": "Rider",
+      "star": 3,
+      "name": "牛若丸",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 29,
+      "class": "Rider",
+      "star": 4,
+      "name": "玛丽・安托瓦内特",
       "types": [
         2,
         4
@@ -1125,19 +170,337 @@
     },
     {
       "id": 30,
-      "star": 4,
       "class": "Rider",
-      "name": "Servant030.jpg",
+      "star": 4,
+      "name": "玛尔达",
       "types": [
         2,
         4
       ]
     },
     {
-      "id": 73,
+      "id": 37,
+      "class": "Caster",
+      "star": 5,
+      "name": "诸葛孔明〔埃尔梅罗Ⅱ世〕",
+      "types": [
+        1
+      ]
+    },
+    {
+      "id": 43,
+      "class": "Assassin",
+      "star": 2,
+      "name": "夏尔・亨利・桑松",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 51,
+      "class": "Berserker",
+      "star": 5,
+      "name": "坂田金时",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 53,
+      "class": "Berserker",
+      "star": 1,
+      "name": "阿斯忒里俄斯",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 56,
+      "class": "Berserker",
+      "star": 3,
+      "name": "清姬",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 58,
+      "class": "Berserker",
       "star": 4,
+      "name": "玉藻猫",
+      "types": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": 59,
+      "class": "Ruler",
+      "star": 5,
+      "name": "贞德",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 62,
+      "class": "Caster",
+      "star": 5,
+      "name": "玉藻前",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 67,
+      "class": "Caster",
+      "star": 4,
+      "name": "美狄亚〔Lily〕",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 68,
+      "class": "Saber",
+      "star": 5,
+      "name": "冲田总司",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 69,
+      "class": "Archer",
+      "star": 4,
+      "name": "织田信长",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 70,
+      "class": "Lancer",
+      "star": 5,
+      "name": "斯卡哈",
+      "types": [
+        0,
+        3
+      ],
+      "typeComments": {
+        "0": "灵衣「穿刺兔女郎」"
+      }
+    },
+    {
+      "id": 73,
       "class": "Rider",
-      "name": "Servant073.jpg",
+      "star": 4,
+      "name": "阿尔托莉雅・潘德拉贡〔圣诞Alter〕",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 76,
+      "class": "Saber",
+      "star": 5,
+      "name": "莫德雷德",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 78,
+      "class": "Lancer",
+      "star": 4,
+      "name": "阿尔托莉雅・潘德拉贡〔Alter〕",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 79,
+      "class": "Caster",
+      "star": 3,
+      "name": "冯・霍恩海姆・帕拉塞尔苏斯",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 81,
+      "class": "Assassin",
+      "star": 3,
+      "name": "亨利・杰基尔＆海德",
+      "types": [
+        2
+      ],
+      "typeComments": {
+        "2": "人格为亨利·杰基尔时"
+      }
+    },
+    {
+      "id": 84,
+      "class": "Archer",
+      "star": 5,
+      "name": "阿周那",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 85,
+      "class": "Lancer",
+      "star": 5,
+      "name": "迦尔纳",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 86,
+      "class": "Assassin",
+      "star": 5,
+      "name": "谜之女主角X",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 91,
+      "class": "Saber",
+      "star": 5,
+      "name": "两仪式",
+      "types": [
+        0,
+        3
+      ],
+      "typeComments": {
+        "0": "灵衣「斩首兔女郎」"
+      }
+    },
+    {
+      "id": 92,
+      "class": "Assassin",
+      "star": 4,
+      "name": "两仪式",
+      "types": [
+        1
+      ]
+    },
+    {
+      "id": 93,
+      "class": "Ruler",
+      "star": 5,
+      "name": "天草四郎",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 94,
+      "class": "Rider",
+      "star": 4,
+      "name": "阿斯托尔福",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 96,
+      "class": "Avenger",
+      "star": 5,
+      "name": "岩窟王",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 97,
+      "class": "Berserker",
+      "star": 5,
+      "name": "南丁格尔",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 98,
+      "class": "Berserker",
+      "star": 5,
+      "name": "库・丘林〔Alter〕",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 99,
+      "class": "Rider",
+      "star": 5,
+      "name": "女王梅芙",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 100,
+      "class": "Caster",
+      "star": 4,
+      "name": "海伦娜・布拉瓦茨基",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 101,
+      "class": "Saber",
+      "star": 4,
+      "name": "罗摩",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 106,
+      "class": "Avenger",
+      "star": 5,
+      "name": "贞德〔Alter〕",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 110,
+      "class": "Assassin",
+      "star": 3,
+      "name": "百貌哈桑",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 112,
+      "class": "Assassin",
+      "star": 5,
+      "name": "酒吞童子",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 113,
+      "class": "Caster",
+      "star": 5,
+      "name": "玄奘三藏",
       "types": [
         2,
         4
@@ -1145,68 +508,27 @@
     },
     {
       "id": 115,
-      "star": 4,
       "class": "Rider",
-      "name": "Servant115.jpg",
+      "star": 4,
+      "name": "坂田金时",
       "types": [
         2
       ]
     },
     {
-      "id": 144,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant144.jpg",
+      "id": 117,
+      "class": "Assassin",
+      "star": 3,
+      "name": "风魔小太郎",
       "types": [
-        2,
-        4
+        3
       ]
     },
     {
-      "id": 253,
+      "id": 119,
+      "class": "Lancer",
       "star": 5,
-      "class": "Rider",
-      "name": "Servant253.jpg",
-      "types": [
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "id": 342,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant342.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 406,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant406.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 67,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant067.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 113,
-      "star": 5,
-      "class": "Caster",
-      "name": "Servant113.jpg",
+      "name": "阿尔托莉雅・潘德拉贡",
       "types": [
         2,
         4
@@ -1214,9 +536,9 @@
     },
     {
       "id": 120,
-      "star": 4,
       "class": "Caster",
-      "name": "Servant120.jpg",
+      "star": 4,
+      "name": "尼托克丽丝",
       "types": [
         2,
         3,
@@ -1224,10 +546,156 @@
       ]
     },
     {
-      "id": 130,
+      "id": 121,
+      "class": "Saber",
       "star": 4,
+      "name": "兰斯洛特",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 122,
+      "class": "Archer",
+      "star": 4,
+      "name": "崔斯坦",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 123,
+      "class": "Saber",
+      "star": 4,
+      "name": "高文",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 124,
+      "class": "Assassin",
+      "star": 3,
+      "name": "静谧哈桑",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 126,
+      "class": "Saber",
+      "star": 3,
+      "name": "贝德维尔",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 128,
+      "class": "Lancer",
+      "star": 5,
+      "name": "玉藻前",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 129,
+      "class": "Archer",
+      "star": 5,
+      "name": "阿尔托莉雅・潘德拉贡",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 130,
       "class": "Caster",
-      "name": "Servant130.jpg",
+      "star": 4,
+      "name": "玛丽・安托瓦内特",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 135,
+      "class": "Ruler",
+      "star": 4,
+      "name": "玛尔达",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 136,
+      "class": "Caster",
+      "star": 5,
+      "name": "伊莉雅丝菲尔・冯・爱因兹贝伦",
+      "types": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 137,
+      "class": "Archer",
+      "star": 4,
+      "name": "克洛伊・冯・爱因兹贝伦",
+      "types": [
+        1
+      ]
+    },
+    {
+      "id": 139,
+      "class": "Assassin",
+      "star": 5,
+      "name": "克娄巴特拉",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 140,
+      "class": "Lancer",
+      "star": 4,
+      "name": "弗拉德三世〔EXTRA〕",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 142,
+      "class": "Archer",
+      "star": 5,
+      "name": "伊什塔尔",
+      "types": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 143,
+      "class": "Lancer",
+      "star": 5,
+      "name": "恩奇都",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 144,
+      "class": "Rider",
+      "star": 5,
+      "name": "魁札尔・科亚特尔",
       "types": [
         2,
         4
@@ -1235,88 +703,123 @@
     },
     {
       "id": 145,
-      "star": 4,
       "class": "Caster",
-      "name": "Servant145.jpg",
+      "star": 4,
+      "name": "吉尔伽美什",
       "types": [
         2,
         3
+      ]
+    },
+    {
+      "id": 147,
+      "class": "Avenger",
+      "star": 4,
+      "name": "戈耳工",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 148,
+      "class": "Lancer",
+      "star": 3,
+      "name": "豹人",
+      "types": [
+        0,
+        1
       ]
     },
     {
       "id": 150,
-      "star": 5,
       "class": "Caster",
-      "name": "Servant150.jpg",
+      "star": 5,
+      "name": "梅林",
       "types": [
         2,
         3
       ]
     },
     {
-      "id": 330,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant330.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 385,
+      "id": 156,
+      "class": "Archer",
       "star": 5,
-      "class": "Caster",
-      "name": "Servant385.jpg",
+      "name": "新宿的Archer",
       "types": [
-        2,
-        4
+        3
       ]
     },
     {
-      "id": 81,
-      "star": 3,
-      "class": "Assassin",
-      "name": "Servant081.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 177,
+      "id": 158,
+      "class": "Avenger",
       "star": 4,
-      "class": "Assassin",
-      "name": "Servant177.jpg",
+      "name": "新宿的Avenger",
       "types": [
-        2,
-        4
+        0
       ]
     },
     {
-      "id": 51,
+      "id": 159,
+      "class": "Assassin",
+      "star": 4,
+      "name": "新宿的Assassin",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 160,
+      "class": "Saber",
       "star": 5,
-      "class": "Berserker",
-      "name": "Servant051.jpg",
+      "name": "亚瑟・潘德拉贡〔Prototype〕",
       "types": [
         2,
         3
       ]
     },
     {
-      "id": 97,
+      "id": 163,
+      "class": "Alterego",
       "star": 5,
-      "class": "Berserker",
-      "name": "Servant097.jpg",
+      "name": "Meltryllis",
       "types": [
         2,
+        4
+      ]
+    },
+    {
+      "id": 164,
+      "class": "Alterego",
+      "star": 4,
+      "name": "Passionlip",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 169,
+      "class": "Caster",
+      "star": 5,
+      "name": "不夜城的Caster",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 170,
+      "class": "Assassin",
+      "star": 4,
+      "name": "不夜城的Assassin",
+      "types": [
         4
       ]
     },
     {
       "id": 171,
-      "star": 4,
       "class": "Berserker",
-      "name": "Servant171.jpg",
+      "star": 4,
+      "name": "黄金国的Berserker",
       "types": [
         2,
         3,
@@ -1324,110 +827,84 @@
       ]
     },
     {
-      "id": 247,
-      "star": 5,
+      "id": 174,
       "class": "Berserker",
-      "name": "Servant247.jpg",
+      "star": 1,
+      "name": "保罗・班扬",
+      "types": [
+        0,
+        3
+      ],
+      "typeComments": {
+        "0": "灵衣「疯狂的兔子」"
+      }
+    },
+    {
+      "id": 177,
+      "class": "Assassin",
+      "star": 4,
+      "name": "尼托克丽丝",
       "types": [
         2,
-        3
+        4
       ]
     },
     {
-      "id": 59,
+      "id": 179,
+      "class": "Rider",
       "star": 5,
-      "class": "Ruler",
-      "name": "Servant059.jpg",
+      "name": "阿尔托莉雅・潘德拉贡〔Alter〕",
       "types": [
+        4
+      ]
+    },
+    {
+      "id": 181,
+      "class": "Lancer",
+      "star": 4,
+      "name": "源赖光",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 182,
+      "class": "Rider",
+      "star": 4,
+      "name": "伊什塔尔",
+      "types": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 183,
+      "class": "Lancer",
+      "star": 4,
+      "name": "帕尔瓦蒂",
+      "types": [
+        1,
         2,
         3,
         4
       ]
     },
     {
-      "id": 93,
+      "id": 189,
+      "class": "Assassin",
       "star": 5,
-      "class": "Ruler",
-      "name": "Servant093.jpg",
+      "name": "刑部姬",
       "types": [
-        2,
         3
-      ]
-    },
-    {
-      "id": 135,
-      "star": 4,
-      "class": "Ruler",
-      "name": "Servant135.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 229,
-      "star": 5,
-      "class": "Ruler",
-      "name": "Servant229.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 233,
-      "star": 4,
-      "class": "Ruler",
-      "name": "Servant233.jpg",
-      "types": [
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "id": 374,
-      "star": 5,
-      "class": "Ruler",
-      "name": "Servant374.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 438,
-      "star": 5,
-      "class": "Ruler",
-      "name": "Servant438.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 328,
-      "star": 4,
-      "class": "Avenger",
-      "name": "Servant328.jpg",
-      "types": [
-        2
-      ]
-    },
-    {
-      "id": 163,
-      "star": 5,
-      "class": "Alterego",
-      "name": "Servant163.jpg",
-      "types": [
-        2,
-        4
       ]
     },
     {
       "id": 190,
-      "star": 4,
       "class": "Alterego",
-      "name": "Servant190.jpg",
+      "star": 4,
+      "name": "机械伊丽亲",
       "types": [
         2,
         4
@@ -1435,423 +912,860 @@
     },
     {
       "id": 191,
-      "star": 4,
       "class": "Alterego",
-      "name": "Servant191.jpg",
+      "star": 4,
+      "name": "机械伊丽亲Ⅱ号机",
       "types": [
         2,
         4
-      ]
-    },
-    {
-      "id": 426,
-      "star": 5,
-      "class": "Alterego",
-      "name": "Servant426.jpg",
-      "types": [
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "id": 222,
-      "star": 4,
-      "class": "Foreigner",
-      "name": "Servant222.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 373,
-      "star": 5,
-      "class": "Foreigner",
-      "name": "Servant373.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 372,
-      "star": 4,
-      "class": "Pretender",
-      "name": "Servant372.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 431,
-      "star": 5,
-      "class": "Pretender",
-      "name": "Servant431.jpg",
-      "types": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": 3,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant003.jpg",
-      "types": [
-        3,
-        4
-      ]
-    },
-    {
-      "id": 5,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant005.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 6,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant006.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 8,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant008.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 68,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant068.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 76,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant076.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 213,
-      "star": 5,
-      "class": "Saber",
-      "name": "Servant213.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 293,
-      "star": 4,
-      "class": "Saber",
-      "name": "Servant293.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 11,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant011.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 13,
-      "star": 3,
-      "class": "Archer",
-      "name": "Servant013.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 15,
-      "star": 3,
-      "class": "Archer",
-      "name": "Servant015.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 84,
-      "star": 5,
-      "class": "Archer",
-      "name": "Servant084.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 156,
-      "star": 5,
-      "class": "Archer",
-      "name": "Servant156.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 294,
-      "star": 1,
-      "class": "Archer",
-      "name": "Servant294.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 143,
-      "star": 5,
-      "class": "Lancer",
-      "name": "Servant143.jpg",
-      "types": [
-        3
       ]
     },
     {
       "id": 196,
-      "star": 5,
       "class": "Lancer",
-      "name": "Servant196.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 428,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant428.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 23,
-      "star": 3,
-      "class": "Rider",
-      "name": "Servant023.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 25,
-      "star": 2,
-      "class": "Rider",
-      "name": "Servant025.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 27,
-      "star": 3,
-      "class": "Rider",
-      "name": "Servant027.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 94,
-      "star": 4,
-      "class": "Rider",
-      "name": "Servant094.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 99,
       "star": 5,
-      "class": "Rider",
-      "name": "Servant099.jpg",
+      "name": "埃列什基伽勒",
       "types": [
         3
       ]
     },
     {
-      "id": 206,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant206.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 257,
-      "star": 1,
-      "class": "Rider",
-      "name": "Servant257.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 273,
-      "star": 3,
-      "class": "Rider",
-      "name": "Servant273.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 277,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant277.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 296,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant296.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 79,
-      "star": 3,
-      "class": "Caster",
-      "name": "Servant079.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 100,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant100.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 249,
-      "star": 3,
-      "class": "Caster",
-      "name": "Servant249.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 43,
-      "star": 2,
+      "id": 199,
       "class": "Assassin",
-      "name": "Servant043.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 86,
       "star": 5,
-      "class": "Assassin",
-      "name": "Servant086.jpg",
+      "name": "塞弥拉弥斯",
       "types": [
-        3
-      ]
-    },
-    {
-      "id": 112,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant112.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 117,
-      "star": 3,
-      "class": "Assassin",
-      "name": "Servant117.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 124,
-      "star": 3,
-      "class": "Assassin",
-      "name": "Servant124.jpg",
-      "types": [
-        3,
         4
       ]
     },
     {
-      "id": 159,
+      "id": 200,
+      "class": "Archer",
       "star": 4,
-      "class": "Assassin",
-      "name": "Servant159.jpg",
+      "name": "浅上藤乃",
+      "types": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": 202,
+      "class": "Berserker",
+      "star": 4,
+      "name": "阿塔兰忒〔Alter〕",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 205,
+      "class": "Rider",
+      "star": 5,
+      "name": "伊凡雷帝",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 206,
+      "class": "Rider",
+      "star": 5,
+      "name": "阿喀琉斯",
       "types": [
         3
       ]
     },
     {
-      "id": 189,
+      "id": 207,
+      "class": "Archer",
+      "star": 4,
+      "name": "喀戎",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 209,
+      "class": "Alterego",
       "star": 5,
-      "class": "Assassin",
-      "name": "Servant189.jpg",
+      "name": "冲田总司〔Alter〕",
       "types": [
         3
       ]
     },
     {
       "id": 210,
-      "star": 3,
       "class": "Assassin",
-      "name": "Servant210.jpg",
+      "star": 3,
+      "name": "冈田以藏",
       "types": [
         3
+      ]
+    },
+    {
+      "id": 213,
+      "class": "Saber",
+      "star": 5,
+      "name": "齐格鲁德",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 214,
+      "class": "Lancer",
+      "star": 4,
+      "name": "瓦尔基里",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 216,
+      "class": "Archer",
+      "star": 5,
+      "name": "贞德",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 220,
+      "class": "MoonCancer",
+      "star": 5,
+      "name": "BB",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 222,
+      "class": "Foreigner",
+      "star": 4,
+      "name": "谜之女主角XX",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 227,
+      "class": "Saber",
+      "star": 4,
+      "name": "兰陵王",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 228,
+      "class": "Lancer",
+      "star": 4,
+      "name": "秦良玉",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 229,
+      "class": "Ruler",
+      "star": 5,
+      "name": "始皇帝",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 230,
+      "class": "Assassin",
+      "star": 4,
+      "name": "虞美人",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 231,
+      "class": "Rider",
+      "star": 3,
+      "name": "赤兔马",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 232,
+      "class": "Lancer",
+      "star": 5,
+      "name": "布拉达曼特",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 233,
+      "class": "Ruler",
+      "star": 4,
+      "name": "魁札尔・科亚特尔〔桑巴／圣诞〕",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 234,
+      "class": "Saber",
+      "star": 5,
+      "name": "红阎魔",
+      "types": [
+        0,
+        2,
+        4
       ]
     },
     {
       "id": 235,
-      "star": 5,
       "class": "Assassin",
-      "name": "Servant235.jpg",
+      "star": 5,
+      "name": "李书文",
       "types": [
         3
       ]
     },
     {
-      "id": 359,
+      "id": 236,
+      "class": "Caster",
       "star": 4,
+      "name": "美游・艾德费尔特",
+      "types": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 238,
+      "class": "Alterego",
+      "star": 5,
+      "name": "Kingprotea",
+      "types": [
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 241,
+      "class": "Rider",
+      "star": 5,
+      "name": "司马懿〔莱妮丝〕",
+      "types": [
+        1
+      ]
+    },
+    {
+      "id": 242,
+      "class": "Ruler",
+      "star": 4,
+      "name": "阿斯特赖亚",
+      "types": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 243,
       "class": "Assassin",
-      "name": "Servant359.jpg",
+      "star": 4,
+      "name": "格蕾",
+      "types": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 244,
+      "class": "MoonCancer",
+      "star": 5,
+      "name": "伟大的石像神",
+      "types": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 245,
+      "class": "Saber",
+      "star": 4,
+      "name": "拉克什米・芭伊",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 246,
+      "class": "Archer",
+      "star": 3,
+      "name": "威廉・退尔",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 247,
+      "class": "Berserker",
+      "star": 5,
+      "name": "阿周那〔Alter〕",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 249,
+      "class": "Caster",
+      "star": 3,
+      "name": "阿斯克勒庇俄斯",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 252,
+      "class": "Lancer",
+      "star": 4,
+      "name": "长尾景虎",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 253,
+      "class": "Rider",
+      "star": 5,
+      "name": "莱昂纳多・达・芬奇",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 254,
+      "class": "Saber",
+      "star": 1,
+      "name": "伊阿宋",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 256,
+      "class": "Lancer",
+      "star": 2,
+      "name": "加雷斯",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 257,
+      "class": "Rider",
+      "star": 1,
+      "name": "巴沙洛缪・罗伯茨",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 261,
+      "class": "Berserker",
+      "star": 5,
+      "name": "宫本武藏",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 265,
+      "class": "Ruler",
+      "star": 5,
+      "name": "阿尔托莉雅・潘德拉贡",
+      "types": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": 266,
+      "class": "Lancer",
+      "star": 4,
+      "name": "谜之Alterego・Λ",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 268,
+      "class": "Avenger",
+      "star": 5,
+      "name": "太空伊什塔尔",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 270,
+      "class": "Saber",
+      "star": 5,
+      "name": "阿斯托尔福",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 271,
+      "class": "Archer",
+      "star": 4,
+      "name": "南丁格尔〔圣诞〕",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 273,
+      "class": "Rider",
+      "star": 3,
+      "name": "曼迪卡尔多",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 277,
+      "class": "Rider",
+      "star": 5,
+      "name": "奥德修斯",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 282,
+      "class": "Berserker",
+      "star": 4,
+      "name": "鬼女红叶",
+      "types": [
+        0
+      ],
+      "typeComments": {
+        "0": "战斗形象1"
+      }
+    },
+    {
+      "id": 283,
+      "class": "Lancer",
+      "star": 4,
+      "name": "宇津见绘里濑",
+      "types": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": 285,
+      "class": "MoonCancer",
+      "star": 5,
+      "name": "杀生院祈荒",
+      "types": [
+        0,
+        4
+      ],
+      "typeComments": {
+        "0": "战斗形象3"
+      }
+    },
+    {
+      "id": 286,
+      "class": "Archer",
+      "star": 4,
+      "name": "伊莉雅丝菲尔・冯・爱因兹贝伦",
+      "types": [
+        1
+      ]
+    },
+    {
+      "id": 288,
+      "class": "Lancer",
+      "star": 4,
+      "name": "虞美人",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 289,
+      "class": "Foreigner",
+      "star": 5,
+      "name": "阿比盖尔・威廉姆斯〔夏〕",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 293,
+      "class": "Saber",
+      "star": 4,
+      "name": "斋藤一",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 294,
+      "class": "Archer",
+      "star": 1,
+      "name": "织田信胜",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 296,
+      "class": "Rider",
+      "star": 5,
+      "name": "尼莫",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 297,
+      "class": "Alterego",
+      "star": 5,
+      "name": "芦屋道满",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 299,
+      "class": "Saber",
+      "star": 5,
+      "name": "伊吹童子",
+      "types": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": 300,
+      "class": "Lancer",
+      "star": 5,
+      "name": "弗栗多",
+      "types": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": 301,
+      "class": "Saber",
+      "star": 4,
+      "name": "迦尔纳〔圣诞〕",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 302,
+      "class": "Saber",
+      "star": 5,
+      "name": "千子村正",
+      "types": [
+        1
+      ]
+    },
+    {
+      "id": 305,
+      "class": "Ruler",
+      "star": 5,
+      "name": "阿摩耳〔卡莲〕",
+      "types": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 307,
+      "class": "Caster",
+      "star": 5,
+      "name": "克莱恩小姐",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 309,
+      "class": "Berserker",
+      "star": 5,
+      "name": "摩根",
+      "types": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 310,
+      "class": "Saber",
+      "star": 4,
+      "name": "妖精骑士高文",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 312,
+      "class": "Lancer",
+      "star": 5,
+      "name": "妖精骑士兰斯洛特",
+      "types": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": 313,
+      "class": "Lancer",
+      "star": 4,
+      "name": "珀西瓦尔",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 314,
+      "class": "Assassin",
+      "star": 5,
+      "name": "光之高扬斯卡娅",
+      "types": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 316,
+      "class": "Pretender",
+      "star": 5,
+      "name": "奥伯龙",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 320,
+      "class": "Ruler",
+      "star": 4,
+      "name": "莱昂纳多・达・芬奇",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 325,
+      "class": "Archer",
+      "star": 4,
+      "name": "芝诺比阿",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 328,
+      "class": "Avenger",
+      "star": 4,
+      "name": "谜之兰丸X",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 330,
+      "class": "Caster",
+      "star": 4,
+      "name": "玛尔达〔圣诞〕",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 332,
+      "class": "Rider",
+      "star": 4,
+      "name": "多布雷尼亚・尼基季奇",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 334,
+      "class": "Foreigner",
+      "star": 5,
+      "name": "暗之高扬斯卡娅",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 336,
+      "class": "Alterego",
+      "star": 5,
+      "name": "马纳南・麦克・利尔〔巴泽特〕",
+      "types": [
+        1
+      ]
+    },
+    {
+      "id": 337,
+      "class": "Saber",
+      "star": 5,
+      "name": "征氏姐妹",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 340,
+      "class": "Caster",
+      "star": 4,
+      "name": "大黑天",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 342,
+      "class": "Rider",
+      "star": 5,
+      "name": "君士坦丁十一世",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 343,
+      "class": "Saber",
+      "star": 5,
+      "name": "查理曼",
+      "types": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 344,
+      "class": "Saber",
+      "star": 4,
+      "name": "罗兰",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 347,
+      "class": "Lancer",
+      "star": 4,
+      "name": "堂・吉诃德",
+      "types": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": 349,
+      "class": "Rider",
+      "star": 5,
+      "name": "曲亭马琴",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 354,
+      "class": "Saber",
+      "star": 4,
+      "name": "加雷斯",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 355,
+      "class": "Berserker",
+      "star": 5,
+      "name": "伊吹童子",
+      "types": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": 356,
+      "class": "Avenger",
+      "star": 4,
+      "name": "宇津见绘里濑",
+      "types": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": 357,
+      "class": "Ruler",
+      "star": 5,
+      "name": "斯卡哈・斯卡蒂",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 358,
+      "class": "Caster",
+      "star": 4,
+      "name": "武则天",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 359,
+      "class": "Assassin",
+      "star": 4,
+      "name": "斯露德",
       "types": [
         3,
         4
@@ -1859,9 +1773,9 @@
     },
     {
       "id": 360,
-      "star": 4,
       "class": "Assassin",
-      "name": "Servant360.jpg",
+      "star": 4,
+      "name": "希露德",
       "types": [
         3,
         4
@@ -1869,295 +1783,418 @@
     },
     {
       "id": 361,
-      "star": 4,
       "class": "Assassin",
-      "name": "Servant361.jpg",
+      "star": 4,
+      "name": "奥特琳德",
       "types": [
         3,
         4
       ]
     },
     {
-      "id": 56,
-      "star": 3,
-      "class": "Berserker",
-      "name": "Servant056.jpg",
+      "id": 363,
+      "class": "Saber",
+      "star": 4,
+      "name": "山南敬助",
       "types": [
-        3
-      ]
-    },
-    {
-      "id": 98,
-      "star": 5,
-      "class": "Berserker",
-      "name": "Servant098.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 261,
-      "star": 5,
-      "class": "Berserker",
-      "name": "Servant261.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 309,
-      "star": 5,
-      "class": "Berserker",
-      "name": "Servant309.jpg",
-      "types": [
-        3,
-        4
-      ]
-    },
-    {
-      "id": 357,
-      "star": 5,
-      "class": "Ruler",
-      "name": "Servant357.jpg",
-      "types": [
-        3
+        2
       ]
     },
     {
       "id": 364,
-      "star": 4,
       "class": "Ruler",
-      "name": "Servant364.jpg",
-      "types": [
-        3,
-        4
-      ]
-    },
-    {
-      "id": 96,
-      "star": 5,
-      "class": "Avenger",
-      "name": "Servant096.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 106,
-      "star": 5,
-      "class": "Avenger",
-      "name": "Servant106.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 268,
-      "star": 5,
-      "class": "Avenger",
-      "name": "Servant268.jpg",
-      "types": [
-        3,
-        4
-      ]
-    },
-    {
-      "id": 164,
       "star": 4,
-      "class": "Alterego",
-      "name": "Servant164.jpg",
+      "name": "壹与",
       "types": [
         3,
         4
       ]
     },
     {
-      "id": 209,
+      "id": 365,
+      "class": "Assassin",
       "star": 5,
-      "class": "Alterego",
-      "name": "Servant209.jpg",
+      "name": "呼延灼",
       "types": [
+        0
+      ]
+    },
+    {
+      "id": 368,
+      "class": "Lancer",
+      "star": 5,
+      "name": "布里托玛特",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 371,
+      "class": "Assassin",
+      "star": 5,
+      "name": "特斯卡特利波卡",
+      "types": [
+        1,
         3
       ]
     },
     {
-      "id": 297,
-      "star": 5,
-      "class": "Alterego",
-      "name": "Servant297.jpg",
+      "id": 372,
+      "class": "Pretender",
+      "star": 4,
+      "name": "特拉洛克",
       "types": [
-        3
+        2,
+        4
       ]
     },
     {
-      "id": 220,
+      "id": 373,
+      "class": "Foreigner",
       "star": 5,
-      "class": "MoonCancer",
-      "name": "Servant220.jpg",
+      "name": "库库尔坎",
       "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 374,
+      "class": "Ruler",
+      "star": 5,
+      "name": "女教皇若安",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 376,
+      "class": "Alterego",
+      "star": 5,
+      "name": "幼体／提亚马特",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 377,
+      "class": "Beast",
+      "star": 5,
+      "name": "所多玛之兽／德拉科",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 381,
+      "class": "Lancer",
+      "star": 5,
+      "name": "怖军",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 383,
+      "class": "Archer",
+      "star": 5,
+      "name": "杜尔伽",
+      "types": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": 385,
+      "class": "Caster",
+      "star": 5,
+      "name": "雨之魔女梣",
+      "types": [
+        2,
+        4
+      ],
+      "typeComments": {
+        "2": "战斗形象1"
+      }
+    },
+    {
+      "id": 388,
+      "class": "Avenger",
+      "star": 4,
+      "name": "克洛伊・冯・爱因兹贝伦",
+      "types": [
+        0,
+        1,
         3
+      ],
+      "typeComments": {
+        "0": "战斗形象3"
+      }
+    },
+    {
+      "id": 390,
+      "class": "Ruler",
+      "star": 5,
+      "name": "梅柳齐娜",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 391,
+      "class": "Archer",
+      "star": 4,
+      "name": "UDK－巴格斯特",
+      "types": [
+        0
       ]
     },
     {
       "id": 393,
-      "star": 5,
       "class": "Foreigner",
-      "name": "Servant393.jpg",
-      "types": [
-        3
-      ]
-    },
-    {
-      "id": 316,
       "star": 5,
-      "class": "Pretender",
-      "name": "Servant316.jpg",
+      "name": "旺吉娜",
       "types": [
         3
       ]
     },
     {
-      "id": 354,
-      "star": 4,
+      "id": 396,
       "class": "Saber",
-      "name": "Servant354.jpg",
-      "types": [
-        4
-      ]
-    },
-    {
-      "id": 69,
-      "star": 4,
-      "class": "Archer",
-      "name": "Servant069.jpg",
-      "types": [
-        4
-      ]
-    },
-    {
-      "id": 216,
-      "star": 5,
-      "class": "Archer",
-      "name": "Servant216.jpg",
-      "types": [
-        4
-      ]
-    },
-    {
-      "id": 288,
-      "star": 4,
-      "class": "Lancer",
-      "name": "Servant288.jpg",
-      "types": [
-        4
-      ]
-    },
-    {
-      "id": 179,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant179.jpg",
-      "types": [
-        4
-      ]
-    },
-    {
-      "id": 349,
-      "star": 5,
-      "class": "Rider",
-      "name": "Servant349.jpg",
-      "types": [
-        4
-      ]
-    },
-    {
-      "id": 169,
-      "star": 5,
-      "class": "Caster",
-      "name": "Servant169.jpg",
-      "types": [
-        4
-      ]
-    },
-    {
-      "id": 358,
-      "star": 4,
-      "class": "Caster",
-      "name": "Servant358.jpg",
-      "types": [
-        4
-      ]
-    },
-    {
-      "id": 110,
       "star": 3,
-      "class": "Assassin",
-      "name": "Servant110.jpg",
+      "name": "忒修斯",
       "types": [
-        4
+        2
       ]
     },
     {
-      "id": 139,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant139.jpg",
-      "types": [
-        4
-      ]
-    },
-    {
-      "id": 170,
+      "id": 399,
+      "class": "Archer",
       "star": 4,
-      "class": "Assassin",
-      "name": "Servant170.jpg",
+      "name": "杂贺孙一",
       "types": [
-        4
-      ]
-    },
-    {
-      "id": 199,
-      "star": 5,
-      "class": "Assassin",
-      "name": "Servant199.jpg",
-      "types": [
-        4
-      ]
-    },
-    {
-      "id": 230,
-      "star": 4,
-      "class": "Assassin",
-      "name": "Servant230.jpg",
-      "types": [
-        4
-      ]
-    },
-    {
-      "id": 320,
-      "star": 4,
-      "class": "Ruler",
-      "name": "Servant320.jpg",
-      "types": [
+        2,
         4
       ]
     },
     {
       "id": 403,
-      "star": 5,
       "class": "Avenger",
-      "name": "Servant403.jpg",
+      "star": 5,
+      "name": "源赖光／丑御前",
       "types": [
         4
       ]
     },
     {
-      "id": 289,
+      "id": 406,
+      "class": "Rider",
       "star": 5,
-      "class": "Foreigner",
-      "name": "Servant289.jpg",
+      "name": "安德洛墨达",
       "types": [
+        2,
         4
+      ]
+    },
+    {
+      "id": 413,
+      "class": "Foreigner",
+      "star": 5,
+      "name": "苍崎青子",
+      "types": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 414,
+      "class": "Berserker",
+      "star": 4,
+      "name": "静希草十郎",
+      "types": [
+        1
+      ]
+    },
+    {
+      "id": 415,
+      "class": "Caster",
+      "star": 5,
+      "name": "久远寺有珠",
+      "types": [
+        1
+      ]
+    },
+    {
+      "id": 416,
+      "class": "Alterego",
+      "star": 5,
+      "name": "响＆千键",
+      "types": [
+        1,
+        2,
+        4
+      ],
+      "typeComments": {
+        "1": "战斗形象1、2",
+        "2": "战斗形象1、2"
+      }
+    },
+    {
+      "id": 418,
+      "class": "MoonCancer",
+      "star": 5,
+      "name": "谜之代行者C.I.E.L",
+      "types": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 419,
+      "class": "Lancer",
+      "star": 4,
+      "name": "多布雷尼亚・尼基季奇",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 421,
+      "class": "MoonCancer",
+      "star": 5,
+      "name": "BB迪拜",
+      "types": [
+        0
+      ],
+      "typeComments": {
+        "0": "战斗形象3"
+      }
+    },
+    {
+      "id": 422,
+      "class": "MoonCancer",
+      "star": 4,
+      "name": "特诺奇蒂特兰",
+      "types": [
+        0,
+        2,
+        4
+      ],
+      "typeComments": {
+        "0": "战斗形象3"
+      }
+    },
+    {
+      "id": 426,
+      "class": "Alterego",
+      "star": 5,
+      "name": "Kazuradrop",
+      "types": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 427,
+      "class": "Archer",
+      "star": 5,
+      "name": "图坦卡蒙",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 428,
+      "class": "Lancer",
+      "star": 4,
+      "name": "梵高〔矿工〕",
+      "types": [
+        3
+      ]
+    },
+    {
+      "id": 429,
+      "class": "Berserker",
+      "star": 5,
+      "name": "娄希",
+      "types": [
+        0
+      ],
+      "typeComments": {
+        "0": "战斗形象3"
+      }
+    },
+    {
+      "id": 431,
+      "class": "Pretender",
+      "star": 5,
+      "name": "Phantasmoon",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 433,
+      "class": "Lancer",
+      "star": 5,
+      "name": "比肖内",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 434,
+      "class": "Saber",
+      "star": 4,
+      "name": "黑姬",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 438,
+      "class": "Ruler",
+      "star": 5,
+      "name": "梅塔特隆・贞德",
+      "types": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 439,
+      "class": "Lancer",
+      "star": 4,
+      "name": "阿育王",
+      "types": [
+        2
+      ]
+    },
+    {
+      "id": 440,
+      "class": "Berserker",
+      "star": 5,
+      "name": "莉莉丝",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 441,
+      "class": "Pretender",
+      "star": 5,
+      "name": "堤丰・厄斐墨洛斯",
+      "types": [
+        0,
+        3
       ]
     }
   ]
