@@ -117,9 +117,7 @@ const startMultiSelect = (init: Set<number>) => {
 
 const stopMultiSelect = () => {
   multiSelectMode.value = false;
-  const result = selectedServants.value;
   selectedServants.value = new Set();
-  return result as Set<number>;
 };
 
 const onServantClick = (id: number) => {

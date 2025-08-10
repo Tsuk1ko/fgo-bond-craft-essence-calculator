@@ -12,7 +12,22 @@
         <TypeFilter :selected="selectedTypes" />
       </el-form-item>
       <el-form-item class="options-label" label="设置">
-        <el-check-tag v-model:checked="selectHideServantMode">隐藏从者</el-check-tag>
+        <div class="setting-list">
+          <el-check-tag v-model:checked="selectHideServantMode">隐藏从者</el-check-tag>
+          <el-popconfirm
+            v-if="selectHideServantMode"
+            confirm-button-text="确定"
+            cancel-button-text="取消"
+            title="确定要清除吗？"
+            @confirm="handleClearHideServant"
+          >
+            <template #reference>
+              <el-button class="short-btn" type="danger" 
+                >清除隐藏从者</el-button
+              >
+            </template>
+          </el-popconfirm>
+        </div>
       </el-form-item>
     </el-form>
     <ServantSelector
@@ -20,7 +35,7 @@
       :selected-classes="selectedClasses"
       :selected-stars="selectedStars"
       :selected-types="selectedTypes"
-      :hide-servants="hideServantsSet"
+      :hide-servants="hideServants"
       :disable-hide-servant="selectHideServantMode"
       :disable-badge="selectHideServantMode"
       :disable-tooltip="selectHideServantMode"
@@ -38,28 +53,27 @@ import { useLocalStorage } from '@vueuse/core';
 
 const servantSelector = useTemplateRef('servantSelector');
 
-const selectedClasses = ref(new Set<string>());
-const selectedTypes = ref(new Set<number>());
-const selectedStars = ref(new Set<number>());
+const selectedClasses = useLocalStorage<Set<string>>('selectedClasses', new Set());
+const selectedTypes = useLocalStorage<Set<number>>('selectedTypes', new Set());
+const selectedStars = useLocalStorage<Set<number>>('selectedStars', new Set());
 
 const selectHideServantMode = ref(false);
-const hideServants = useLocalStorage<number[]>('hideServants', []);
-const hideServantsSet = computed({
-  get: () => new Set(hideServants.value),
-  set: v => {
-    hideServants.value = Array.from(v);
-  },
-});
+const hideServants = useLocalStorage<Set<number>>('hideServants', new Set());
 
 watch(selectHideServantMode, v => {
   const comp = servantSelector.value;
   if (!comp) return;
   if (v) {
-    comp.startMultiSelect(hideServantsSet.value);
+    comp.startMultiSelect(hideServants.value);
   } else {
-    hideServantsSet.value = comp.stopMultiSelect();
+    comp.stopMultiSelect();
   }
 });
+
+const handleClearHideServant = () => {
+  hideServants.value.clear();
+  selectHideServantMode.value = false;
+};
 
 const gotoGithub = () => {
   window.open('https://github.com/Tsuk1ko/fgo-bond-craft-essence-calculator', '_blank');
@@ -108,5 +122,15 @@ const gotoGithub = () => {
   :deep(.el-scrollbar__view) {
     padding: 0 64px;
   }
+}
+
+.short-btn {
+  height: 28px;
+  padding: 6px 14px;
+}
+
+.setting-list {
+  display: flex;
+  gap: 16px;
 }
 </style>
