@@ -12,8 +12,8 @@
             class="type-num"
             :key="s.name"
             :value="s.selectedTypes.length"
-            :type="hasTypeComment(s) ? 'warning' : undefined"
-            :hidden="disableBadge || s.selectedTypes.length <= 1"
+            :type="s.hasTypeComment ? 'warning' : undefined"
+            :hidden="disableBadge || (!s.hasTypeComment && s.selectedTypes.length <= 1)"
           >
             <el-tooltip
               popper-class="servant-type-tooltip"
@@ -24,7 +24,7 @@
             >
               <template #content>
                 <div class="type-title">{{ s.name }}</div>
-                <div v-for="{ text, comment } in getTypeTooltip(s)" :key="text">
+                <div v-for="{ text, comment } in s.typeTooltip" :key="text">
                   {{ text }}<span class="type-comment" v-if="comment">{{ comment }}</span>
                 </div>
               </template>
@@ -79,23 +79,20 @@ const filteredServants = computed(() =>
       if (selectedTypes.size && !s.types.some(t => selectedTypes.has(t))) return false;
       return true;
     })
-    .map(s => ({
-      ...s,
-      selectedTypes: selectedTypes.size ? s.types.filter(t => selectedTypes.has(t)) : s.types,
-    })),
+    .map((s: Servant) => {
+      const selected = selectedTypes.size ? s.types.filter(t => selectedTypes.has(t)) : s.types;
+      return {
+        ...s,
+        selectedTypes: selected,
+        hasTypeComment: s.typeComments && selected.some(i => i in s.typeComments!),
+        typeTooltip: selected.map(i => {
+          const text = typeList[i];
+          const comment = s.typeComments?.[i];
+          return { text, comment };
+        }),
+      };
+    }),
 );
-
-type ExtendedServant = Servant & { selectedTypes: number[] };
-
-const getTypeTooltip = ({ selectedTypes, typeComments }: ExtendedServant) =>
-  selectedTypes.map(i => {
-    const text = typeList[i];
-    const comment = typeComments?.[i];
-    return { text, comment };
-  });
-
-const hasTypeComment = ({ selectedTypes, typeComments }: ExtendedServant) =>
-  typeComments && selectedTypes.some(i => i in typeComments);
 
 const groupedServants = computed(() => {
   const groups = Object.entries(groupBy(filteredServants.value, s => s.class));
