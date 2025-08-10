@@ -36,6 +36,7 @@ export default defineConfig({
         theme_color: '#f4f4f5',
         lang: 'zh',
       },
+      includeAssets: ['assets/class/*', 'assets/servant/*'],
     }),
     vue(),
     SvgLoader(),

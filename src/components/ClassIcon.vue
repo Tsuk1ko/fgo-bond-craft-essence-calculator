@@ -12,6 +12,7 @@ const src = computed(() => `assets/class/${name}.png`);
 
 <style scoped lang="scss">
 .class-icon {
+  display: block;
   width: var(--class-icon-size, 45px);
   height: var(--class-icon-size, 45px);
   flex-grow: 0;
