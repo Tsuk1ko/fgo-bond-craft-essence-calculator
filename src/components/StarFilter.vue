@@ -7,10 +7,13 @@
       @change="onChange(i - 1)"
       >{{ i - 1 }}</el-check-tag
     >
+    <ClearBtn @click="selected.clear()" />
   </div>
 </template>
 
 <script setup lang="ts">
+import ClearBtn from './ClearBtn.vue';
+
 const { selected } = defineProps<{
   selected: Set<number>;
 }>();

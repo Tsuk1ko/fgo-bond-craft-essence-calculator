@@ -150,12 +150,13 @@ defineExpose({
   }
 
   &-title {
-    --class-icon-size: 32px;
+    --class-icon-size: 24px;
     display: flex;
-    gap: 16px;
+    gap: 8px;
     align-items: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   &-content {

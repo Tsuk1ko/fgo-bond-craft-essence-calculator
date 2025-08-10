@@ -8,12 +8,14 @@
       :class="{ selected: selected.has(name) }"
       @click="toggleClass(name)"
     />
+    <ClearBtn @click="selected.clear()" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { classList } from '@/utils/data';
 import ClassIcon from './ClassIcon.vue';
+import ClearBtn from './ClearBtn.vue';
 
 const { selected } = defineProps<{
   selected: Set<string>;
@@ -40,5 +42,9 @@ const toggleClass = (name: string) => {
   &:not(.selected) {
     filter: brightness(0.65);
   }
+}
+
+.clear-btn {
+  margin-left: 8px;
 }
 </style>

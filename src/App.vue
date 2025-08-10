@@ -1,6 +1,7 @@
 <template>
+  <el-button class="github-btn" :icon="IconGithub" circle text @click="gotoGithub" />
   <div class="container">
-    <el-form label-width="auto">
+    <el-form class="options-form" label-width="auto">
       <el-form-item class="options-label" label="职阶">
         <ClassFilter :selected="selectedClasses" />
       </el-form-item>
@@ -28,6 +29,7 @@
 </template>
 
 <script setup lang="ts">
+import IconGithub from '@/assets/github.svg';
 import ClassFilter from './components/ClassFilter.vue';
 import StarFilter from './components/StarFilter.vue';
 import TypeFilter from './components/TypeFilter.vue';
@@ -58,6 +60,10 @@ watch(selectHideServantMode, v => {
     hideServantsSet.value = comp.stopMultiSelect();
   }
 });
+
+const gotoGithub = () => {
+  window.open('https://github.com/Tsuk1ko/fgo-bond-craft-essence-calculator', '_blank');
+};
 </script>
 
 <style lang="scss" scoped>
@@ -65,7 +71,7 @@ watch(selectHideServantMode, v => {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 32px 64px;
+  padding: 32px 0;
   width: 100%;
   height: 100%;
 
@@ -81,6 +87,26 @@ watch(selectHideServantMode, v => {
 
   :deep(.el-form-item__label) {
     padding-right: 24px;
+  }
+}
+
+.github-btn {
+  --el-fill-color-light: rgba(0, 0, 0, 0.1);
+  --el-fill-color: rgba(0, 0, 0, 0.15);
+  padding: 4px;
+  font-size: 18px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.options-form {
+  padding: 0 64px;
+}
+
+.servant-selector {
+  :deep(.el-scrollbar__view) {
+    padding: 0 64px;
   }
 }
 </style>
