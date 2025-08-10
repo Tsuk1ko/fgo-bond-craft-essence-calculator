@@ -5,6 +5,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import SvgLoader from 'vite-svg-loader';
+import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -26,6 +27,16 @@ export default defineConfig({
     },
   },
   plugins: [
+    VitePWA({
+      registerType: 'autoUpdate',
+      manifest: {
+        name: 'FGO 羁绊加成礼装计算器',
+        short_name: 'FGO 羁绊加成',
+        background_color: '#f4f4f5',
+        theme_color: '#f4f4f5',
+        lang: 'zh',
+      },
+    }),
     vue(),
     SvgLoader(),
     AutoImport({
