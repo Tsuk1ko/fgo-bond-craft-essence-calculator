@@ -9,7 +9,7 @@ on:
       - 'src/**'
       - 'public/**'
       - 'package.json'
-      - 'vite.config.js'
+      - 'vite.config.ts'
       - '.github/workflows/pages-deploy.yml'
 
 concurrency:
