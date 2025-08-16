@@ -93,6 +93,8 @@ const typeList = [
   '特性：秩序的女性',
 ];
 
+const typeToIndex = Object.fromEntries(typeList.map((t, i) => [t, i]));
+
 const dataList = await Promise.all(
   typeList.map((type, i) => fetchData(i, `https://fgo.wiki/w/${encodeURIComponent(type)}`)),
 );
@@ -172,6 +174,23 @@ dataList.forEach(({ type, servantList }) => {
     }
   });
 });
+
+// 补充所长
+{
+  const types = [
+    typeToIndex['特性：活在当下的人类'],
+    typeToIndex['属性：秩序·善'],
+    typeToIndex['特性：秩序的女性'],
+  ].sort((a, b) => a - b);
+  servantMap[444] = {
+    id: 444,
+    class: 'Beast',
+    star: 5,
+    name: 'U－奥尔加玛丽',
+    types,
+    typeComments: Object.fromEntries(types.map(t => [t, '战斗形象3'])),
+  };
+}
 
 const dataJson = {
   typeList,

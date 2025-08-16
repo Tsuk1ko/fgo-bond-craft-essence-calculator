@@ -188,6 +188,15 @@
       ]
     },
     {
+      "id": 38,
+      "class": "Caster",
+      "star": 3,
+      "name": "库・丘林",
+      "types": [
+        3
+      ]
+    },
+    {
       "id": 43,
       "class": "Assassin",
       "star": 2,
@@ -2196,6 +2205,68 @@
         0,
         3
       ]
+    },
+    {
+      "id": 444,
+      "class": "Beast",
+      "star": 5,
+      "name": "U－奥尔加玛丽",
+      "types": [
+        1,
+        2,
+        4
+      ],
+      "typeComments": {
+        "1": "战斗形象3",
+        "2": "战斗形象3",
+        "4": "战斗形象3"
+      }
+    },
+    {
+      "id": 445,
+      "class": "Saber",
+      "star": 5,
+      "name": "Passionlip",
+      "types": [
+        4
+      ]
+    },
+    {
+      "id": 447,
+      "class": "Berserker",
+      "star": 4,
+      "name": "呼延灼",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 448,
+      "class": "MoonCancer",
+      "star": 5,
+      "name": "玉兔",
+      "types": [
+        0,
+        1
+      ],
+      "typeComments": {
+        "0": "战斗形象1、3",
+        "1": "战斗形象1、2"
+      }
+    },
+    {
+      "id": 449,
+      "class": "Lancer",
+      "star": 4,
+      "name": "美游·艾德费尔特",
+      "types": [
+        1,
+        2,
+        4
+      ],
+      "typeComments": {
+        "2": "战斗形象1、2"
+      }
     }
   ]
 }
