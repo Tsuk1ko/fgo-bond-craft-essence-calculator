@@ -44,7 +44,7 @@
 </template>
 
 <script setup lang="ts">
-import { groupBy } from 'es-toolkit';
+import { groupBy, maxBy } from 'es-toolkit';
 import { classSortIndex, servantList, typeList, type Servant } from '@/utils/data';
 import ClassIcon from './ClassIcon.vue';
 import ServantImg from './ServantImg.vue';
@@ -58,6 +58,7 @@ const {
   disableTooltip = false,
   disableHideServant = false,
   hideServants = new Set(),
+  minTypeNum = 1,
 } = defineProps<{
   selectedClasses?: Set<string>;
   selectedTypes?: Set<number>;
@@ -67,9 +68,10 @@ const {
   disableTooltip?: boolean;
   disableHideServant?: boolean;
   hideServants?: Set<number>;
+  minTypeNum?: number;
 }>();
 
-const filteredServants = computed(() =>
+const filteredServants0 = computed(() =>
   servantList
     .filter(s => {
       if (disableFilter) return true;
@@ -93,6 +95,15 @@ const filteredServants = computed(() =>
       };
     }),
 );
+
+const maxTypeNum = computed(
+  () => maxBy(filteredServants0.value, s => s.selectedTypes.length)?.selectedTypes.length ?? 0,
+);
+
+const filteredServants = computed(() => {
+  const minVal = Math.min(minTypeNum, maxTypeNum.value);
+  return filteredServants0.value.filter(s => s.selectedTypes.length >= minVal);
+});
 
 const groupedServants = computed(() => {
   const groups = Object.entries(groupBy(filteredServants.value, s => s.class));

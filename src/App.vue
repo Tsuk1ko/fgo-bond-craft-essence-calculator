@@ -22,11 +22,13 @@
             @confirm="handleClearHideServant"
           >
             <template #reference>
-              <el-button class="short-btn" type="danger" 
-                >清除隐藏从者</el-button
-              >
+              <el-button class="short-btn" type="danger">清除隐藏从者</el-button>
             </template>
           </el-popconfirm>
+          <div class="min-type-num">
+            只看符合数量≥
+            <el-input-number v-model="minTypeNum" :min="1" :max="typeList.length" />
+          </div>
         </div>
       </el-form-item>
     </el-form>
@@ -39,17 +41,19 @@
       :disable-hide-servant="selectHideServantMode"
       :disable-badge="selectHideServantMode"
       :disable-tooltip="selectHideServantMode"
+      :min-type-num="minTypeNum"
     />
   </div>
 </template>
 
 <script setup lang="ts">
+import { useLocalStorage } from '@vueuse/core';
 import IconGithub from '@/assets/github.svg';
 import ClassFilter from './components/ClassFilter.vue';
 import StarFilter from './components/StarFilter.vue';
 import TypeFilter from './components/TypeFilter.vue';
 import ServantSelector from './components/ServantSelector.vue';
-import { useLocalStorage } from '@vueuse/core';
+import { typeList } from '@/utils/data';
 
 const servantSelector = useTemplateRef('servantSelector');
 
@@ -59,6 +63,7 @@ const selectedStars = useLocalStorage<Set<number>>('selectedStars', new Set());
 
 const selectHideServantMode = ref(false);
 const hideServants = useLocalStorage<Set<number>>('hideServants', new Set());
+const minTypeNum = useLocalStorage<number>('minTypeNum', 1);
 
 watch(selectHideServantMode, v => {
   const comp = servantSelector.value;
@@ -102,6 +107,14 @@ const gotoGithub = () => {
   :deep(.el-form-item__label) {
     padding-right: 24px;
   }
+
+  :deep(.el-form-item__content) {
+    line-height: unset;
+  }
+
+  :deep(.el-input) {
+    --el-input-height: 28px;
+  }
 }
 
 .github-btn {
@@ -132,5 +145,11 @@ const gotoGithub = () => {
 .setting-list {
   display: flex;
   gap: 16px;
+}
+
+.min-type-num {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 </style>
