@@ -2,15 +2,15 @@ name: Pages deploy
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - 'src/**'
-      - 'public/**'
-      - 'package.json'
-      - 'vite.config.ts'
-      - '.github/workflows/pages-deploy.yml'
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'src/**'
+  #     - 'public/**'
+  #     - 'package.json'
+  #     - 'vite.config.ts'
+  #     - '.github/workflows/pages-deploy.yml'
 
 concurrency:
   group: 'pages'
@@ -21,12 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-      - name: Install Dependencies
+      - name: Install dependencies
         run: bun install --frozen-lockfile
       - name: Build
         run: bun run build
