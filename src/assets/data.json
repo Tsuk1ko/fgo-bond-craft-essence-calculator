@@ -787,6 +787,15 @@
       ]
     },
     {
+      "id": 161,
+      "class": "Berserker",
+      "star": 5,
+      "name": "土方岁三",
+      "types": [
+        3
+      ]
+    },
+    {
       "id": 163,
       "class": "Alterego",
       "star": 5,
@@ -2297,12 +2306,30 @@
       ]
     },
     {
+      "id": 453,
+      "class": "Assassin",
+      "star": 5,
+      "name": "河上彦斋",
+      "types": [
+        3
+      ]
+    },
+    {
       "id": 454,
       "class": "Avenger",
       "star": 4,
       "name": "藤堂平助",
       "types": [
         2
+      ]
+    },
+    {
+      "id": 455,
+      "class": "Lancer",
+      "star": 4,
+      "name": "原田左之助",
+      "types": [
+        3
       ]
     }
   ]
