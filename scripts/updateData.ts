@@ -33,7 +33,7 @@ const characterList = await fetchCharacterListData();
 const charMapById = keyBy(characterList, v => v.id);
 const charMapByNameLink = keyBy(characterList, v => v.nameLink);
 
-const fetchData = async (type: number, url: string) => {
+const fetchData = async (url: string) => {
   console.log('fetching:', url);
   const $ = load(await (await fetch(url)).text());
   const $row = $('.tabber__panel[data-title^="持有该"]').first().find('tbody tr:not(.nodesktop)');
@@ -82,21 +82,32 @@ const fetchData = async (type: number, url: string) => {
     });
   });
 
-  return { type, classImgMap, servantList };
+  return { classImgMap, servantList };
 };
 
 const typeList = [
-  '特性：兽科',
-  '特性：活在当下的人类',
-  '属性：秩序·善',
-  '特性：持有灵衣之人',
-  '特性：秩序的女性',
+  ['特性：兽科'],
+  ['特性：活在当下的人类'],
+  ['属性：秩序·善'],
+  ['特性：持有灵衣之人'],
+  ['特性：秩序的女性'],
+  ['副属性：星', '属性：恶'],
 ];
 
-const typeToIndex = Object.fromEntries(typeList.map((t, i) => [t, i]));
-
 const dataList = await Promise.all(
-  typeList.map((type, i) => fetchData(i, `https://fgo.wiki/w/${encodeURIComponent(type)}`)),
+  typeList.map(async (types, i) => {
+    const resultList = await Promise.all(
+      types.map(type => fetchData(`https://fgo.wiki/w/${encodeURIComponent(type)}`)),
+    );
+    return {
+      type: i,
+      classImgMap: Object.assign({}, ...resultList.map(data => data.classImgMap)),
+      servantList: uniqBy(
+        resultList.flatMap(data => data.servantList),
+        s => s.id,
+      ),
+    };
+  }),
 );
 
 const classImgMap: Record<string, string> = Object.assign(
@@ -105,7 +116,7 @@ const classImgMap: Record<string, string> = Object.assign(
 );
 const servantList = uniqBy(
   dataList.flatMap(data => data.servantList),
-  s => s.imgName,
+  s => s.id,
 );
 
 const assetsDir = resolve(import.meta.dir, '../public/assets');
@@ -155,7 +166,7 @@ const servantMap: Record<
       s.id,
       {
         id: s.id,
-        class: s.cls,
+        class: s.cls === 'UnBeast' ? 'Beast' : s.cls,
         star: charData.star,
         name: charData.name,
         types: [],
@@ -175,25 +186,8 @@ dataList.forEach(({ type, servantList }) => {
   });
 });
 
-// 补充所长
-{
-  const types = [
-    typeToIndex['特性：活在当下的人类'],
-    typeToIndex['属性：秩序·善'],
-    typeToIndex['特性：秩序的女性'],
-  ].sort((a, b) => a - b);
-  servantMap[444] = {
-    id: 444,
-    class: 'Beast',
-    star: 5,
-    name: 'U－奥尔加玛丽',
-    types,
-    typeComments: Object.fromEntries(types.map(t => [t, '战斗形象3'])),
-  };
-}
-
 const dataJson = {
-  typeList,
+  typeList: typeList.map(types => types.map(t => t.replace(/^.*：/, '')).join(' | ')),
   servantList: Object.values(servantMap).sort((a, b) => a.id - b.id),
 };
 
