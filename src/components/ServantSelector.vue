@@ -107,7 +107,7 @@ const filteredServants = computed(() => {
 
 const groupedServants = computed(() => {
   const groups = Object.entries(groupBy(filteredServants.value, s => s.class));
-  groups.sort(([a], [b]) => classSortIndex[a] - classSortIndex[b]);
+  groups.sort(([a], [b]) => classSortIndex[a]! - classSortIndex[b]!);
   groups.forEach(([, servants]) => {
     servants.sort((a, b) =>
       a.selectedTypes.length === b.selectedTypes.length || disableFilter
