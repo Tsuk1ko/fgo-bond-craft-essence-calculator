@@ -13,7 +13,16 @@
       </el-form-item>
       <el-form-item class="options-label" label="设置">
         <div class="setting-list">
-          <el-check-tag v-model:checked="selectHideServantMode">隐藏从者</el-check-tag>
+          <div class="check-tag-group">
+            <el-check-tag v-model:checked="hideServantMode">隐藏从者</el-check-tag>
+            <el-check-tag
+              v-model:checked="selectHideServantMode"
+              type="warning"
+              style="line-height: 0; padding: 7px 11px"
+            >
+              <el-icon><Setting /></el-icon>
+            </el-check-tag>
+          </div>
           <el-popconfirm
             v-if="selectHideServantMode"
             confirm-button-text="确定"
@@ -26,7 +35,7 @@
             </template>
           </el-popconfirm>
           <div class="min-type-num">
-            只看符合数量≥
+            只看≥
             <el-input-number v-model="minTypeNum" :min="1" :max="typeList.length" />
           </div>
         </div>
@@ -37,30 +46,47 @@
       :selected-classes="selectedClasses"
       :selected-stars="selectedStars"
       :selected-types="selectedTypes"
-      :hide-servants="hideServants"
+      :hide-servants="hideServantMode ? hideServants : undefined"
       :disable-hide-servant="selectHideServantMode"
       :disable-badge="selectHideServantMode"
       :disable-tooltip="selectHideServantMode"
       :min-type-num="minTypeNum"
+      @item-contextmenu="handleItemContextmenu"
     />
+    <ContextMenu ref="contextMenuRef">
+      <el-dropdown-item :icon="Compass" @click="handleMenuClickHideServant"
+        >前往 WIKI</el-dropdown-item
+      >
+      <el-dropdown-item
+        v-if="hideServantMode && !selectHideServantMode"
+        :icon="Hide"
+        @click="handleMenuClickHideServant"
+        >隐藏该从者</el-dropdown-item
+      >
+    </ContextMenu>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useLocalStorage } from '@vueuse/core';
+import { Setting, Hide, Compass } from '@element-plus/icons-vue';
 import IconGithub from '@/assets/github.svg';
 import ClassFilter from './components/ClassFilter.vue';
 import StarFilter from './components/StarFilter.vue';
 import TypeFilter from './components/TypeFilter.vue';
 import ServantSelector from './components/ServantSelector.vue';
+import ContextMenu from './components/ContextMenu.vue';
 import { typeList } from '@/utils/data';
+import { isNil } from 'es-toolkit';
 
 const servantSelector = useTemplateRef('servantSelector');
+const contextMenuRef = useTemplateRef('contextMenuRef');
 
 const selectedClasses = useLocalStorage<Set<string>>('selectedClasses', new Set());
 const selectedTypes = useLocalStorage<Set<number>>('selectedTypes', new Set());
 const selectedStars = useLocalStorage<Set<number>>('selectedStars', new Set());
 
+const hideServantMode = useLocalStorage('hideServantMode', true);
 const selectHideServantMode = ref(false);
 const hideServants = useLocalStorage<Set<number>>('hideServants', new Set());
 const minTypeNum = useLocalStorage<number>('minTypeNum', 1);
@@ -78,6 +104,18 @@ watch(selectHideServantMode, v => {
 const handleClearHideServant = () => {
   hideServants.value.clear();
   selectHideServantMode.value = false;
+};
+
+let curContextMenuServantId: number | undefined;
+
+const handleItemContextmenu = (event: MouseEvent, id: number) => {
+  curContextMenuServantId = id;
+  contextMenuRef.value?.open(event);
+};
+
+const handleMenuClickHideServant = () => {
+  if (isNil(curContextMenuServantId)) return;
+  hideServants.value.add(curContextMenuServantId);
 };
 
 const gotoGithub = () => {
@@ -151,5 +189,17 @@ const gotoGithub = () => {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.check-tag-group {
+  display: flex;
+  .el-check-tag:first-of-type {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .el-check-tag:last-of-type {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 </style>

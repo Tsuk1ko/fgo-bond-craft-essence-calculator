@@ -13,6 +13,7 @@
     "update-data": "bun run ./scripts/updateData.ts"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
     "@supercharge/promise-pool": "^3.2.0",
     "@vueuse/core": "^13.9.0",
     "cheerio": "^1.1.2",

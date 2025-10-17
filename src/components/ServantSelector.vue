@@ -28,7 +28,12 @@
                   {{ text }}<span class="type-comment" v-if="comment">{{ comment }}</span>
                 </div>
               </template>
-              <ServantImg :id="s.id" :name="s.name" @click="onServantClick(s.id)" />
+              <ServantImg
+                :id="s.id"
+                :name="s.name"
+                @click="onServantClick(s.id)"
+                @contextmenu.prevent="emit('item-contextmenu', $event, s.id)"
+              />
             </el-tooltip>
             <el-checkbox
               v-if="multiSelectMode"
@@ -48,6 +53,10 @@ import { groupBy, maxBy } from 'es-toolkit';
 import { classSortIndex, servantList, typeList, type Servant } from '@/utils/data';
 import ClassIcon from './ClassIcon.vue';
 import ServantImg from './ServantImg.vue';
+
+const emit = defineEmits<{
+  (e: 'item-contextmenu', event: MouseEvent, id: number): void;
+}>();
 
 const {
   selectedClasses = new Set(),
