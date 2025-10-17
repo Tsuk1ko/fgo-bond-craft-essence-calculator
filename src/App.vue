@@ -54,9 +54,7 @@
       @item-contextmenu="handleItemContextmenu"
     />
     <ContextMenu ref="contextMenuRef">
-      <el-dropdown-item :icon="Compass" @click="handleMenuClickHideServant"
-        >前往 WIKI</el-dropdown-item
-      >
+      <el-dropdown-item :icon="Compass" @click="handleGotoWiki">前往 WIKI</el-dropdown-item>
       <el-dropdown-item
         v-if="hideServantMode && !selectHideServantMode"
         :icon="Hide"
@@ -72,7 +70,7 @@ import { Compass, Hide, Setting } from '@element-plus/icons-vue';
 import { useLocalStorage } from '@vueuse/core';
 import { isNil } from 'es-toolkit';
 import IconGithub from '@/assets/github.svg';
-import { typeList } from '@/utils/data';
+import { servantMap, typeList } from '@/utils/data';
 import ClassFilter from './components/ClassFilter.vue';
 import ContextMenu from './components/ContextMenu.vue';
 import ServantSelector from './components/ServantSelector.vue';
@@ -116,6 +114,11 @@ const handleItemContextmenu = (event: MouseEvent, id: number) => {
 const handleMenuClickHideServant = () => {
   if (isNil(curContextMenuServantId)) return;
   hideServants.value.add(curContextMenuServantId);
+};
+
+const handleGotoWiki = () => {
+  if (isNil(curContextMenuServantId)) return;
+  window.open(`https://fgo.wiki/w/${servantMap[curContextMenuServantId]!.nameLink}`, '_blank');
 };
 
 const gotoGithub = () => {

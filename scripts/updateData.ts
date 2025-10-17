@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import PromisePool from '@supercharge/promise-pool';
 import { write } from 'bun';
 import { load } from 'cheerio';
-import { keyBy, uniqBy } from 'es-toolkit';
+import { keyBy, pick, uniqBy } from 'es-toolkit';
 import { tinyPNG } from './utils/tinypng';
 
 const fetchCharacterListData = async () => {
@@ -167,8 +167,7 @@ const servantMap: Record<
       {
         id: s.id,
         class: s.cls === 'UnBeast' ? 'Beast' : s.cls,
-        star: charData.star,
-        name: charData.name,
+        ...pick(charData, ['star', 'name', 'nameLink']),
         types: [],
       },
     ];
