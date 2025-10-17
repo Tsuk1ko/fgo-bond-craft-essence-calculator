@@ -68,16 +68,16 @@
 </template>
 
 <script setup lang="ts">
+import { Compass, Hide, Setting } from '@element-plus/icons-vue';
 import { useLocalStorage } from '@vueuse/core';
-import { Setting, Hide, Compass } from '@element-plus/icons-vue';
+import { isNil } from 'es-toolkit';
 import IconGithub from '@/assets/github.svg';
+import { typeList } from '@/utils/data';
 import ClassFilter from './components/ClassFilter.vue';
+import ContextMenu from './components/ContextMenu.vue';
+import ServantSelector from './components/ServantSelector.vue';
 import StarFilter from './components/StarFilter.vue';
 import TypeFilter from './components/TypeFilter.vue';
-import ServantSelector from './components/ServantSelector.vue';
-import ContextMenu from './components/ContextMenu.vue';
-import { typeList } from '@/utils/data';
-import { isNil } from 'es-toolkit';
 
 const servantSelector = useTemplateRef('servantSelector');
 const contextMenuRef = useTemplateRef('contextMenuRef');

@@ -1,7 +1,7 @@
 <template>
   <div class="servant-selector" :class="{ 'multi-select-mode': multiSelectMode }">
     <el-scrollbar>
-      <div class="servant-group" v-for="[className, group] in groupedServants" :key="className">
+      <div v-for="[className, group] in groupedServants" :key="className" class="servant-group">
         <div class="servant-group-title">
           <ClassIcon :name="className" />
           {{ className }}
@@ -9,8 +9,8 @@
         <div class="servant-group-content">
           <el-badge
             v-for="s in group"
-            class="type-num"
             :key="s.name"
+            class="type-num"
             :value="s.selectedTypes.length"
             :type="s.hasTypeComment ? 'warning' : undefined"
             :hidden="disableBadge || (!s.hasTypeComment && s.selectedTypes.length <= 1)"
@@ -25,14 +25,14 @@
               <template #content>
                 <div class="type-title">{{ s.name }}</div>
                 <div v-for="{ text, comment } in s.typeTooltip" :key="text">
-                  {{ text }}<span class="type-comment" v-if="comment">{{ comment }}</span>
+                  {{ text }}<span v-if="comment" class="type-comment">{{ comment }}</span>
                 </div>
               </template>
               <ServantImg
                 :id="s.id"
                 :name="s.name"
                 @click="onServantClick(s.id)"
-                @contextmenu.prevent="emit('item-contextmenu', $event, s.id)"
+                @contextmenu.prevent="emit('itemContextmenu', $event, s.id)"
               />
             </el-tooltip>
             <el-checkbox
@@ -50,13 +50,10 @@
 
 <script setup lang="ts">
 import { groupBy, maxBy } from 'es-toolkit';
-import { classSortIndex, servantList, typeList, type Servant } from '@/utils/data';
+import { classSortIndex, servantList, typeList } from '@/utils/data';
+import type { Servant } from '@/utils/data';
 import ClassIcon from './ClassIcon.vue';
 import ServantImg from './ServantImg.vue';
-
-const emit = defineEmits<{
-  (e: 'item-contextmenu', event: MouseEvent, id: number): void;
-}>();
 
 const {
   selectedClasses = new Set(),
@@ -78,6 +75,10 @@ const {
   disableHideServant?: boolean;
   hideServants?: Set<number>;
   minTypeNum?: number;
+}>();
+
+const emit = defineEmits<{
+  (e: 'itemContextmenu', event: MouseEvent, id: number): void;
 }>();
 
 const filteredServants0 = computed(() =>
