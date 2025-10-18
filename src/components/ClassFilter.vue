@@ -42,9 +42,9 @@ const toggleClass = (name: string) => {
   &:not(.selected) {
     filter: brightness(0.65);
   }
-}
 
-.clear-btn {
-  margin-left: 8px;
+  @media (max-width: 768px) {
+    --class-icon-size: 28px;
+  }
 }
 </style>

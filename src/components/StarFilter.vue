@@ -3,6 +3,7 @@
     <el-check-tag
       v-for="i in 6"
       :key="i"
+      class="star-filter-check-tag"
       :checked="selected.has(i - 1)"
       @change="onChange(i - 1)"
       >{{ i - 1 }}</el-check-tag
@@ -28,6 +29,11 @@ const onChange = (value: number) => {
 .star-filter {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 8px;
+}
+
+.star-filter-check-tag{
+  min-width: 32px;
+  text-align: center;
 }
 </style>

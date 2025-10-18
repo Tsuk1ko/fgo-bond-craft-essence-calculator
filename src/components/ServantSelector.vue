@@ -228,4 +228,15 @@ defineExpose({
     }
   }
 }
+
+@media (max-width: 768px) {
+  .servant-selector {
+    --servant-img-size: 48px;
+  }
+
+  .servant-group,
+  .servant-group-content {
+    gap: 12px;
+  }
+}
 </style>

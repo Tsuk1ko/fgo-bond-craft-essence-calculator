@@ -29,6 +29,6 @@ const onChange = (value: number) => {
 .type-filter {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 8px;
 }
 </style>
