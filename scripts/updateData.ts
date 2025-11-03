@@ -35,8 +35,9 @@ const charMapByNameLink = keyBy(characterList, v => v.nameLink);
 
 const fetchData = async (url: string) => {
   console.log('fetching:', url);
-  const $ = load(await (await fetch(url)).text());
-  const $row = $('.tabber__panel[data-title^="持有该"]').first().find('tbody tr:not(.nodesktop)');
+  const html = await (await fetch(url)).text();
+  const $ = load(html);
+  const $row = $('.tabber__panel[id^="tabber-持有该"]').first().find('tbody tr:not(.nodesktop)');
   const $comment = $('#mw-content-text ul:contains(仅有):contains(持有) li');
 
   const commentMap: Record<number, string | undefined> = {};
@@ -70,14 +71,15 @@ const fetchData = async (url: string) => {
     const $classImg = $tr.find('th img');
     const className = $classImg.parent().attr('title')!;
     if (!className.match(/^\w+$/)) return;
-    const classImg = $classImg.attr('data-src')!;
+    const classImg = $classImg.attr('src')!;
     classImgMap[className] = classImg;
 
     $tr.find('td img').each((i, el) => {
       const $img = $(el);
-      const imgName = $img.attr('alt')!;
-      const imgUrl = $img.attr('data-src')!;
-      const id = parseInt(/\d+/.exec(imgName)![0]);
+      const imgUrl = $img.attr('src')!;
+      const idStr = /\d+/.exec($img.parent().attr('title')!)![0];
+      const id = parseInt(idStr);
+      const imgName = `Servant${idStr}.jpg`;
       servantList.push({ id, cls: className, imgName, imgUrl, typeComment: commentMap[id] });
     });
   });
