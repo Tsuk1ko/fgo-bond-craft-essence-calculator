@@ -9,7 +9,7 @@
         <div class="servant-group-content">
           <el-badge
             v-for="s in group"
-            :key="s.name"
+            :key="s.id"
             class="type-num"
             :value="s.selectedTypes.length"
             :type="s.hasTypeComment ? 'warning' : undefined"
