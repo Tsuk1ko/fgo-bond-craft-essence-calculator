@@ -282,17 +282,6 @@
       ]
     },
     {
-      "id": 35,
-      "class": "Caster",
-      "star": 3,
-      "name": "梅菲斯托费勒斯",
-      "nameLink": "梅菲斯托费勒斯",
-      "types": [
-        5,
-        6
-      ]
-    },
-    {
       "id": 36,
       "class": "Caster",
       "star": 1,
@@ -412,17 +401,6 @@
       "name": "赫拉克勒斯",
       "nameLink": "赫拉克勒斯",
       "types": [
-        6
-      ]
-    },
-    {
-      "id": 49,
-      "class": "Berserker",
-      "star": 3,
-      "name": "吕布奉先",
-      "nameLink": "吕布奉先",
-      "types": [
-        5,
         6
       ]
     },
@@ -793,17 +771,6 @@
       "types": [
         1,
         6
-      ]
-    },
-    {
-      "id": 93,
-      "class": "Ruler",
-      "star": 5,
-      "name": "天草四郎",
-      "nameLink": "天草四郎",
-      "types": [
-        2,
-        3
       ]
     },
     {
@@ -1401,17 +1368,6 @@
       ]
     },
     {
-      "id": 157,
-      "class": "Archer",
-      "star": 4,
-      "name": "卫宫〔Alter〕",
-      "nameLink": "卫宫〔Alter〕",
-      "types": [
-        5,
-        6
-      ]
-    },
-    {
       "id": 158,
       "class": "Avenger",
       "star": 4,
@@ -1494,16 +1450,6 @@
       "star": 4,
       "name": "铃鹿御前",
       "nameLink": "铃鹿御前",
-      "types": [
-        5
-      ]
-    },
-    {
-      "id": 167,
-      "class": "Alterego",
-      "star": 5,
-      "name": "杀生院祈荒",
-      "nameLink": "杀生院祈荒",
       "types": [
         5
       ]
@@ -1715,16 +1661,6 @@
       "nameLink": "俄刻阿诺斯的Caster",
       "types": [
         6
-      ]
-    },
-    {
-      "id": 195,
-      "class": "Foreigner",
-      "star": 5,
-      "name": "阿比盖尔・威廉姆斯",
-      "nameLink": "阿比盖尔·威廉姆斯",
-      "types": [
-        5
       ]
     },
     {
@@ -3992,6 +3928,16 @@
       "nameLink": "终结之伊丽莎白",
       "types": [
         0,
+        5
+      ]
+    },
+    {
+      "id": 459,
+      "class": "Pretender",
+      "star": 5,
+      "name": "所罗门",
+      "nameLink": "所罗门(Pretender)",
+      "types": [
         5
       ]
     }
