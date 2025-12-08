@@ -1455,6 +1455,16 @@
       ]
     },
     {
+      "id": 167,
+      "class": "Alterego",
+      "star": 5,
+      "name": "杀生院祈荒",
+      "nameLink": "杀生院祈荒",
+      "types": [
+        5
+      ]
+    },
+    {
       "id": 169,
       "class": "Caster",
       "star": 5,
