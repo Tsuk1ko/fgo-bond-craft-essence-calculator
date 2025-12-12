@@ -282,6 +282,17 @@
       ]
     },
     {
+      "id": 35,
+      "class": "Caster",
+      "star": 3,
+      "name": "梅菲斯托费勒斯",
+      "nameLink": "梅菲斯托费勒斯",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
       "id": 36,
       "class": "Caster",
       "star": 1,
@@ -401,6 +412,17 @@
       "name": "赫拉克勒斯",
       "nameLink": "赫拉克勒斯",
       "types": [
+        6
+      ]
+    },
+    {
+      "id": 49,
+      "class": "Berserker",
+      "star": 3,
+      "name": "吕布奉先",
+      "nameLink": "吕布奉先",
+      "types": [
+        5,
         6
       ]
     },
@@ -771,6 +793,16 @@
       "types": [
         1,
         6
+      ]
+    },
+    {
+      "id": 93,
+      "class": "Ruler",
+      "star": 5,
+      "name": "天草四郎",
+      "nameLink": "天草四郎",
+      "types": [
+        3
       ]
     },
     {
@@ -1368,6 +1400,17 @@
       ]
     },
     {
+      "id": 157,
+      "class": "Archer",
+      "star": 4,
+      "name": "卫宫〔Alter〕",
+      "nameLink": "卫宫〔Alter〕",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
       "id": 158,
       "class": "Avenger",
       "star": 4,
@@ -1671,6 +1714,16 @@
       "nameLink": "俄刻阿诺斯的Caster",
       "types": [
         6
+      ]
+    },
+    {
+      "id": 195,
+      "class": "Foreigner",
+      "star": 5,
+      "name": "阿比盖尔・威廉姆斯",
+      "nameLink": "阿比盖尔·威廉姆斯",
+      "types": [
+        5
       ]
     },
     {
@@ -2948,6 +3001,7 @@
       "name": "詹姆斯・莫里亚蒂",
       "nameLink": "詹姆斯·莫里亚蒂(Ruler)",
       "types": [
+        3,
         5
       ]
     },
