@@ -24,7 +24,11 @@
             >
               <template #content>
                 <div class="type-title">{{ s.name }}</div>
-                <div v-for="{ text, comment } in s.typeTooltip" :key="text">
+                <div
+                  v-for="{ text, comment, disabled } in s.typeTooltip"
+                  :key="text"
+                  :class="{ 'type-disabled': disabled }"
+                >
                   {{ text }}<span v-if="comment" class="type-comment">{{ comment }}</span>
                 </div>
               </template>
@@ -92,16 +96,21 @@ const filteredServants0 = computed(() =>
       return true;
     })
     .map((s: Servant) => {
-      const selected = selectedTypes.size ? s.types.filter(t => selectedTypes.has(t)) : s.types;
+      const hasSelectedTypes = Boolean(selectedTypes.size);
+      const selected = hasSelectedTypes ? s.types.filter(t => selectedTypes.has(t)) : s.types;
+      const { firstTypeTooltip = [], secondTypeTooltip = [] } = groupBy(
+        s.types.map(i => ({
+          text: typeList[i],
+          comment: s.typeComments?.[i],
+          disabled: hasSelectedTypes ? !selectedTypes.has(i) : false,
+        })),
+        item => (item.disabled ? 'secondTypeTooltip' : 'firstTypeTooltip'),
+      );
       return {
         ...s,
         selectedTypes: selected,
         hasTypeComment: s.typeComments && selected.some(i => i in s.typeComments!),
-        typeTooltip: selected.map(i => {
-          const text = typeList[i];
-          const comment = s.typeComments?.[i];
-          return { text, comment };
-        }),
+        typeTooltip: [...firstTypeTooltip, ...secondTypeTooltip],
       };
     }),
 );
@@ -210,6 +219,10 @@ defineExpose({
 
 .type-num {
   line-height: 1;
+}
+
+.type-disabled {
+  opacity: 0.4;
 }
 
 .type-comment {
