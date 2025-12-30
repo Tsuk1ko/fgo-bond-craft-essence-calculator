@@ -19,6 +19,12 @@
             :filtered-servants="servantSelector?.filteredServants"
           />
         </el-form-item>
+        <el-form-item class="options-label" label="组合">
+          <TypeCombination
+            :servants="servantSelector?.filteredServantsWithoutTypes"
+            @apply-type-filter="handleApplyTypeFilter"
+          />
+        </el-form-item>
         <el-form-item class="options-label" label="设置">
           <div class="setting-list">
             <div class="check-tag-group">
@@ -92,6 +98,7 @@ import ClassFilter from './components/ClassFilter.vue';
 import ContextMenu from './components/ContextMenu.vue';
 import ServantSelector from './components/ServantSelector.vue';
 import StarFilter from './components/StarFilter.vue';
+import TypeCombination from './components/TypeCombination.vue';
 import TypeFilter from './components/TypeFilter.vue';
 
 const servantSelector = useTemplateRef('servantSelector');
@@ -142,6 +149,10 @@ const handleGotoWiki = () => {
 
 const gotoGithub = () => {
   window.open('https://github.com/Tsuk1ko/fgo-bond-craft-essence-calculator', '_blank');
+};
+
+const handleApplyTypeFilter = (comb: number[]) => {
+  selectedTypes.value = new Set(comb);
 };
 </script>
 

@@ -84,16 +84,19 @@ const emit = defineEmits<{
   (e: 'itemContextmenu', event: MouseEvent, id: number): void;
 }>();
 
-const filteredServants0 = computed(() =>
-  servantList
-    .filter(s => {
-      if (disableFilter) return true;
-      if (!disableHideServant && hideServants.has(s.id)) return false;
-      if (selectedClasses.size && !selectedClasses.has(s.class)) return false;
-      if (selectedStars.size && !selectedStars.has(s.star)) return false;
-      if (selectedTypes.size && !s.types.some(t => selectedTypes.has(t))) return false;
-      return true;
-    })
+const filteredServantsWithoutTypes = computed(() =>
+  servantList.filter(s => {
+    if (disableFilter) return true;
+    if (!disableHideServant && hideServants.has(s.id)) return false;
+    if (selectedClasses.size && !selectedClasses.has(s.class)) return false;
+    if (selectedStars.size && !selectedStars.has(s.star)) return false;
+    return true;
+  }),
+);
+
+const filteredServantsFull = computed(() =>
+  filteredServantsWithoutTypes.value
+    .filter(s => !selectedTypes.size || s.types.some(t => selectedTypes.has(t)))
     .map((s: Servant) => {
       const hasSelectedTypes = Boolean(selectedTypes.size);
       const selected = hasSelectedTypes ? s.types.filter(t => selectedTypes.has(t)) : s.types;
@@ -115,12 +118,12 @@ const filteredServants0 = computed(() =>
 );
 
 const maxTypeNum = computed(
-  () => maxBy(filteredServants0.value, s => s.selectedTypes.length)?.selectedTypes.length ?? 0,
+  () => maxBy(filteredServantsFull.value, s => s.selectedTypes.length)?.selectedTypes.length ?? 0,
 );
 
 const filteredServants = computed(() => {
   const minVal = Math.min(minTypeNum, maxTypeNum.value);
-  return filteredServants0.value.filter(s => s.selectedTypes.length >= minVal);
+  return filteredServantsFull.value.filter(s => s.selectedTypes.length >= minVal);
 });
 
 const groupedServants = computed(() => {
@@ -157,6 +160,7 @@ const onServantClick = (id: number) => {
 
 defineExpose({
   filteredServants,
+  filteredServantsWithoutTypes,
   startMultiSelect,
   stopMultiSelect,
 });
