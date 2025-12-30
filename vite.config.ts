@@ -10,6 +10,9 @@ import SvgLoader from 'vite-svg-loader';
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '',
+  server: {
+    host: '0.0.0.0',
+  },
   build: {
     rollupOptions: {
       output: {
@@ -49,9 +52,7 @@ export default defineConfig({
     }),
     Components({
       dirs: [],
-      resolvers: [
-        ElementPlusResolver(),
-      ],
+      resolvers: [ElementPlusResolver()],
       dts: './src/components.d.ts',
     }),
   ],
