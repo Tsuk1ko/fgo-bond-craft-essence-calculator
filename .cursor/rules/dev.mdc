@@ -1,0 +1,9 @@
+---
+alwaysApply: true
+---
+
+- 组件库使用 Element Plus
+- 灵活运用 es-toolkit, vueuse
+- 使用 Vue 的 Composition API 时不需要导入，因为项目已经配置了 unplugin-auto-import
+- 使用 Element Plus 组件时不需要导入，因为项目已经配置了 unplugin-vue-components
+- 函数默认使用箭头函数形式
