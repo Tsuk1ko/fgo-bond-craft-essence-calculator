@@ -10,7 +10,6 @@
           <el-badge
             v-for="s in group"
             :key="s.id"
-            class="type-num"
             :value="s.selectedTypes.length"
             :type="s.hasTypeComment ? 'warning' : undefined"
             :hidden="disableBadge || (!s.hasTypeComment && s.selectedTypes.length <= 1)"
@@ -157,6 +156,7 @@ const onServantClick = (id: number) => {
 };
 
 defineExpose({
+  filteredServants,
   startMultiSelect,
   stopMultiSelect,
 });
@@ -215,10 +215,6 @@ defineExpose({
   color: var(--el-color-primary);
   filter: brightness(1.3);
   font-weight: bold;
-}
-
-.type-num {
-  line-height: 1;
 }
 
 .type-disabled {

@@ -14,7 +14,10 @@
           <StarFilter :selected="selectedStars" />
         </el-form-item>
         <el-form-item class="options-label" label="属性">
-          <TypeFilter :selected="selectedTypes" />
+          <TypeFilter
+            :selected="selectedTypes"
+            :filtered-servants="servantSelector?.filteredServants"
+          />
         </el-form-item>
         <el-form-item class="options-label" label="设置">
           <div class="setting-list">
@@ -276,6 +279,10 @@ const gotoGithub = () => {
 
 .el-input {
   --el-input-height: 28px;
+}
+
+.el-badge__content {
+  line-height: 1;
 }
 
 @media (max-width: 992px) {
