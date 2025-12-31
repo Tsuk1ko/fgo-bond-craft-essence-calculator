@@ -16,12 +16,12 @@
         <el-form-item class="options-label" label="属性">
           <TypeFilter
             :selected="selectedTypes"
-            :filtered-servants="servantSelector?.filteredServants"
+            :filtered-servants="servantSelectorRef?.filteredServants"
           />
         </el-form-item>
         <el-form-item class="options-label" label="组合">
           <TypeCombination
-            :servants="servantSelector?.filteredServantsWithoutTypes"
+            :servants="servantSelectorRef?.filteredServantsWithoutTypes"
             @apply-type-filter="handleApplyTypeFilter"
           />
         </el-form-item>
@@ -74,49 +74,41 @@
       :disable-badge="selectHideServantMode"
       :disable-tooltip="selectHideServantMode"
       :min-type-num="minTypeNum"
-      @item-contextmenu="handleItemContextmenu"
+      @item-contextmenu="(...args) => contextMenuRef?.open(...args)"
     />
-    <ContextMenu ref="contextMenuRef">
-      <el-dropdown-item :icon="Compass" @click="handleGotoWiki">前往 WIKI</el-dropdown-item>
-      <el-dropdown-item
-        v-if="hideServantMode && !selectHideServantMode"
-        :icon="Hide"
-        @click="handleMenuClickHideServant"
-        >隐藏该从者</el-dropdown-item
-      >
-    </ContextMenu>
+    <ServantContextMenu ref="contextMenuRef" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ArrowDown, ArrowUp, Compass, Hide, Setting } from '@element-plus/icons-vue';
-import { useLocalStorage } from '@vueuse/core';
-import { isNil } from 'es-toolkit';
+import { ArrowDown, ArrowUp, Setting } from '@element-plus/icons-vue';
+import { storeToRefs } from 'pinia';
 import IconGithub from '@/assets/github.svg';
-import { servantMap, typeList } from '@/utils/data';
+import { typeList } from '@/utils/data';
 import ClassFilter from './components/ClassFilter.vue';
-import ContextMenu from './components/ContextMenu.vue';
+import ServantContextMenu from './components/ServantContextMenu.vue';
 import ServantSelector from './components/ServantSelector.vue';
 import StarFilter from './components/StarFilter.vue';
 import TypeCombination from './components/TypeCombination.vue';
 import TypeFilter from './components/TypeFilter.vue';
+import { useSettingsStore } from './stores/settings';
 
-const servantSelector = useTemplateRef('servantSelector');
+const servantSelectorRef = useTemplateRef('servantSelector');
 const contextMenuRef = useTemplateRef('contextMenuRef');
 
-const selectedClasses = useLocalStorage<Set<string>>('selectedClasses', new Set());
-const selectedTypes = useLocalStorage<Set<number>>('selectedTypes', new Set());
-const selectedStars = useLocalStorage<Set<number>>('selectedStars', new Set());
-
-const hideServantMode = useLocalStorage('hideServantMode', true);
-const selectHideServantMode = ref(false);
-const hideServants = useLocalStorage<Set<number>>('hideServants', new Set());
-const minTypeNum = useLocalStorage<number>('minTypeNum', 1);
-
-const isOptionsFormCollapsed = useLocalStorage('isOptionsFormCollapsed', false);
+const {
+  selectedClasses,
+  selectedTypes,
+  selectedStars,
+  hideServantMode,
+  hideServants,
+  minTypeNum,
+  isOptionsFormCollapsed,
+  selectHideServantMode,
+} = storeToRefs(useSettingsStore());
 
 watch(selectHideServantMode, v => {
-  const comp = servantSelector.value;
+  const comp = servantSelectorRef.value;
   if (!comp) return;
   if (v) {
     comp.startMultiSelect(hideServants.value);
@@ -128,23 +120,6 @@ watch(selectHideServantMode, v => {
 const handleClearHideServant = () => {
   hideServants.value.clear();
   selectHideServantMode.value = false;
-};
-
-let curContextMenuServantId: number | undefined;
-
-const handleItemContextmenu = (event: MouseEvent, id: number) => {
-  curContextMenuServantId = id;
-  contextMenuRef.value?.open(event);
-};
-
-const handleMenuClickHideServant = () => {
-  if (isNil(curContextMenuServantId)) return;
-  hideServants.value.add(curContextMenuServantId);
-};
-
-const handleGotoWiki = () => {
-  if (isNil(curContextMenuServantId)) return;
-  window.open(`https://fgo.wiki/w/${servantMap[curContextMenuServantId]!.nameLink}`, '_blank');
 };
 
 const gotoGithub = () => {
