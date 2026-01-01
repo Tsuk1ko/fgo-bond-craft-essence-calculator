@@ -1,3 +1,16 @@
+:root {
+  --page-x-padding: 64px;
+  --page-y-padding: 32px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
 html,
 body {
   margin: 0;
@@ -13,10 +26,64 @@ body,
   overflow: hidden;
 }
 
-* {
-  box-sizing: border-box;
+.el-form {
+  --el-form-label-font-size: 18px;
+
+  &-item__label {
+    padding-right: 24px;
+  }
 }
 
-img {
-  -webkit-user-drag: none;
+.el-input {
+  --el-input-height: 28px;
+}
+
+.el-badge__content {
+  line-height: 1;
+}
+
+@media (max-width: 992px) {
+  :root {
+    --page-x-padding: 32px;
+    --page-y-padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-x-padding: 24px;
+    --page-y-padding: 16px;
+    --el-font-size-base: 12px;
+  }
+
+  .el-form {
+    --el-form-label-font-size: 14px;
+
+    &-item__label {
+      height: auto;
+      line-height: 24px;
+      padding-right: 16px;
+    }
+  }
+
+  .el-check-tag {
+    padding: 6px 9px;
+  }
+
+  .el-input {
+    --el-input-height: 24px;
+
+    &-number {
+      width: 120px;
+    }
+  }
+}
+
+.el-check-tag,
+.no-wrap {
+  text-wrap: nowrap;
+}
+
+.font-size-base {
+  font-size: var(--el-font-size-base);
 }

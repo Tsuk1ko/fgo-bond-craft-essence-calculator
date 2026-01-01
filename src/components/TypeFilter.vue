@@ -9,13 +9,16 @@
       type="primary"
       badge-class="type-filter-badge"
     >
-      <el-check-tag :checked="selected.has(i)" @change="onChange(i)">{{ name }}</el-check-tag>
+      <el-check-tag :checked="selected.has(i)" @change="toggleSet(selected, i)">{{
+        name
+      }}</el-check-tag>
     </el-badge>
     <ClearBtn @click="selected.clear()" />
   </div>
 </template>
 
 <script setup lang="ts">
+import { toggleSet } from '@/utils/common';
 import { servantMap, typeList } from '@/utils/data';
 import type { Servant } from '@/utils/data';
 import ClearBtn from './ClearBtn.vue';
@@ -34,11 +37,6 @@ const numbers = computed(() => {
   });
   return data;
 });
-
-const onChange = (value: number) => {
-  if (selected.has(value)) selected.delete(value);
-  else selected.add(value);
-};
 </script>
 
 <style lang="scss" scoped>

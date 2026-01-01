@@ -1,5 +1,12 @@
 <template>
-  <el-button class="github-btn" :icon="IconGithub" circle text @click="gotoGithub" />
+  <el-button
+    class="github-btn"
+    :class="{ hidden: isOptionsFormCollapsed }"
+    :icon="IconGithub"
+    circle
+    text
+    @click="gotoGithub"
+  />
   <div class="container">
     <div class="options-form-wrapper">
       <el-form
@@ -16,12 +23,12 @@
         <el-form-item class="options-label" label="属性">
           <TypeFilter
             :selected="selectedTypes"
-            :filtered-servants="servantSelector?.filteredServants"
+            :filtered-servants="servantStore.filteredServantsForDisplayWithMinTypeNum"
           />
         </el-form-item>
         <el-form-item class="options-label" label="组合">
           <TypeCombination
-            :servants="servantSelector?.filteredServantsWithoutTypes"
+            :servants="servantStore.filteredServantsWithoutTypes"
             @apply-type-filter="handleApplyTypeFilter"
           />
         </el-form-item>
@@ -65,86 +72,48 @@
       </el-button>
     </div>
     <ServantSelector
-      ref="servantSelector"
-      :selected-classes="selectedClasses"
-      :selected-stars="selectedStars"
-      :selected-types="selectedTypes"
-      :hide-servants="hideServantMode ? hideServants : undefined"
-      :disable-hide-servant="selectHideServantMode"
+      :data="servantStore.servantGroupsForDisplay"
       :disable-badge="selectHideServantMode"
-      :disable-tooltip="selectHideServantMode"
-      :min-type-num="minTypeNum"
-      @item-contextmenu="handleItemContextmenu"
+      :multi-select-mode="selectHideServantMode"
+      :selected="hideServants"
+      @item-contextmenu="contextMenuRef?.open"
     />
-    <ContextMenu ref="contextMenuRef">
-      <el-dropdown-item :icon="Compass" @click="handleGotoWiki">前往 WIKI</el-dropdown-item>
-      <el-dropdown-item
-        v-if="hideServantMode && !selectHideServantMode"
-        :icon="Hide"
-        @click="handleMenuClickHideServant"
-        >隐藏该从者</el-dropdown-item
-      >
-    </ContextMenu>
+    <ServantContextMenu ref="contextMenuRef" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ArrowDown, ArrowUp, Compass, Hide, Setting } from '@element-plus/icons-vue';
-import { useLocalStorage } from '@vueuse/core';
-import { isNil } from 'es-toolkit';
+import { ArrowDown, ArrowUp, Setting } from '@element-plus/icons-vue';
+import { storeToRefs } from 'pinia';
 import IconGithub from '@/assets/github.svg';
-import { servantMap, typeList } from '@/utils/data';
+import { typeList } from '@/utils/data';
 import ClassFilter from './components/ClassFilter.vue';
-import ContextMenu from './components/ContextMenu.vue';
+import ServantContextMenu from './components/ServantContextMenu.vue';
 import ServantSelector from './components/ServantSelector.vue';
 import StarFilter from './components/StarFilter.vue';
 import TypeCombination from './components/TypeCombination.vue';
 import TypeFilter from './components/TypeFilter.vue';
+import { useServantStore } from './stores/servant';
+import { useSettingsStore } from './stores/settings';
 
-const servantSelector = useTemplateRef('servantSelector');
 const contextMenuRef = useTemplateRef('contextMenuRef');
 
-const selectedClasses = useLocalStorage<Set<string>>('selectedClasses', new Set());
-const selectedTypes = useLocalStorage<Set<number>>('selectedTypes', new Set());
-const selectedStars = useLocalStorage<Set<number>>('selectedStars', new Set());
+const {
+  selectedClasses,
+  selectedTypes,
+  selectedStars,
+  hideServantMode,
+  hideServants,
+  minTypeNum,
+  isOptionsFormCollapsed,
+  selectHideServantMode,
+} = storeToRefs(useSettingsStore());
 
-const hideServantMode = useLocalStorage('hideServantMode', true);
-const selectHideServantMode = ref(false);
-const hideServants = useLocalStorage<Set<number>>('hideServants', new Set());
-const minTypeNum = useLocalStorage<number>('minTypeNum', 1);
-
-const isOptionsFormCollapsed = useLocalStorage('isOptionsFormCollapsed', false);
-
-watch(selectHideServantMode, v => {
-  const comp = servantSelector.value;
-  if (!comp) return;
-  if (v) {
-    comp.startMultiSelect(hideServants.value);
-  } else {
-    comp.stopMultiSelect();
-  }
-});
+const servantStore = useServantStore();
 
 const handleClearHideServant = () => {
   hideServants.value.clear();
   selectHideServantMode.value = false;
-};
-
-let curContextMenuServantId: number | undefined;
-
-const handleItemContextmenu = (event: MouseEvent, id: number) => {
-  curContextMenuServantId = id;
-  contextMenuRef.value?.open(event);
-};
-
-const handleMenuClickHideServant = () => {
-  if (isNil(curContextMenuServantId)) return;
-  hideServants.value.add(curContextMenuServantId);
-};
-
-const handleGotoWiki = () => {
-  if (isNil(curContextMenuServantId)) return;
-  window.open(`https://fgo.wiki/w/${servantMap[curContextMenuServantId]!.nameLink}`, '_blank');
 };
 
 const gotoGithub = () => {
@@ -160,13 +129,9 @@ const handleApplyTypeFilter = (comb: number[]) => {
 .container {
   display: flex;
   flex-direction: column;
-  padding: var(--page-y-padding) 0;
+  padding-top: var(--page-y-padding);
   width: 100%;
   height: 100%;
-
-  :deep(.el-form-item) {
-    margin-bottom: 8px;
-  }
 
   :deep(.el-form-item__label-wrap) {
     align-items: center;
@@ -186,6 +151,12 @@ const handleApplyTypeFilter = (comb: number[]) => {
   position: absolute;
   top: 8px;
   right: 8px;
+  transition: all 0.2s;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 
   @media (max-width: 768px) {
     top: 0;
@@ -196,7 +167,6 @@ const handleApplyTypeFilter = (comb: number[]) => {
 }
 
 .options-form {
-  margin-bottom: 8px;
   padding: 0 var(--page-x-padding);
   overflow: hidden;
   transition: all 0.2s;
@@ -205,23 +175,37 @@ const handleApplyTypeFilter = (comb: number[]) => {
   &.collapsed {
     height: 0;
   }
+
+  :deep(.el-form-item) {
+    margin-bottom: 8px;
+  }
 }
 
 .options-form-wrapper {
   position: relative;
+  @media (max-width: 768px) {
+    padding-bottom: 20px;
+  }
+}
 
-  .collapse-btn {
-    position: absolute;
-    bottom: -12px;
-    right: var(--page-y-padding);
-    transform: translateY(50%);
-    z-index: 10;
+.collapse-btn {
+  position: absolute;
+  bottom: 0;
+  right: var(--page-x-padding);
+  z-index: 10;
+
+  &-placeholder {
+    width: 52px;
+    height: 20px;
   }
 }
 
 .servant-selector {
+  --servant-selector-bottom-padding: calc(var(--page-y-padding) + 16px);
+
   :deep(.el-scrollbar__view) {
-    padding: 0 var(--page-x-padding);
+    display: flow-root;
+    margin: 0 var(--page-x-padding);
   }
 }
 
@@ -271,74 +255,5 @@ const handleApplyTypeFilter = (comb: number[]) => {
     padding-left: 9px;
     padding-right: 9px;
   }
-}
-</style>
-
-<style lang="scss">
-:root {
-  --page-x-padding: 64px;
-  --page-y-padding: 32px;
-}
-
-.el-form {
-  --el-form-label-font-size: 18px;
-
-  &-item__label {
-    padding-right: 24px;
-  }
-}
-
-.el-input {
-  --el-input-height: 28px;
-}
-
-.el-badge__content {
-  line-height: 1;
-}
-
-@media (max-width: 992px) {
-  :root {
-    --page-x-padding: 32px;
-    --page-y-padding: 24px;
-  }
-}
-
-@media (max-width: 768px) {
-  :root {
-    --page-x-padding: 24px;
-    --page-y-padding: 16px;
-    --el-font-size-base: 12px;
-  }
-
-  .el-form {
-    --el-form-label-font-size: 14px;
-
-    &-item__label {
-      height: auto;
-      line-height: 24px;
-      padding-right: 16px;
-    }
-  }
-
-  .el-check-tag {
-    padding: 6px 9px;
-  }
-
-  .el-input {
-    --el-input-height: 24px;
-
-    &-number {
-      width: 120px;
-    }
-  }
-}
-
-.el-check-tag,
-.no-wrap {
-  text-wrap: nowrap;
-}
-
-.font-size-base {
-  font-size: var(--el-font-size-base);
 }
 </style>
