@@ -16,12 +16,12 @@
         <el-form-item class="options-label" label="属性">
           <TypeFilter
             :selected="selectedTypes"
-            :filtered-servants="servantSelectorRef?.filteredServants"
+            :filtered-servants="servantStore.filteredServantsForDisplayWithMinTypeNum"
           />
         </el-form-item>
         <el-form-item class="options-label" label="组合">
           <TypeCombination
-            :servants="servantSelectorRef?.filteredServantsWithoutTypes"
+            :servants="servantStore.filteredServantsWithoutTypes"
             @apply-type-filter="handleApplyTypeFilter"
           />
         </el-form-item>
@@ -65,16 +65,11 @@
       </el-button>
     </div>
     <ServantSelector
-      ref="servantSelector"
-      :selected-classes="selectedClasses"
-      :selected-stars="selectedStars"
-      :selected-types="selectedTypes"
-      :hide-servants="hideServantMode ? hideServants : undefined"
-      :disable-hide-servant="selectHideServantMode"
+      :data="servantStore.servantGroupsForDisplay"
       :disable-badge="selectHideServantMode"
-      :disable-tooltip="selectHideServantMode"
-      :min-type-num="minTypeNum"
-      @item-contextmenu="(...args) => contextMenuRef?.open(...args)"
+      :multi-select-mode="selectHideServantMode"
+      :selected="hideServants"
+      @item-contextmenu="contextMenuRef?.open"
     />
     <ServantContextMenu ref="contextMenuRef" />
   </div>
@@ -91,9 +86,9 @@ import ServantSelector from './components/ServantSelector.vue';
 import StarFilter from './components/StarFilter.vue';
 import TypeCombination from './components/TypeCombination.vue';
 import TypeFilter from './components/TypeFilter.vue';
+import { useServantStore } from './stores/servant';
 import { useSettingsStore } from './stores/settings';
 
-const servantSelectorRef = useTemplateRef('servantSelector');
 const contextMenuRef = useTemplateRef('contextMenuRef');
 
 const {
@@ -107,15 +102,7 @@ const {
   selectHideServantMode,
 } = storeToRefs(useSettingsStore());
 
-watch(selectHideServantMode, v => {
-  const comp = servantSelectorRef.value;
-  if (!comp) return;
-  if (v) {
-    comp.startMultiSelect(hideServants.value);
-  } else {
-    comp.stopMultiSelect();
-  }
-});
+const servantStore = useServantStore();
 
 const handleClearHideServant = () => {
   hideServants.value.clear();
@@ -246,74 +233,5 @@ const handleApplyTypeFilter = (comb: number[]) => {
     padding-left: 9px;
     padding-right: 9px;
   }
-}
-</style>
-
-<style lang="scss">
-:root {
-  --page-x-padding: 64px;
-  --page-y-padding: 32px;
-}
-
-.el-form {
-  --el-form-label-font-size: 18px;
-
-  &-item__label {
-    padding-right: 24px;
-  }
-}
-
-.el-input {
-  --el-input-height: 28px;
-}
-
-.el-badge__content {
-  line-height: 1;
-}
-
-@media (max-width: 992px) {
-  :root {
-    --page-x-padding: 32px;
-    --page-y-padding: 24px;
-  }
-}
-
-@media (max-width: 768px) {
-  :root {
-    --page-x-padding: 24px;
-    --page-y-padding: 16px;
-    --el-font-size-base: 12px;
-  }
-
-  .el-form {
-    --el-form-label-font-size: 14px;
-
-    &-item__label {
-      height: auto;
-      line-height: 24px;
-      padding-right: 16px;
-    }
-  }
-
-  .el-check-tag {
-    padding: 6px 9px;
-  }
-
-  .el-input {
-    --el-input-height: 24px;
-
-    &-number {
-      width: 120px;
-    }
-  }
-}
-
-.el-check-tag,
-.no-wrap {
-  text-wrap: nowrap;
-}
-
-.font-size-base {
-  font-size: var(--el-font-size-base);
 }
 </style>

@@ -5,7 +5,7 @@
       :key="i"
       class="star-filter-check-tag"
       :checked="selected.has(i - 1)"
-      @change="onChange(i - 1)"
+      @change="toggleSet(selected, i - 1)"
       >{{ i - 1 }}</el-check-tag
     >
     <ClearBtn @click="selected.clear()" />
@@ -13,16 +13,12 @@
 </template>
 
 <script setup lang="ts">
+import { toggleSet } from '@/utils/common';
 import ClearBtn from './ClearBtn.vue';
 
 const { selected } = defineProps<{
   selected: Set<number>;
 }>();
-
-const onChange = (value: number) => {
-  if (selected.has(value)) selected.delete(value);
-  else selected.add(value);
-};
 </script>
 
 <style lang="scss" scoped>
@@ -32,7 +28,7 @@ const onChange = (value: number) => {
   gap: 8px;
 }
 
-.star-filter-check-tag{
+.star-filter-check-tag {
   min-width: 32px;
   text-align: center;
 }

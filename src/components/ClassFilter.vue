@@ -6,13 +6,14 @@
       :title="name"
       :name
       :class="{ selected: selected.has(name) }"
-      @click="toggleClass(name)"
+      @click="toggleSet(selected, name)"
     />
     <ClearBtn @click="selected.clear()" />
   </div>
 </template>
 
 <script setup lang="ts">
+import { toggleSet } from '@/utils/common';
 import { classList } from '@/utils/data';
 import ClassIcon from './ClassIcon.vue';
 import ClearBtn from './ClearBtn.vue';
@@ -20,11 +21,6 @@ import ClearBtn from './ClearBtn.vue';
 const { selected } = defineProps<{
   selected: Set<string>;
 }>();
-
-const toggleClass = (name: string) => {
-  if (selected.has(name)) selected.delete(name);
-  else selected.add(name);
-};
 </script>
 
 <style lang="scss" scoped>

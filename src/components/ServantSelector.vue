@@ -1,7 +1,7 @@
 <template>
   <div class="servant-selector" :class="{ 'multi-select-mode': multiSelectMode }">
     <el-scrollbar>
-      <div v-for="[className, group] in groupedServants" :key="className" class="servant-group">
+      <div v-for="[className, group] in data" :key="className" class="servant-group">
         <div class="servant-group-title">
           <ClassIcon :name="className" />
           {{ className }}
@@ -34,14 +34,14 @@
               <ServantImg
                 :id="s.id"
                 :name="s.name"
-                @click="onServantClick(s.id)"
+                @click="handleClickServant(s.id)"
                 @contextmenu.prevent="emit('itemContextmenu', $event, s.id)"
               />
             </el-tooltip>
             <el-checkbox
               v-if="multiSelectMode"
               class="servant-checkbox"
-              :model-value="selectedServants.has(s.id)"
+              :model-value="selected.has(s.id)"
               size="large"
             />
           </el-badge>
@@ -52,118 +52,33 @@
 </template>
 
 <script setup lang="ts">
-import { groupBy, maxBy } from 'es-toolkit';
-import { classSortIndex, servantList, typeList } from '@/utils/data';
-import type { Servant } from '@/utils/data';
+import type { ServantGroupForDisplay } from '@/types';
+import { toggleSet } from '@/utils/common';
 import ClassIcon from './ClassIcon.vue';
 import ServantImg from './ServantImg.vue';
 
 const {
-  selectedClasses = new Set(),
-  selectedTypes = new Set(),
-  selectedStars = new Set(),
-  disableFilter = false,
+  data,
   disableBadge = false,
   disableTooltip = false,
-  disableHideServant = false,
-  hideServants = new Set(),
-  minTypeNum = 1,
+  multiSelectMode = false,
+  selected = new Set(),
 } = defineProps<{
-  selectedClasses?: Set<string>;
-  selectedTypes?: Set<number>;
-  selectedStars?: Set<number>;
-  disableFilter?: boolean;
+  data: ServantGroupForDisplay[];
   disableBadge?: boolean;
   disableTooltip?: boolean;
-  disableHideServant?: boolean;
-  hideServants?: Set<number>;
-  minTypeNum?: number;
+  multiSelectMode?: boolean;
+  selected?: Set<number>;
 }>();
 
 const emit = defineEmits<{
   (e: 'itemContextmenu', event: MouseEvent, id: number): void;
 }>();
 
-const filteredServantsWithoutTypes = computed(() =>
-  servantList.filter(s => {
-    if (disableFilter) return true;
-    if (!disableHideServant && hideServants.has(s.id)) return false;
-    if (selectedClasses.size && !selectedClasses.has(s.class)) return false;
-    if (selectedStars.size && !selectedStars.has(s.star)) return false;
-    return true;
-  }),
-);
-
-const filteredServantsFull = computed(() =>
-  filteredServantsWithoutTypes.value
-    .filter(s => !selectedTypes.size || s.types.some(t => selectedTypes.has(t)))
-    .map((s: Servant) => {
-      const hasSelectedTypes = Boolean(selectedTypes.size);
-      const selected = hasSelectedTypes ? s.types.filter(t => selectedTypes.has(t)) : s.types;
-      const { firstTypeTooltip = [], secondTypeTooltip = [] } = groupBy(
-        s.types.map(i => ({
-          text: typeList[i],
-          comment: s.typeComments?.[i],
-          disabled: hasSelectedTypes ? !selectedTypes.has(i) : false,
-        })),
-        item => (item.disabled ? 'secondTypeTooltip' : 'firstTypeTooltip'),
-      );
-      return {
-        ...s,
-        selectedTypes: selected,
-        hasTypeComment: s.typeComments && selected.some(i => i in s.typeComments!),
-        typeTooltip: [...firstTypeTooltip, ...secondTypeTooltip],
-      };
-    }),
-);
-
-const maxTypeNum = computed(
-  () => maxBy(filteredServantsFull.value, s => s.selectedTypes.length)?.selectedTypes.length ?? 0,
-);
-
-const filteredServants = computed(() => {
-  const minVal = Math.min(minTypeNum, maxTypeNum.value);
-  return filteredServantsFull.value.filter(s => s.selectedTypes.length >= minVal);
-});
-
-const groupedServants = computed(() => {
-  const groups = Object.entries(groupBy(filteredServants.value, s => s.class));
-  groups.sort(([a], [b]) => classSortIndex[a]! - classSortIndex[b]!);
-  groups.forEach(([, servants]) => {
-    servants.sort((a, b) =>
-      a.selectedTypes.length === b.selectedTypes.length || disableFilter
-        ? b.star - a.star
-        : b.selectedTypes.length - a.selectedTypes.length,
-    );
-  });
-  return groups;
-});
-
-const multiSelectMode = ref(false);
-const selectedServants = ref<Set<number>>(new Set());
-
-const startMultiSelect = (init: Set<number>) => {
-  multiSelectMode.value = true;
-  selectedServants.value = init;
+const handleClickServant = (id: number) => {
+  if (!multiSelectMode) return;
+  toggleSet(selected, id);
 };
-
-const stopMultiSelect = () => {
-  multiSelectMode.value = false;
-  selectedServants.value = new Set();
-};
-
-const onServantClick = (id: number) => {
-  if (!multiSelectMode.value) return;
-  if (selectedServants.value.has(id)) selectedServants.value.delete(id);
-  else selectedServants.value.add(id);
-};
-
-defineExpose({
-  filteredServants,
-  filteredServantsWithoutTypes,
-  startMultiSelect,
-  stopMultiSelect,
-});
 </script>
 
 <style lang="scss" scoped>

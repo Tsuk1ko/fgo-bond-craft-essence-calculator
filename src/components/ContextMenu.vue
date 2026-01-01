@@ -23,12 +23,7 @@
 <script setup lang="ts">
 const dropdownRef = useTemplateRef('dropdownRef');
 
-const position = ref({
-  top: 0,
-  left: 0,
-  bottom: 0,
-  right: 0,
-} as DOMRect);
+const position = shallowRef(DOMRect.fromRect());
 
 const open = (event: MouseEvent) => {
   const { clientX, clientY } = event;
