@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import PromisePool from '@supercharge/promise-pool';
 import { write } from 'bun';
 import { load } from 'cheerio';
-import { keyBy, pick, uniqBy } from 'es-toolkit';
+import { groupBy, keyBy, pick, uniqBy } from 'es-toolkit';
 import { tinyPNG } from './utils/tinypng';
 
 const fetchCharacterListData = async () => {
@@ -33,27 +33,125 @@ const characterList = await fetchCharacterListData();
 const charMapById = keyBy(characterList, v => v.id);
 const charMapByNameLink = keyBy(characterList, v => v.nameLink);
 
+enum CommentType {
+  NORMAL,
+  STAGE,
+  SKIN_STAGE,
+}
+
+type CommentItem =
+  | { type: CommentType.NORMAL; text: string }
+  | { type: CommentType.STAGE; stage: string }
+  | { type: CommentType.SKIN_STAGE; name: string; stage: string };
+
+type ExtractCommentItem<T extends CommentType> = Extract<CommentItem, { type: T }>;
+
+const parseSingleComment = (comment: string): CommentItem => {
+  let match: RegExpExecArray | null;
+  if ((match = /战斗形象「第(\d+)阶段」/.exec(comment))) {
+    return { type: CommentType.STAGE, stage: match[1] };
+  }
+  if ((match = /战斗形象「([^」]+?)(?:（第(.)再临）)?」.*灵衣/.exec(comment))) {
+    let name = match[1];
+    if (name.startsWith('简易灵衣：')) {
+      name = name.slice(5);
+    }
+    return match[2]
+      ? { type: CommentType.SKIN_STAGE, name, stage: match[2] }
+      : { type: CommentType.NORMAL, text: `灵衣「${name}」` };
+  }
+  return { type: CommentType.NORMAL, text: comment.trim() };
+};
+
+const mergeCommentStage = (items: Array<{ stage: string }>) => items.map(c => c.stage).join('/');
+
+const mergeComments = (comments: CommentItem[]) => {
+  if (comments.length <= 1) return comments;
+  const result: CommentItem[] = [];
+  const typeGroup = groupBy(comments, c => c.type);
+  let tmpArray: CommentItem[] = [];
+  if ((tmpArray = typeGroup[CommentType.STAGE])?.length) {
+    result.push({
+      type: CommentType.STAGE,
+      stage: mergeCommentStage(tmpArray as ExtractCommentItem<CommentType.STAGE>[]),
+    });
+  }
+  if ((tmpArray = typeGroup[CommentType.SKIN_STAGE])?.length) {
+    const nameGroup = groupBy(
+      tmpArray as ExtractCommentItem<CommentType.SKIN_STAGE>[],
+      c => c.name,
+    );
+    Object.entries(nameGroup).forEach(([name, items]) => {
+      result.push({
+        type: CommentType.SKIN_STAGE,
+        name,
+        stage: mergeCommentStage(items as ExtractCommentItem<CommentType.SKIN_STAGE>[]),
+      });
+    });
+  }
+  if ((tmpArray = typeGroup[CommentType.NORMAL])?.length) {
+    result.push(...tmpArray);
+  }
+  return result;
+};
+
+const commentToString = (comment: CommentItem) => {
+  switch (comment.type) {
+    case CommentType.NORMAL:
+      return comment.text;
+    case CommentType.STAGE:
+      return `战斗形象${comment.stage}`;
+    case CommentType.SKIN_STAGE:
+      return `灵衣「${comment.name}（第${comment.stage}再临）」`;
+  }
+};
+
+enum CommentCondition {
+  ANY,
+  ALL_NOT,
+}
+
+const getCommentCondition = (text: string) => {
+  if (text.includes('(满足任一条件)：')) return CommentCondition.ANY;
+  if (text.includes('(不满足所有条件)：')) return CommentCondition.ALL_NOT;
+  throw new Error(`unknown comment condition: ${text}`);
+};
+
+const commentsToString = (comments: CommentItem[], condition: CommentCondition) => {
+  switch (condition) {
+    case CommentCondition.ANY:
+      return comments.map(commentToString).join('、');
+    case CommentCondition.ALL_NOT:
+      return comments.map(comment => `非${commentToString(comment)}`).join('、');
+  }
+};
+
+const parseComment = (text: string) => {
+  const commentPart = text.slice(text.indexOf('：') + 1);
+  if (!commentPart) return;
+  const comments = mergeComments(commentPart.split('、').map(parseSingleComment));
+  const condition = getCommentCondition(text);
+  return commentsToString(comments, condition);
+};
+
 const fetchData = async (url: string) => {
   console.log('fetching:', url);
   const html = await (await fetch(url)).text();
   const $ = load(html);
-  const $row = $('.tabber__panel[id^="tabber-持有该"]').first().find('tbody tr:not(.nodesktop)');
-  const $comment = $('#mw-content-text ul:contains(仅有):contains(持有) li');
+  const $panel = $('.tabber__panel[id^="tabber-持有该"]').first();
+  const $row = $panel.find('tbody tr:not([class])');
+  const $comment = $panel.find('tr.mw-collapsible li');
 
   const commentMap: Record<number, string | undefined> = {};
   $comment.each((i, el) => {
     const $li = $(el);
-    const text = $li.text();
-    const startI = text.indexOf('仅有') + 2;
-    const endI = text.indexOf('持有');
-    const comment = text.slice(startI, endI);
+    const text = $li.text().replaceAll('\n', '');
+    const comment = parseComment(text);
     if (!comment) return;
-    $li.find('a').each((i, el) => {
-      const $a = $(el);
-      const nameLink = $a.text();
-      const id = charMapByNameLink[nameLink]?.id;
-      if (id) commentMap[id] = comment;
-    });
+    const $name = $li.find('a').first();
+    const nameLink = $name.text();
+    const id = charMapByNameLink[nameLink]?.id;
+    if (id) commentMap[id] = comment;
   });
 
   const classImgMap: Record<string, string> = {};
@@ -100,7 +198,13 @@ const typeList = [
 const dataList = await Promise.all(
   typeList.map(async (types, i) => {
     const resultList = await Promise.all(
-      types.map(type => fetchData(`https://fgo.wiki/w/${encodeURIComponent(type)}`)),
+      types.map(type =>
+        fetchData(`https://fgo.wiki/w/${encodeURIComponent(type)}`).catch(e => {
+          console.error(`fetch ${type} failed`);
+          console.error(e);
+          throw e;
+        }),
+      ),
     );
     return {
       type: i,
