@@ -1,5 +1,12 @@
 <template>
-  <el-button class="github-btn" :icon="IconGithub" circle text @click="gotoGithub" />
+  <el-button
+    class="github-btn"
+    :class="{ hidden: isOptionsFormCollapsed }"
+    :icon="IconGithub"
+    circle
+    text
+    @click="gotoGithub"
+  />
   <div class="container">
     <div class="options-form-wrapper">
       <el-form
@@ -122,13 +129,9 @@ const handleApplyTypeFilter = (comb: number[]) => {
 .container {
   display: flex;
   flex-direction: column;
-  padding: var(--page-y-padding) 0;
+  padding-top: var(--page-y-padding);
   width: 100%;
   height: 100%;
-
-  :deep(.el-form-item) {
-    margin-bottom: 8px;
-  }
 
   :deep(.el-form-item__label-wrap) {
     align-items: center;
@@ -148,6 +151,12 @@ const handleApplyTypeFilter = (comb: number[]) => {
   position: absolute;
   top: 8px;
   right: 8px;
+  transition: all 0.2s;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 
   @media (max-width: 768px) {
     top: 0;
@@ -158,7 +167,6 @@ const handleApplyTypeFilter = (comb: number[]) => {
 }
 
 .options-form {
-  margin-bottom: 8px;
   padding: 0 var(--page-x-padding);
   overflow: hidden;
   transition: all 0.2s;
@@ -167,23 +175,37 @@ const handleApplyTypeFilter = (comb: number[]) => {
   &.collapsed {
     height: 0;
   }
+
+  :deep(.el-form-item) {
+    margin-bottom: 8px;
+  }
 }
 
 .options-form-wrapper {
   position: relative;
+  @media (max-width: 768px) {
+    padding-bottom: 20px;
+  }
+}
 
-  .collapse-btn {
-    position: absolute;
-    bottom: -12px;
-    right: var(--page-y-padding);
-    transform: translateY(50%);
-    z-index: 10;
+.collapse-btn {
+  position: absolute;
+  bottom: 0;
+  right: var(--page-x-padding);
+  z-index: 10;
+
+  &-placeholder {
+    width: 52px;
+    height: 20px;
   }
 }
 
 .servant-selector {
+  --servant-selector-bottom-padding: calc(var(--page-y-padding) + 16px);
+
   :deep(.el-scrollbar__view) {
-    padding: 0 var(--page-x-padding);
+    display: flow-root;
+    margin: 0 var(--page-x-padding);
   }
 }
 

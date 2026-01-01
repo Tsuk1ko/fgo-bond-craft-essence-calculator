@@ -85,15 +85,25 @@ const handleClickServant = (id: number) => {
 .servant-selector {
   flex: 1;
   min-height: 0;
+
+  mask-image:
+    linear-gradient(to bottom, transparent, black 16px, black calc(100% - 16px), transparent),
+    linear-gradient(black, black);
+  mask-size:
+    calc(100% - 8px) 100%,
+    8px 100%;
+  mask-position: left, right;
+  mask-repeat: no-repeat;
 }
 
 .servant-group {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-top: 16px;
 
-  & + & {
-    margin-top: 16px;
+  &:last-of-type {
+    padding-bottom: var(--servant-selector-bottom-padding, 16px);
   }
 
   &-title {
