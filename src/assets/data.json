@@ -313,16 +313,6 @@
       ]
     },
     {
-      "id": 38,
-      "class": "Caster",
-      "star": 3,
-      "name": "库・丘林",
-      "nameLink": "库·丘林(Caster)",
-      "types": [
-        3
-      ]
-    },
-    {
       "id": 39,
       "class": "Assassin",
       "star": 1,
@@ -1456,7 +1446,6 @@
       "name": "土方岁三",
       "nameLink": "土方岁三",
       "types": [
-        3,
         5
       ]
     },
@@ -3006,7 +2995,6 @@
       "name": "詹姆斯・莫里亚蒂",
       "nameLink": "詹姆斯·莫里亚蒂(Ruler)",
       "types": [
-        3,
         5
       ]
     },
@@ -4012,18 +4000,6 @@
       "name": "所罗门",
       "nameLink": "所罗门(Pretender)",
       "types": [
-        5
-      ]
-    },
-    {
-      "id": 461,
-      "class": "Saber",
-      "star": 5,
-      "name": "ロード・ログレス",
-      "nameLink": "ロード・ログレス",
-      "types": [
-        2,
-        4,
         5
       ]
     }
