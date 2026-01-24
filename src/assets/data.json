@@ -313,6 +313,16 @@
       ]
     },
     {
+      "id": 38,
+      "class": "Caster",
+      "star": 3,
+      "name": "库・丘林",
+      "nameLink": "库·丘林(Caster)",
+      "types": [
+        3
+      ]
+    },
+    {
       "id": 39,
       "class": "Assassin",
       "star": 1,
@@ -1446,6 +1456,7 @@
       "name": "土方岁三",
       "nameLink": "土方岁三",
       "types": [
+        3,
         5
       ]
     },
@@ -3822,6 +3833,7 @@
       "types": [
         1,
         2,
+        3,
         4,
         5
       ],
