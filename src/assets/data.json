@@ -3006,6 +3006,7 @@
       "name": "詹姆斯・莫里亚蒂",
       "nameLink": "詹姆斯·莫里亚蒂(Ruler)",
       "types": [
+        3,
         5
       ]
     },
@@ -4025,6 +4026,27 @@
         2,
         4,
         5
+      ]
+    },
+    {
+      "id": 463,
+      "class": "Assassin",
+      "star": 4,
+      "name": "蛇女房",
+      "nameLink": "蛇女房",
+      "types": [
+        0
+      ]
+    },
+    {
+      "id": 464,
+      "class": "Alterego",
+      "star": 4,
+      "name": "芙萝拉",
+      "nameLink": "芙萝拉",
+      "types": [
+        2,
+        4
       ]
     }
   ]
