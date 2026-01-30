@@ -4029,6 +4029,19 @@
       ]
     },
     {
+      "id": 462,
+      "class": "Caster",
+      "star": 5,
+      "name": "花咲翁",
+      "nameLink": "花咲翁",
+      "types": [
+        0
+      ],
+      "typeComments": {
+        "0": "战斗形象3"
+      }
+    },
+    {
       "id": 463,
       "class": "Assassin",
       "star": 4,
