@@ -13,7 +13,7 @@
       "id": 1,
       "class": "Shielder",
       "star": 4,
-      "name": "玛修・基列莱特",
+      "name": "玛修·基列莱特",
       "nameLink": "玛修·基列莱特",
       "types": [
         1,
@@ -26,7 +26,7 @@
       "id": 2,
       "class": "Saber",
       "star": 5,
-      "name": "阿尔托莉雅・潘德拉贡",
+      "name": "阿尔托莉雅·潘德拉贡",
       "nameLink": "阿尔托莉雅·潘德拉贡",
       "types": [
         2,
@@ -38,7 +38,7 @@
       "id": 3,
       "class": "Saber",
       "star": 4,
-      "name": "阿尔托莉雅・潘德拉贡〔Alter〕",
+      "name": "阿尔托莉雅·潘德拉贡〔Alter〕",
       "nameLink": "阿尔托莉雅·潘德拉贡〔Alter〕",
       "types": [
         3,
@@ -50,7 +50,7 @@
       "id": 4,
       "class": "Saber",
       "star": 4,
-      "name": "阿尔托莉雅・潘德拉贡〔Lily〕",
+      "name": "阿尔托莉雅·潘德拉贡〔Lily〕",
       "nameLink": "阿尔托莉雅·潘德拉贡〔Lily〕",
       "types": [
         2,
@@ -61,7 +61,7 @@
       "id": 5,
       "class": "Saber",
       "star": 4,
-      "name": "尼禄・克劳狄乌斯",
+      "name": "尼禄·克劳狄乌斯",
       "nameLink": "尼禄·克劳狄乌斯",
       "types": [
         3,
@@ -94,7 +94,7 @@
       "id": 9,
       "class": "Saber",
       "star": 3,
-      "name": "吉尔・德・雷",
+      "name": "吉尔·德·雷",
       "nameLink": "吉尔·德·雷",
       "types": [
         2
@@ -166,7 +166,7 @@
       "id": 18,
       "class": "Lancer",
       "star": 4,
-      "name": "伊丽莎白・巴托里",
+      "name": "伊丽莎白·巴托里",
       "nameLink": "伊丽莎白·巴托里",
       "types": [
         5,
@@ -219,7 +219,7 @@
       "id": 25,
       "class": "Rider",
       "star": 2,
-      "name": "爱德华・蒂奇",
+      "name": "爱德华·蒂奇",
       "nameLink": "爱德华·蒂奇",
       "types": [
         3,
@@ -242,7 +242,7 @@
       "id": 29,
       "class": "Rider",
       "star": 4,
-      "name": "玛丽・安托瓦内特",
+      "name": "玛丽·安托瓦内特",
       "nameLink": "玛丽·安托瓦内特",
       "types": [
         2,
@@ -274,7 +274,7 @@
       "id": 32,
       "class": "Caster",
       "star": 3,
-      "name": "吉尔・德・雷",
+      "name": "吉尔·德·雷",
       "nameLink": "吉尔·德·雷(Caster)",
       "types": [
         5,
@@ -296,7 +296,7 @@
       "id": 36,
       "class": "Caster",
       "star": 1,
-      "name": "沃尔夫冈・阿马德乌斯・莫扎特",
+      "name": "沃尔夫冈·阿马德乌斯·莫扎特",
       "nameLink": "沃尔夫冈·阿马德乌斯·莫扎特",
       "types": [
         5
@@ -316,7 +316,7 @@
       "id": 38,
       "class": "Caster",
       "star": 3,
-      "name": "库・丘林",
+      "name": "库·丘林",
       "nameLink": "库·丘林(Caster)",
       "types": [
         3
@@ -366,7 +366,7 @@
       "id": 43,
       "class": "Assassin",
       "star": 2,
-      "name": "夏尔・亨利・桑松",
+      "name": "夏尔·亨利·桑松",
       "nameLink": "夏尔·亨利·桑松",
       "types": [
         3,
@@ -388,7 +388,7 @@
       "id": 45,
       "class": "Assassin",
       "star": 1,
-      "name": "玛塔・哈丽",
+      "name": "玛塔·哈丽",
       "nameLink": "玛塔·哈丽",
       "types": [
         6
@@ -532,7 +532,7 @@
       "id": 61,
       "class": "Caster",
       "star": 4,
-      "name": "伊丽莎白・巴托里〔万圣节〕",
+      "name": "伊丽莎白·巴托里〔万圣节〕",
       "nameLink": "伊丽莎白·巴托里〔万圣节〕",
       "types": [
         5,
@@ -554,7 +554,7 @@
       "id": 65,
       "class": "Rider",
       "star": 5,
-      "name": "弗朗西斯・德雷克",
+      "name": "弗朗西斯·德雷克",
       "nameLink": "弗朗西斯·德雷克",
       "types": [
         5,
@@ -565,7 +565,7 @@
       "id": 66,
       "class": "Rider",
       "star": 4,
-      "name": "安妮・伯妮＆玛莉・瑞德",
+      "name": "安妮·伯妮＆玛莉·瑞德",
       "nameLink": "安妮·伯妮＆玛莉·瑞德",
       "types": [
         5,
@@ -622,7 +622,7 @@
       "id": 73,
       "class": "Rider",
       "star": 4,
-      "name": "阿尔托莉雅・潘德拉贡〔圣诞Alter〕",
+      "name": "阿尔托莉雅·潘德拉贡〔圣诞Alter〕",
       "nameLink": "阿尔托莉雅·潘德拉贡〔圣诞Alter〕",
       "types": [
         2,
@@ -655,7 +655,7 @@
       "id": 77,
       "class": "Archer",
       "star": 5,
-      "name": "尼古拉・特斯拉",
+      "name": "尼古拉·特斯拉",
       "nameLink": "尼古拉·特斯拉",
       "types": [
         5,
@@ -666,7 +666,7 @@
       "id": 78,
       "class": "Lancer",
       "star": 4,
-      "name": "阿尔托莉雅・潘德拉贡〔Alter〕",
+      "name": "阿尔托莉雅·潘德拉贡〔Alter〕",
       "nameLink": "阿尔托莉雅·潘德拉贡〔Alter〕(Lancer)",
       "types": [
         2,
@@ -677,7 +677,7 @@
       "id": 79,
       "class": "Caster",
       "star": 3,
-      "name": "冯・霍恩海姆・帕拉塞尔苏斯",
+      "name": "冯·霍恩海姆·帕拉塞尔苏斯",
       "nameLink": "冯·霍恩海姆·帕拉塞尔苏斯",
       "types": [
         3,
@@ -688,7 +688,7 @@
       "id": 80,
       "class": "Caster",
       "star": 3,
-      "name": "查尔斯・巴贝奇",
+      "name": "查尔斯·巴贝奇",
       "nameLink": "查尔斯·巴贝奇",
       "types": [
         6
@@ -698,7 +698,7 @@
       "id": 81,
       "class": "Assassin",
       "star": 3,
-      "name": "亨利・杰基尔＆海德",
+      "name": "亨利·杰基尔＆海德",
       "nameLink": "亨利·杰基尔＆海德",
       "types": [
         2,
@@ -768,7 +768,7 @@
       "id": 90,
       "class": "Saber",
       "star": 5,
-      "name": "尼禄・克劳狄乌斯〔新娘〕",
+      "name": "尼禄·克劳狄乌斯〔新娘〕",
       "nameLink": "尼禄·克劳狄乌斯〔新娘〕",
       "types": [
         6
@@ -857,7 +857,7 @@
       "id": 98,
       "class": "Berserker",
       "star": 5,
-      "name": "库・丘林〔Alter〕",
+      "name": "库·丘林〔Alter〕",
       "nameLink": "库·丘林〔Alter〕",
       "types": [
         3,
@@ -881,7 +881,7 @@
       "id": 100,
       "class": "Caster",
       "star": 4,
-      "name": "海伦娜・布拉瓦茨基",
+      "name": "海伦娜·布拉瓦茨基",
       "nameLink": "海伦娜·布拉瓦茨基",
       "types": [
         3,
@@ -1051,7 +1051,7 @@
       "id": 119,
       "class": "Lancer",
       "star": 5,
-      "name": "阿尔托莉雅・潘德拉贡",
+      "name": "阿尔托莉雅·潘德拉贡",
       "nameLink": "阿尔托莉雅·潘德拉贡(Lancer)",
       "types": [
         2,
@@ -1131,7 +1131,7 @@
       "id": 127,
       "class": "Caster",
       "star": 5,
-      "name": "莱昂纳多・达・芬奇",
+      "name": "莱昂纳多·达·芬奇",
       "nameLink": "莱昂纳多·达·芬奇",
       "types": [
         5,
@@ -1152,7 +1152,7 @@
       "id": 129,
       "class": "Archer",
       "star": 5,
-      "name": "阿尔托莉雅・潘德拉贡",
+      "name": "阿尔托莉雅·潘德拉贡",
       "nameLink": "阿尔托莉雅·潘德拉贡(Archer)",
       "types": [
         2,
@@ -1163,7 +1163,7 @@
       "id": 130,
       "class": "Caster",
       "star": 4,
-      "name": "玛丽・安托瓦内特",
+      "name": "玛丽·安托瓦内特",
       "nameLink": "玛丽·安托瓦内特(Caster)",
       "types": [
         2,
@@ -1174,7 +1174,7 @@
       "id": 131,
       "class": "Archer",
       "star": 4,
-      "name": "安妮・伯妮＆玛莉・瑞德",
+      "name": "安妮·伯妮＆玛莉·瑞德",
       "nameLink": "安妮·伯妮＆玛莉·瑞德(Archer)",
       "types": [
         6
@@ -1226,7 +1226,7 @@
       "id": 136,
       "class": "Caster",
       "star": 5,
-      "name": "伊莉雅丝菲尔・冯・爱因兹贝伦",
+      "name": "伊莉雅丝菲尔·冯·爱因兹贝伦",
       "nameLink": "伊莉雅丝菲尔·冯·爱因兹贝伦",
       "types": [
         1,
@@ -1237,7 +1237,7 @@
       "id": 137,
       "class": "Archer",
       "star": 4,
-      "name": "克洛伊・冯・爱因兹贝伦",
+      "name": "克洛伊·冯·爱因兹贝伦",
       "nameLink": "克洛伊·冯·爱因兹贝伦",
       "types": [
         1,
@@ -1248,7 +1248,7 @@
       "id": 138,
       "class": "Saber",
       "star": 4,
-      "name": "伊丽莎白・巴托里〔勇者〕",
+      "name": "伊丽莎白·巴托里〔勇者〕",
       "nameLink": "伊丽莎白·巴托里〔勇者〕",
       "types": [
         6
@@ -1278,7 +1278,7 @@
       "id": 141,
       "class": "Lancer",
       "star": 4,
-      "name": "贞德・Alter・Santa・Lily",
+      "name": "贞德·Alter·Santa·Lily",
       "nameLink": "贞德·Alter·Santa·Lily",
       "types": [
         6
@@ -1310,7 +1310,7 @@
       "id": 144,
       "class": "Rider",
       "star": 5,
-      "name": "魁札尔・科亚特尔",
+      "name": "魁札尔·科亚特尔",
       "nameLink": "魁札尔·科亚特尔",
       "types": [
         2,
@@ -1442,7 +1442,7 @@
       "id": 160,
       "class": "Saber",
       "star": 5,
-      "name": "亚瑟・潘德拉贡〔Prototype〕",
+      "name": "亚瑟·潘德拉贡〔Prototype〕",
       "nameLink": "亚瑟·潘德拉贡〔Prototype〕",
       "types": [
         2,
@@ -1559,7 +1559,7 @@
       "id": 173,
       "class": "Ruler",
       "star": 5,
-      "name": "夏洛克・福尔摩斯",
+      "name": "夏洛克·福尔摩斯",
       "nameLink": "夏洛克·福尔摩斯",
       "types": [
         5
@@ -1569,7 +1569,7 @@
       "id": 174,
       "class": "Berserker",
       "star": 1,
-      "name": "保罗・班扬",
+      "name": "保罗·班扬",
       "nameLink": "保罗·班扬",
       "types": [
         0,
@@ -1583,7 +1583,7 @@
       "id": 175,
       "class": "Caster",
       "star": 5,
-      "name": "尼禄・克劳狄乌斯",
+      "name": "尼禄·克劳狄乌斯",
       "nameLink": "尼禄·克劳狄乌斯(Caster)",
       "types": [
         6
@@ -1614,7 +1614,7 @@
       "id": 179,
       "class": "Rider",
       "star": 5,
-      "name": "阿尔托莉雅・潘德拉贡〔Alter〕",
+      "name": "阿尔托莉雅·潘德拉贡〔Alter〕",
       "nameLink": "阿尔托莉雅·潘德拉贡〔Alter〕(Rider)",
       "types": [
         4,
@@ -1625,7 +1625,7 @@
       "id": 180,
       "class": "Archer",
       "star": 4,
-      "name": "海伦娜・布拉瓦茨基",
+      "name": "海伦娜·布拉瓦茨基",
       "nameLink": "海伦娜·布拉瓦茨基(Archer)",
       "types": [
         6
@@ -1725,7 +1725,7 @@
       "id": 195,
       "class": "Foreigner",
       "star": 5,
-      "name": "阿比盖尔・威廉姆斯",
+      "name": "阿比盖尔·威廉姆斯",
       "nameLink": "阿比盖尔·威廉姆斯",
       "types": [
         5
@@ -1747,7 +1747,7 @@
       "id": 197,
       "class": "Archer",
       "star": 4,
-      "name": "阿蒂拉・the・San〔ta〕",
+      "name": "阿蒂拉·the·San〔ta〕",
       "nameLink": "阿蒂拉·the·San〔ta〕",
       "types": [
         5,
@@ -1793,7 +1793,7 @@
       "id": 204,
       "class": "Avenger",
       "star": 3,
-      "name": "安东尼奥・萨列里",
+      "name": "安东尼奥·萨列里",
       "nameLink": "安东尼奥·萨列里",
       "types": [
         5
@@ -1886,7 +1886,7 @@
       "id": 215,
       "class": "Caster",
       "star": 5,
-      "name": "斯卡哈・斯卡蒂",
+      "name": "斯卡哈·斯卡蒂",
       "nameLink": "斯卡哈·斯卡蒂",
       "types": [
         6
@@ -2036,7 +2036,7 @@
       "id": 233,
       "class": "Ruler",
       "star": 4,
-      "name": "魁札尔・科亚特尔〔桑巴／圣诞〕",
+      "name": "魁札尔·科亚特尔〔桑巴／圣诞〕",
       "nameLink": "魁札尔·科亚特尔〔桑巴／圣诞〕",
       "types": [
         2,
@@ -2071,7 +2071,7 @@
       "id": 236,
       "class": "Caster",
       "star": 4,
-      "name": "美游・艾德费尔特",
+      "name": "美游·艾德费尔特",
       "nameLink": "美游·艾德费尔特",
       "types": [
         1,
@@ -2153,7 +2153,7 @@
       "id": 245,
       "class": "Saber",
       "star": 4,
-      "name": "拉克什米・芭伊",
+      "name": "拉克什米·芭伊",
       "nameLink": "拉克什米·芭伊",
       "types": [
         2,
@@ -2164,7 +2164,7 @@
       "id": 246,
       "class": "Archer",
       "star": 3,
-      "name": "威廉・退尔",
+      "name": "威廉·退尔",
       "nameLink": "威廉·退尔",
       "types": [
         2
@@ -2228,7 +2228,7 @@
       "id": 253,
       "class": "Rider",
       "star": 5,
-      "name": "莱昂纳多・达・芬奇",
+      "name": "莱昂纳多·达·芬奇",
       "nameLink": "莱昂纳多·达·芬奇(Rider)",
       "types": [
         2,
@@ -2261,7 +2261,7 @@
       "id": 257,
       "class": "Rider",
       "star": 1,
-      "name": "巴沙洛缪・罗伯茨",
+      "name": "巴沙洛缪·罗伯茨",
       "nameLink": "巴沙洛缪·罗伯茨",
       "types": [
         3,
@@ -2325,7 +2325,7 @@
       "id": 265,
       "class": "Ruler",
       "star": 5,
-      "name": "阿尔托莉雅・潘德拉贡",
+      "name": "阿尔托莉雅·潘德拉贡",
       "nameLink": "阿尔托莉雅·潘德拉贡(Ruler)",
       "types": [
         0,
@@ -2336,7 +2336,7 @@
       "id": 266,
       "class": "Lancer",
       "star": 4,
-      "name": "谜之Alterego・Λ",
+      "name": "谜之Alterego·Λ",
       "nameLink": "谜之Alterego·Λ",
       "types": [
         2,
@@ -2452,7 +2452,7 @@
       "id": 280,
       "class": "Lancer",
       "star": 5,
-      "name": "罗穆路斯・奎里努斯",
+      "name": "罗穆路斯·奎里努斯",
       "nameLink": "罗穆路斯·奎里努斯",
       "types": [
         6
@@ -2497,7 +2497,7 @@
       "id": 284,
       "class": "Caster",
       "star": 5,
-      "name": "阿尔托莉雅・卡斯特",
+      "name": "阿尔托莉雅·卡斯特",
       "nameLink": "阿尔托莉雅·卡斯特",
       "types": [
         5
@@ -2522,7 +2522,7 @@
       "id": 286,
       "class": "Archer",
       "star": 4,
-      "name": "伊莉雅丝菲尔・冯・爱因兹贝伦",
+      "name": "伊莉雅丝菲尔·冯·爱因兹贝伦",
       "nameLink": "伊莉雅丝菲尔·冯·爱因兹贝伦(Archer)",
       "types": [
         1
@@ -2543,7 +2543,7 @@
       "id": 289,
       "class": "Foreigner",
       "star": 5,
-      "name": "阿比盖尔・威廉姆斯〔夏〕",
+      "name": "阿比盖尔·威廉姆斯〔夏〕",
       "nameLink": "阿比盖尔·威廉姆斯〔夏〕",
       "types": [
         4,
@@ -2806,7 +2806,7 @@
       "id": 319,
       "class": "Caster",
       "star": 4,
-      "name": "夏洛特・科黛",
+      "name": "夏洛特·科黛",
       "nameLink": "夏洛特·科黛(Caster)",
       "types": [
         6
@@ -2816,7 +2816,7 @@
       "id": 320,
       "class": "Ruler",
       "star": 4,
-      "name": "莱昂纳多・达・芬奇",
+      "name": "莱昂纳多·达·芬奇",
       "nameLink": "莱昂纳多·达·芬奇(Ruler)",
       "types": [
         4
@@ -2846,7 +2846,7 @@
       "id": 324,
       "class": "Foreigner",
       "star": 5,
-      "name": "雅克・德・莫莱",
+      "name": "雅克·德·莫莱",
       "nameLink": "雅克·德·莫莱",
       "types": [
         5
@@ -2867,7 +2867,7 @@
       "id": 326,
       "class": "Rider",
       "star": 4,
-      "name": "伊丽莎白・巴托里〔灰姑娘〕",
+      "name": "伊丽莎白·巴托里〔灰姑娘〕",
       "nameLink": "伊丽莎白·巴托里〔灰姑娘〕",
       "types": [
         6
@@ -2909,7 +2909,7 @@
       "id": 332,
       "class": "Rider",
       "star": 4,
-      "name": "多布雷尼亚・尼基季奇",
+      "name": "多布雷尼亚·尼基季奇",
       "nameLink": "多布雷尼亚·尼基季奇",
       "types": [
         0
@@ -2930,7 +2930,7 @@
       "id": 336,
       "class": "Alterego",
       "star": 5,
-      "name": "马纳南・麦克・利尔〔巴泽特〕",
+      "name": "马纳南·麦克·利尔〔巴泽特〕",
       "nameLink": "马纳南·麦克·利尔〔巴泽特〕",
       "types": [
         1
@@ -3003,7 +3003,7 @@
       "id": 346,
       "class": "Ruler",
       "star": 5,
-      "name": "詹姆斯・莫里亚蒂",
+      "name": "詹姆斯·莫里亚蒂",
       "nameLink": "詹姆斯·莫里亚蒂(Ruler)",
       "types": [
         3,
@@ -3014,7 +3014,7 @@
       "id": 347,
       "class": "Lancer",
       "star": 4,
-      "name": "堂・吉诃德",
+      "name": "堂·吉诃德",
       "nameLink": "堂·吉诃德",
       "types": [
         0,
@@ -3088,7 +3088,7 @@
       "id": 357,
       "class": "Ruler",
       "star": 5,
-      "name": "斯卡哈・斯卡蒂",
+      "name": "斯卡哈·斯卡蒂",
       "nameLink": "斯卡哈·斯卡蒂(Ruler)",
       "types": [
         3
@@ -3218,7 +3218,7 @@
       "id": 369,
       "class": "Alterego",
       "star": 5,
-      "name": "格里戈里・拉斯普京",
+      "name": "格里戈里·拉斯普京",
       "nameLink": "格里戈里·拉斯普京",
       "types": [
         5
@@ -3391,7 +3391,7 @@
       "id": 386,
       "class": "Berserker",
       "star": 5,
-      "name": "阿尔托莉雅・卡斯特",
+      "name": "阿尔托莉雅·卡斯特",
       "nameLink": "阿尔托莉雅·卡斯特(Berserker)",
       "types": [
         5
@@ -3401,7 +3401,7 @@
       "id": 388,
       "class": "Avenger",
       "star": 4,
-      "name": "克洛伊・冯・爱因兹贝伦",
+      "name": "克洛伊·冯·爱因兹贝伦",
       "nameLink": "克洛伊·冯·爱因兹贝伦(Avenger)",
       "types": [
         0,
@@ -3416,7 +3416,7 @@
       "id": 389,
       "class": "Foreigner",
       "star": 4,
-      "name": "诺克娜蕾・雅兰杜",
+      "name": "诺克娜蕾·雅兰杜",
       "nameLink": "诺克娜蕾·雅兰杜",
       "types": [
         5
@@ -3448,7 +3448,7 @@
       "id": 392,
       "class": "Pretender",
       "star": 4,
-      "name": "凯特・库・米可科尔",
+      "name": "凯特·库·米可科尔",
       "nameLink": "凯特·库·米可科尔",
       "types": [
         5
@@ -3541,7 +3541,7 @@
       "id": 407,
       "class": "Avenger",
       "star": 5,
-      "name": "玛丽・安托瓦内特〔Alter〕",
+      "name": "玛丽·安托瓦内特〔Alter〕",
       "nameLink": "玛丽·安托瓦内特〔Alter〕",
       "types": [
         5
@@ -3644,7 +3644,7 @@
       "id": 419,
       "class": "Lancer",
       "star": 4,
-      "name": "多布雷尼亚・尼基季奇",
+      "name": "多布雷尼亚·尼基季奇",
       "nameLink": "多布雷尼亚·尼基季奇(Lancer)",
       "types": [
         0
@@ -3774,7 +3774,7 @@
       "id": 437,
       "class": "Pretender",
       "star": 5,
-      "name": "但丁・阿利吉耶里",
+      "name": "但丁·阿利吉耶里",
       "nameLink": "但丁·阿利吉耶里",
       "types": [
         5
@@ -3784,7 +3784,7 @@
       "id": 438,
       "class": "Ruler",
       "star": 5,
-      "name": "梅塔特隆・贞德",
+      "name": "梅塔特隆·贞德",
       "nameLink": "梅塔特隆·贞德",
       "types": [
         2,
@@ -3817,7 +3817,7 @@
       "id": 441,
       "class": "Pretender",
       "star": 5,
-      "name": "堤丰・厄斐墨洛斯",
+      "name": "堤丰·厄斐墨洛斯",
       "nameLink": "堤丰·厄斐墨洛斯",
       "types": [
         0,
@@ -3895,7 +3895,7 @@
       "id": 449,
       "class": "Lancer",
       "star": 4,
-      "name": "美游・艾德费尔特",
+      "name": "美游·艾德费尔特",
       "nameLink": "美游·艾德费尔特(Lancer)",
       "types": [
         1,
@@ -3924,7 +3924,7 @@
       "id": 451,
       "class": "Alterego",
       "star": 4,
-      "name": "热内斯・克莱恩",
+      "name": "热内斯·克莱恩",
       "nameLink": "热内斯·克莱恩",
       "types": [
         0
@@ -3988,7 +3988,7 @@
       "id": 457,
       "class": "Lancer",
       "star": 5,
-      "name": "伊丽莎白・巴托里",
+      "name": "伊丽莎白·巴托里",
       "nameLink": "伊丽莎白·巴托里(SSR)",
       "types": [
         5,
