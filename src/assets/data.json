@@ -4061,6 +4061,19 @@
         2,
         4
       ]
+    },
+    {
+      "id": 465,
+      "class": "Lancer",
+      "star": 5,
+      "name": "得墨忒耳",
+      "nameLink": "得墨忒耳",
+      "types": [
+        5
+      ],
+      "typeComments": {
+        "5": "战斗形象3"
+      }
     }
   ]
 }
