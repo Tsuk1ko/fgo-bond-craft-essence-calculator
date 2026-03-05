@@ -193,6 +193,7 @@ const typeList = [
   ['特性：秩序的女性'],
   ['副属性：星', '属性：恶'],
   ['特性：混沌且七骑士'],
+  ['属性：中立'],
 ];
 
 const dataList = await Promise.all(
