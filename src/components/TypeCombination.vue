@@ -5,6 +5,7 @@
       :key="group.k"
       trigger="click"
       placement="bottom-start"
+      max-height="calc(100vh - 240px)"
       :show-arrow="false"
       :popper-options="popoverOptions"
       @command="handleMenuItemClick"
