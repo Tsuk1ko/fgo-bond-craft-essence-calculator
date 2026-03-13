@@ -4650,6 +4650,16 @@
       "typeComments": {
         "5": "战斗形象3"
       }
+    },
+    {
+      "id": 466,
+      "class": "Saber",
+      "star": 5,
+      "name": "雅克・德・莫莱",
+      "nameLink": "雅克·德·莫莱(Saber)",
+      "types": [
+        2
+      ]
     }
   ]
 }
