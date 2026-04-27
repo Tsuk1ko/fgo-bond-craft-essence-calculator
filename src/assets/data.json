@@ -4660,6 +4660,27 @@
       "types": [
         2
       ]
+    },
+    {
+      "id": 467,
+      "class": "Caster",
+      "star": 5,
+      "name": "フランソワ・プレラーティ",
+      "nameLink": "フランソワ・プレラーティ",
+      "types": [
+        5
+      ]
+    },
+    {
+      "id": 468,
+      "class": "Rider",
+      "star": 4,
+      "name": "ヒッポリュテ",
+      "nameLink": "ヒッポリュテ",
+      "types": [
+        2,
+        4
+      ]
     }
   ]
 }
