@@ -29,7 +29,7 @@ const { selected, filteredServants = [] } = defineProps<{
 }>();
 
 const numbers = computed(() => {
-  const data = Array.from({ length: typeList.length }, () => 0);
+  const data = Array.from<number>({ length: typeList.length }).fill(0);
   filteredServants.forEach(({ id }) => {
     servantMap[id]!.types.forEach(t => {
       data[t]!++;

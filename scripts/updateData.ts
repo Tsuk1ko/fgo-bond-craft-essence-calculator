@@ -168,7 +168,7 @@ const fetchData = async (url: string) => {
 
     const $classImg = $tr.find('th img');
     const className = $classImg.parent().attr('title')!;
-    if (!className.match(/^\w+$/)) return;
+    if (!/^\w+$/.test(className)) return;
     const classImg = $classImg.attr('src')!;
     classImgMap[className] = classImg;
 
