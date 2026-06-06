@@ -10,7 +10,13 @@ export const useServantStore = defineStore('servant', () => {
 
   const filteredServantsWithoutTypes = computed<Servant[]>(() =>
     servantList.filter(s => {
-      if (!settings.selectHideServantMode && settings.hideServants.has(s.id)) return false;
+      if (
+        !settings.selectHideServantMode &&
+        settings.hideServantMode &&
+        settings.hideServants.has(s.id)
+      ) {
+        return false;
+      }
       if (settings.selectedClasses.size && !settings.selectedClasses.has(s.class)) return false;
       if (settings.selectedStars.size && !settings.selectedStars.has(s.star)) return false;
       return true;
