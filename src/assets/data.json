@@ -4705,6 +4705,17 @@
       "types": [
         4
       ]
+    },
+    {
+      "id": 471,
+      "class": "Alterego",
+      "star": 5,
+      "name": "アスカラポス",
+      "nameLink": "アスカラポス",
+      "types": [
+        0,
+        5
+      ]
     }
   ]
 }
