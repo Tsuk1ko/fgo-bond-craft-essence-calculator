@@ -4222,7 +4222,7 @@
       "class": "MoonCancer",
       "star": 4,
       "name": "岸波白野",
-      "nameLink": "岸波白野(男性)",
+      "nameLink": "岸波白野",
       "types": [
         7
       ]
@@ -4700,8 +4700,8 @@
       "id": 470,
       "class": "Archer",
       "star": 5,
-      "name": "ウルズ",
-      "nameLink": "ウルズ",
+      "name": "终末的Archer",
+      "nameLink": "终末的Archer",
       "types": [
         4
       ]
@@ -4710,8 +4710,8 @@
       "id": 471,
       "class": "Alterego",
       "star": 5,
-      "name": "アスカラポス",
-      "nameLink": "アスカラポス",
+      "name": "阿斯卡拉福斯",
+      "nameLink": "阿斯卡拉福斯",
       "types": [
         0,
         5
