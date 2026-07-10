@@ -43,7 +43,8 @@
       "nameLink": "阿尔托莉雅·潘德拉贡〔Alter〕",
       "types": [
         3,
-        4
+        4,
+        5
       ]
     },
     {
@@ -64,7 +65,8 @@
       "name": "尼禄·克劳狄乌斯",
       "nameLink": "尼禄·克劳狄乌斯",
       "types": [
-        3
+        3,
+        6
       ]
     },
     {
@@ -74,7 +76,8 @@
       "name": "齐格飞",
       "nameLink": "齐格飞",
       "types": [
-        3
+        3,
+        6
       ]
     },
     {
@@ -94,7 +97,8 @@
       "name": "阿蒂拉",
       "nameLink": "阿蒂拉",
       "types": [
-        3
+        3,
+        6
       ]
     },
     {
@@ -129,6 +133,16 @@
       ]
     },
     {
+      "id": 12,
+      "class": "Archer",
+      "star": 5,
+      "name": "吉尔伽美什",
+      "nameLink": "吉尔伽美什",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 13,
       "class": "Archer",
       "star": 3,
@@ -147,6 +161,7 @@
       "nameLink": "阿塔兰忒",
       "types": [
         0,
+        5,
         7
       ]
     },
@@ -157,7 +172,50 @@
       "name": "尤瑞艾莉",
       "nameLink": "尤瑞艾莉",
       "types": [
-        3
+        3,
+        6
+      ]
+    },
+    {
+      "id": 16,
+      "class": "Archer",
+      "star": 1,
+      "name": "阿拉什",
+      "nameLink": "阿拉什",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 18,
+      "class": "Lancer",
+      "star": 4,
+      "name": "伊丽莎白·巴托里",
+      "nameLink": "伊丽莎白·巴托里",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": 19,
+      "class": "Lancer",
+      "star": 2,
+      "name": "武藏坊弁庆",
+      "nameLink": "武藏坊弁庆",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 22,
+      "class": "Lancer",
+      "star": 3,
+      "name": "罗穆路斯",
+      "nameLink": "罗穆路斯",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -167,7 +225,8 @@
       "name": "美杜莎",
       "nameLink": "美杜莎",
       "types": [
-        3
+        3,
+        6
       ]
     },
     {
@@ -187,7 +246,9 @@
       "name": "爱德华·蒂奇",
       "nameLink": "爱德华·蒂奇",
       "types": [
-        3
+        3,
+        5,
+        6
       ]
     },
     {
@@ -207,7 +268,8 @@
       "name": "牛若丸",
       "nameLink": "牛若丸",
       "types": [
-        3
+        3,
+        6
       ]
     },
     {
@@ -249,7 +311,19 @@
       "name": "美狄亚",
       "nameLink": "美狄亚",
       "types": [
+        5,
         7
+      ]
+    },
+    {
+      "id": 32,
+      "class": "Caster",
+      "star": 3,
+      "name": "吉尔·德·雷",
+      "nameLink": "吉尔·德·雷(Caster)",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -263,12 +337,24 @@
       ]
     },
     {
+      "id": 35,
+      "class": "Caster",
+      "star": 3,
+      "name": "梅菲斯托费勒斯",
+      "nameLink": "梅菲斯托费勒斯",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
       "id": 36,
       "class": "Caster",
       "star": 1,
       "name": "沃尔夫冈·阿马德乌斯·莫扎特",
       "nameLink": "沃尔夫冈·阿马德乌斯·莫扎特",
       "types": [
+        5,
         7
       ]
     },
@@ -300,7 +386,38 @@
       "name": "佐佐木小次郎",
       "nameLink": "佐佐木小次郎",
       "types": [
+        5,
         7
+      ]
+    },
+    {
+      "id": 40,
+      "class": "Assassin",
+      "star": 2,
+      "name": "咒腕哈桑",
+      "nameLink": "咒腕哈桑",
+      "types": [
+        5
+      ]
+    },
+    {
+      "id": 41,
+      "class": "Assassin",
+      "star": 4,
+      "name": "斯忒诺",
+      "nameLink": "斯忒诺",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 42,
+      "class": "Assassin",
+      "star": 3,
+      "name": "荆轲",
+      "nameLink": "荆轲",
+      "types": [
+        6
       ]
     },
     {
@@ -310,7 +427,61 @@
       "name": "夏尔·亨利·桑松",
       "nameLink": "夏尔·亨利·桑松",
       "types": [
-        3
+        3,
+        5
+      ]
+    },
+    {
+      "id": 44,
+      "class": "Assassin",
+      "star": 2,
+      "name": "剧院魅影",
+      "nameLink": "剧院魅影",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": 45,
+      "class": "Assassin",
+      "star": 1,
+      "name": "玛塔·哈丽",
+      "nameLink": "玛塔·哈丽",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 46,
+      "class": "Assassin",
+      "star": 4,
+      "name": "卡米拉",
+      "nameLink": "卡米拉",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": 47,
+      "class": "Berserker",
+      "star": 4,
+      "name": "赫拉克勒斯",
+      "nameLink": "赫拉克勒斯",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 49,
+      "class": "Berserker",
+      "star": 3,
+      "name": "吕布奉先",
+      "nameLink": "吕布奉先",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -335,13 +506,37 @@
       ]
     },
     {
+      "id": 52,
+      "class": "Berserker",
+      "star": 5,
+      "name": "弗拉德三世",
+      "nameLink": "弗拉德三世",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
       "id": 53,
       "class": "Berserker",
       "star": 1,
       "name": "阿斯忒里俄斯",
       "nameLink": "阿斯忒里俄斯",
       "types": [
-        0
+        0,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 54,
+      "class": "Berserker",
+      "star": 2,
+      "name": "卡利古拉",
+      "nameLink": "卡利古拉",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -351,7 +546,19 @@
       "name": "清姬",
       "nameLink": "清姬",
       "types": [
-        3
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 57,
+      "class": "Berserker",
+      "star": 2,
+      "name": "血斧埃里克",
+      "nameLink": "血斧埃里克",
+      "types": [
+        6
       ]
     },
     {
@@ -362,7 +569,8 @@
       "nameLink": "玉藻猫",
       "types": [
         0,
-        3
+        3,
+        6
       ]
     },
     {
@@ -374,7 +582,29 @@
       "types": [
         2,
         3,
-        4
+        4,
+        5
+      ]
+    },
+    {
+      "id": 60,
+      "class": "Archer",
+      "star": 5,
+      "name": "俄里翁",
+      "nameLink": "俄里翁",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 61,
+      "class": "Caster",
+      "star": 4,
+      "name": "伊丽莎白·巴托里〔万圣节〕",
+      "nameLink": "伊丽莎白·巴托里〔万圣节〕",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -385,7 +615,30 @@
       "nameLink": "玉藻前",
       "types": [
         0,
+        5,
         7
+      ]
+    },
+    {
+      "id": 65,
+      "class": "Rider",
+      "star": 5,
+      "name": "弗朗西斯·德雷克",
+      "nameLink": "弗朗西斯·德雷克",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": 66,
+      "class": "Rider",
+      "star": 4,
+      "name": "安妮·伯妮＆玛莉·瑞德",
+      "nameLink": "安妮·伯妮＆玛莉·瑞德",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -429,6 +682,7 @@
       "types": [
         0,
         3,
+        5,
         7
       ],
       "typeComments": {
@@ -457,13 +711,36 @@
       ]
     },
     {
+      "id": 75,
+      "class": "Assassin",
+      "star": 5,
+      "name": "开膛手杰克",
+      "nameLink": "开膛手杰克",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
       "id": 76,
       "class": "Saber",
       "star": 5,
       "name": "莫德雷德",
       "nameLink": "莫德雷德",
       "types": [
-        3
+        3,
+        6
+      ]
+    },
+    {
+      "id": 77,
+      "class": "Archer",
+      "star": 5,
+      "name": "尼古拉·特斯拉",
+      "nameLink": "尼古拉·特斯拉",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -484,7 +761,18 @@
       "name": "冯·霍恩海姆·帕拉塞尔苏斯",
       "nameLink": "冯·霍恩海姆·帕拉塞尔苏斯",
       "types": [
-        3
+        3,
+        6
+      ]
+    },
+    {
+      "id": 80,
+      "class": "Caster",
+      "star": 3,
+      "name": "查尔斯·巴贝奇",
+      "nameLink": "查尔斯·巴贝奇",
+      "types": [
+        6
       ]
     },
     {
@@ -494,11 +782,25 @@
       "name": "亨利·杰基尔＆海德",
       "nameLink": "亨利·杰基尔＆海德",
       "types": [
-        2
+        2,
+        5,
+        6
       ],
       "typeComments": {
-        "2": "非变身为〔海德〕"
+        "2": "非变身为〔海德〕",
+        "5": "变身为〔海德〕",
+        "6": "变身为〔海德〕"
       }
+    },
+    {
+      "id": 82,
+      "class": "Berserker",
+      "star": 4,
+      "name": "弗兰肯斯坦",
+      "nameLink": "弗兰肯斯坦",
+      "types": [
+        6
+      ]
     },
     {
       "id": 84,
@@ -528,7 +830,9 @@
       "name": "谜之女主角X",
       "nameLink": "谜之女主角X",
       "types": [
-        3
+        3,
+        5,
+        6
       ]
     },
     {
@@ -549,6 +853,26 @@
       "nameLink": "布伦希尔德",
       "types": [
         7
+      ]
+    },
+    {
+      "id": 89,
+      "class": "Berserker",
+      "star": 4,
+      "name": "贝奥武夫",
+      "nameLink": "贝奥武夫",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 90,
+      "class": "Saber",
+      "star": 5,
+      "name": "尼禄·克劳狄乌斯〔新娘〕",
+      "nameLink": "尼禄·克劳狄乌斯〔新娘〕",
+      "types": [
+        6
       ]
     },
     {
@@ -573,7 +897,8 @@
       "name": "两仪式",
       "nameLink": "两仪式(Assassin)",
       "types": [
-        1
+        1,
+        6
       ]
     },
     {
@@ -594,7 +919,18 @@
       "name": "阿斯托尔福",
       "nameLink": "阿斯托尔福",
       "types": [
-        3
+        3,
+        6
+      ]
+    },
+    {
+      "id": 95,
+      "class": "Archer",
+      "star": 3,
+      "name": "幼吉尔",
+      "nameLink": "幼吉尔",
+      "types": [
+        6
       ]
     },
     {
@@ -604,7 +940,8 @@
       "name": "岩窟王",
       "nameLink": "岩窟王",
       "types": [
-        3
+        3,
+        5
       ]
     },
     {
@@ -625,7 +962,9 @@
       "name": "库·丘林〔Alter〕",
       "nameLink": "库·丘林〔Alter〕",
       "types": [
-        3
+        3,
+        5,
+        6
       ]
     },
     {
@@ -635,7 +974,9 @@
       "name": "女王梅芙",
       "nameLink": "女王梅芙",
       "types": [
-        3
+        3,
+        5,
+        6
       ]
     },
     {
@@ -645,7 +986,8 @@
       "name": "海伦娜·布拉瓦茨基",
       "nameLink": "海伦娜·布拉瓦茨基",
       "types": [
-        3
+        3,
+        6
       ]
     },
     {
@@ -665,6 +1007,7 @@
       "name": "李书文",
       "nameLink": "李书文",
       "types": [
+        5,
         7
       ]
     },
@@ -679,13 +1022,34 @@
       ]
     },
     {
+      "id": 105,
+      "class": "Archer",
+      "star": 3,
+      "name": "比利小子",
+      "nameLink": "比利小子",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 106,
       "class": "Avenger",
       "star": 5,
       "name": "贞德〔Alter〕",
       "nameLink": "贞德〔Alter〕",
       "types": [
-        3
+        3,
+        5
+      ]
+    },
+    {
+      "id": 107,
+      "class": "Avenger",
+      "star": 0,
+      "name": "安哥拉曼纽",
+      "nameLink": "安哥拉曼纽",
+      "types": [
+        5
       ]
     },
     {
@@ -699,13 +1063,35 @@
       ]
     },
     {
+      "id": 109,
+      "class": "Assassin",
+      "star": 4,
+      "name": "卫宫〔Assassin〕",
+      "nameLink": "卫宫〔Assassin〕",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
       "id": 110,
       "class": "Assassin",
       "star": 3,
       "name": "百貌哈桑",
       "nameLink": "百貌哈桑",
       "types": [
-        4
+        4,
+        5
+      ]
+    },
+    {
+      "id": 111,
+      "class": "Caster",
+      "star": 4,
+      "name": "爱丽丝菲尔〔天之衣〕",
+      "nameLink": "爱丽丝菲尔〔天之衣〕",
+      "types": [
+        6
       ]
     },
     {
@@ -715,7 +1101,9 @@
       "name": "酒吞童子",
       "nameLink": "酒吞童子",
       "types": [
-        3
+        3,
+        5,
+        6
       ]
     },
     {
@@ -730,6 +1118,16 @@
       ]
     },
     {
+      "id": 114,
+      "class": "Berserker",
+      "star": 5,
+      "name": "源赖光",
+      "nameLink": "源赖光",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 115,
       "class": "Rider",
       "star": 4,
@@ -740,13 +1138,36 @@
       ]
     },
     {
+      "id": 116,
+      "class": "Berserker",
+      "star": 4,
+      "name": "茨木童子",
+      "nameLink": "茨木童子",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
       "id": 117,
       "class": "Assassin",
       "star": 3,
       "name": "风魔小太郎",
       "nameLink": "风魔小太郎",
       "types": [
-        3
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 118,
+      "class": "Rider",
+      "star": 5,
+      "name": "奥斯曼狄斯",
+      "nameLink": "奥斯曼狄斯",
+      "types": [
+        6
       ]
     },
     {
@@ -813,7 +1234,8 @@
       "nameLink": "静谧哈桑",
       "types": [
         3,
-        4
+        4,
+        5
       ]
     },
     {
@@ -834,7 +1256,19 @@
       "nameLink": "贝德维尔",
       "types": [
         2,
-        3
+        3,
+        5
+      ]
+    },
+    {
+      "id": 127,
+      "class": "Caster",
+      "star": 5,
+      "name": "莱昂纳多·达·芬奇",
+      "nameLink": "莱昂纳多·达·芬奇",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -871,13 +1305,45 @@
       ]
     },
     {
+      "id": 131,
+      "class": "Archer",
+      "star": 4,
+      "name": "安妮·伯妮＆玛莉·瑞德",
+      "nameLink": "安妮·伯妮＆玛莉·瑞德(Archer)",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 132,
+      "class": "Rider",
+      "star": 4,
+      "name": "莫德雷德",
+      "nameLink": "莫德雷德(Rider)",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 133,
       "class": "Assassin",
       "star": 4,
       "name": "斯卡哈",
       "nameLink": "斯卡哈(Assassin)",
       "types": [
+        5,
         7
+      ]
+    },
+    {
+      "id": 134,
+      "class": "Lancer",
+      "star": 4,
+      "name": "清姬",
+      "nameLink": "清姬(Lancer)",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -910,7 +1376,18 @@
       "name": "克洛伊·冯·爱因兹贝伦",
       "nameLink": "克洛伊·冯·爱因兹贝伦",
       "types": [
-        1
+        1,
+        6
+      ]
+    },
+    {
+      "id": 138,
+      "class": "Saber",
+      "star": 4,
+      "name": "伊丽莎白·巴托里〔勇者〕",
+      "nameLink": "伊丽莎白·巴托里〔勇者〕",
+      "types": [
+        6
       ]
     },
     {
@@ -931,6 +1408,16 @@
       "nameLink": "弗拉德三世〔EXTRA〕",
       "types": [
         2
+      ]
+    },
+    {
+      "id": 141,
+      "class": "Lancer",
+      "star": 4,
+      "name": "贞德·Alter·Santa·Lily",
+      "nameLink": "贞德·Alter·Santa·Lily",
+      "types": [
+        6
       ]
     },
     {
@@ -995,7 +1482,8 @@
       "name": "戈耳工",
       "nameLink": "戈耳工",
       "types": [
-        0
+        0,
+        5
       ]
     },
     {
@@ -1022,12 +1510,33 @@
       ]
     },
     {
+      "id": 153,
+      "class": "Saber",
+      "star": 5,
+      "name": "宫本武藏",
+      "nameLink": "宫本武藏",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 154,
+      "class": "Assassin",
+      "star": 5,
+      "name": "“山中老人”",
+      "nameLink": "“山中老人”",
+      "types": [
+        5
+      ]
+    },
+    {
       "id": 155,
       "class": "Berserker",
       "star": 5,
       "name": "谜之女主角X〔Alter〕",
       "nameLink": "谜之女主角X〔Alter〕",
       "types": [
+        5,
         7
       ]
     },
@@ -1038,7 +1547,20 @@
       "name": "新宿的Archer",
       "nameLink": "新宿的Archer",
       "types": [
-        3
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 157,
+      "class": "Archer",
+      "star": 4,
+      "name": "卫宫〔Alter〕",
+      "nameLink": "卫宫〔Alter〕",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -1048,7 +1570,8 @@
       "name": "新宿的Avenger",
       "nameLink": "新宿的Avenger",
       "types": [
-        0
+        0,
+        5
       ]
     },
     {
@@ -1058,7 +1581,9 @@
       "name": "新宿的Assassin",
       "nameLink": "新宿的Assassin",
       "types": [
-        3
+        3,
+        5,
+        6
       ]
     },
     {
@@ -1079,7 +1604,18 @@
       "name": "土方岁三",
       "nameLink": "土方岁三",
       "types": [
-        3
+        3,
+        5
+      ]
+    },
+    {
+      "id": 162,
+      "class": "Berserker",
+      "star": 4,
+      "name": "茶茶",
+      "nameLink": "茶茶",
+      "types": [
+        6
       ]
     },
     {
@@ -1111,7 +1647,18 @@
       "name": "铃鹿御前",
       "nameLink": "铃鹿御前",
       "types": [
+        5,
         7
+      ]
+    },
+    {
+      "id": 167,
+      "class": "Alterego",
+      "star": 5,
+      "name": "杀生院祈荒",
+      "nameLink": "杀生院祈荒",
+      "types": [
+        5
       ]
     },
     {
@@ -1131,7 +1678,8 @@
       "name": "不夜城的Assassin",
       "nameLink": "不夜城的Assassin",
       "types": [
-        4
+        4,
+        5
       ]
     },
     {
@@ -1153,6 +1701,7 @@
       "name": "反抗军的Rider",
       "nameLink": "反抗军的Rider",
       "types": [
+        5,
         7
       ]
     },
@@ -1163,6 +1712,7 @@
       "name": "夏洛克·福尔摩斯",
       "nameLink": "夏洛克·福尔摩斯",
       "types": [
+        5,
         7
       ]
     },
@@ -1180,6 +1730,16 @@
       "typeComments": {
         "0": "灵衣「疯狂的兔子」"
       }
+    },
+    {
+      "id": 175,
+      "class": "Caster",
+      "star": 5,
+      "name": "尼禄·克劳狄乌斯",
+      "nameLink": "尼禄·克劳狄乌斯(Caster)",
+      "types": [
+        6
+      ]
     },
     {
       "id": 176,
@@ -1203,13 +1763,34 @@
       ]
     },
     {
+      "id": 178,
+      "class": "Berserker",
+      "star": 4,
+      "name": "织田信长",
+      "nameLink": "织田信长(Berserker)",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 179,
       "class": "Rider",
       "star": 5,
       "name": "阿尔托莉雅·潘德拉贡〔Alter〕",
       "nameLink": "阿尔托莉雅·潘德拉贡〔Alter〕(Rider)",
       "types": [
-        4
+        4,
+        5
+      ]
+    },
+    {
+      "id": 180,
+      "class": "Archer",
+      "star": 4,
+      "name": "海伦娜·布拉瓦茨基",
+      "nameLink": "海伦娜·布拉瓦茨基(Archer)",
+      "types": [
+        6
       ]
     },
     {
@@ -1242,6 +1823,7 @@
       "name": "帕尔瓦蒂",
       "nameLink": "帕尔瓦蒂",
       "types": [
+        1,
         2,
         3,
         4
@@ -1255,6 +1837,17 @@
       "nameLink": "Archer Inferno",
       "types": [
         7
+      ]
+    },
+    {
+      "id": 185,
+      "class": "Assassin",
+      "star": 4,
+      "name": "Assassin Paraiso",
+      "nameLink": "Assassin Paraiso",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -1284,7 +1877,8 @@
       "name": "刑部姬",
       "nameLink": "刑部姬",
       "types": [
-        3
+        3,
+        6
       ]
     },
     {
@@ -1310,6 +1904,16 @@
       ]
     },
     {
+      "id": 192,
+      "class": "Caster",
+      "star": 4,
+      "name": "俄刻阿诺斯的Caster",
+      "nameLink": "俄刻阿诺斯的Caster",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 193,
       "class": "Lancer",
       "star": 4,
@@ -1330,13 +1934,36 @@
       ]
     },
     {
+      "id": 195,
+      "class": "Foreigner",
+      "star": 5,
+      "name": "阿比盖尔·威廉姆斯",
+      "nameLink": "阿比盖尔·威廉姆斯",
+      "types": [
+        5
+      ]
+    },
+    {
       "id": 196,
       "class": "Lancer",
       "star": 5,
       "name": "埃列什基伽勒",
       "nameLink": "埃列什基伽勒",
       "types": [
-        3
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 197,
+      "class": "Archer",
+      "star": 4,
+      "name": "阿蒂拉·the·San〔ta〕",
+      "nameLink": "阿蒂拉·the·San〔ta〕",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -1346,7 +1973,8 @@
       "name": "塞弥拉弥斯",
       "nameLink": "塞弥拉弥斯",
       "types": [
-        4
+        4,
+        5
       ]
     },
     {
@@ -1357,7 +1985,8 @@
       "nameLink": "浅上藤乃",
       "types": [
         1,
-        4
+        4,
+        5
       ]
     },
     {
@@ -1377,7 +2006,19 @@
       "name": "阿塔兰忒〔Alter〕",
       "nameLink": "阿塔兰忒〔Alter〕",
       "types": [
-        0
+        0,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 204,
+      "class": "Avenger",
+      "star": 3,
+      "name": "安东尼奥·萨列里",
+      "nameLink": "安东尼奥·萨列里",
+      "types": [
+        5
       ]
     },
     {
@@ -1387,7 +2028,8 @@
       "name": "伊凡雷帝",
       "nameLink": "伊凡雷帝",
       "types": [
-        0
+        0,
+        5
       ]
     },
     {
@@ -1439,6 +2081,7 @@
       "nameLink": "冈田以藏",
       "types": [
         3,
+        5,
         7
       ]
     },
@@ -1459,6 +2102,7 @@
       "name": "拿破仑",
       "nameLink": "拿破仑",
       "types": [
+        5,
         7
       ]
     },
@@ -1485,6 +2129,16 @@
       ]
     },
     {
+      "id": 215,
+      "class": "Caster",
+      "star": 5,
+      "name": "斯卡哈·斯卡蒂",
+      "nameLink": "斯卡哈·斯卡蒂",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 216,
       "class": "Archer",
       "star": 5,
@@ -1492,6 +2146,17 @@
       "nameLink": "贞德(Archer)",
       "types": [
         4
+      ]
+    },
+    {
+      "id": 217,
+      "class": "Lancer",
+      "star": 4,
+      "name": "茨木童子",
+      "nameLink": "茨木童子(Lancer)",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -1505,13 +2170,35 @@
       ]
     },
     {
+      "id": 219,
+      "class": "Berserker",
+      "star": 4,
+      "name": "贞德〔Alter〕",
+      "nameLink": "贞德〔Alter〕(Berserker)",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 220,
       "class": "MoonCancer",
       "star": 5,
       "name": "BB",
       "nameLink": "BB(SSR)",
       "types": [
-        3
+        3,
+        5
+      ]
+    },
+    {
+      "id": 221,
+      "class": "Saber",
+      "star": 4,
+      "name": "女王梅芙",
+      "nameLink": "女王梅芙(Saber)",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -1522,7 +2209,19 @@
       "nameLink": "谜之女主角XX",
       "types": [
         2,
-        4
+        4,
+        5
+      ]
+    },
+    {
+      "id": 225,
+      "class": "Caster",
+      "star": 4,
+      "name": "酒吞童子",
+      "nameLink": "酒吞童子(Caster)",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -1564,7 +2263,8 @@
       "name": "虞美人",
       "nameLink": "虞美人",
       "types": [
-        4
+        4,
+        5
       ]
     },
     {
@@ -1621,6 +2321,7 @@
       "nameLink": "李书文(Assassin)",
       "types": [
         3,
+        5,
         7
       ]
     },
@@ -1657,6 +2358,17 @@
         2,
         3,
         4
+      ]
+    },
+    {
+      "id": 239,
+      "class": "Assassin",
+      "star": 5,
+      "name": "迦摩",
+      "nameLink": "迦摩",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -1735,7 +2447,18 @@
       "nameLink": "阿周那〔Alter〕",
       "types": [
         2,
-        3
+        3,
+        5
+      ]
+    },
+    {
+      "id": 248,
+      "class": "Archer",
+      "star": 4,
+      "name": "马嘶",
+      "nameLink": "马嘶",
+      "types": [
+        6
       ]
     },
     {
@@ -1747,6 +2470,16 @@
       "types": [
         3,
         7
+      ]
+    },
+    {
+      "id": 251,
+      "class": "Berserker",
+      "star": 3,
+      "name": "森长可",
+      "nameLink": "森长可",
+      "types": [
+        6
       ]
     },
     {
@@ -1811,7 +2544,19 @@
       "name": "巴沙洛缪·罗伯茨",
       "nameLink": "巴沙洛缪·罗伯茨",
       "types": [
-        3
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 258,
+      "class": "Caster",
+      "star": 2,
+      "name": "陈宫",
+      "nameLink": "陈宫",
+      "types": [
+        6
       ]
     },
     {
@@ -1825,13 +2570,25 @@
       ]
     },
     {
+      "id": 260,
+      "class": "Berserker",
+      "star": 2,
+      "name": "莎乐美",
+      "nameLink": "莎乐美",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
       "id": 261,
       "class": "Berserker",
       "star": 5,
       "name": "宫本武藏",
       "nameLink": "宫本武藏(Berserker)",
       "types": [
-        3
+        3,
+        6
       ]
     },
     {
@@ -1851,7 +2608,18 @@
       "name": "卡米拉",
       "nameLink": "卡米拉(Rider)",
       "types": [
+        5,
         7
+      ]
+    },
+    {
+      "id": 264,
+      "class": "Saber",
+      "star": 4,
+      "name": "葛饰北斋",
+      "nameLink": "葛饰北斋(Saber)",
+      "types": [
+        6
       ]
     },
     {
@@ -1895,7 +2663,18 @@
       "nameLink": "太空伊什塔尔",
       "types": [
         3,
-        4
+        4,
+        5
+      ]
+    },
+    {
+      "id": 269,
+      "class": "Archer",
+      "star": 4,
+      "name": "灾星简",
+      "nameLink": "灾星简",
+      "types": [
+        6
       ]
     },
     {
@@ -1905,7 +2684,8 @@
       "name": "阿斯托尔福",
       "nameLink": "阿斯托尔福(Saber)",
       "types": [
-        0
+        0,
+        6
       ]
     },
     {
@@ -1917,6 +2697,16 @@
       "types": [
         2,
         4
+      ]
+    },
+    {
+      "id": 272,
+      "class": "Archer",
+      "star": 5,
+      "name": "超人俄里翁",
+      "nameLink": "超人俄里翁",
+      "types": [
+        6
       ]
     },
     {
@@ -1941,6 +2731,16 @@
       ]
     },
     {
+      "id": 276,
+      "class": "Archer",
+      "star": 5,
+      "name": "清少纳言",
+      "nameLink": "清少纳言",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 277,
       "class": "Rider",
       "star": 5,
@@ -1952,13 +2752,34 @@
       ]
     },
     {
+      "id": 278,
+      "class": "Saber",
+      "star": 5,
+      "name": "狄俄斯库里",
+      "nameLink": "狄俄斯库里",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 279,
       "class": "Lancer",
       "star": 4,
       "name": "凯妮斯",
       "nameLink": "凯妮斯",
       "types": [
+        5,
         7
+      ]
+    },
+    {
+      "id": 280,
+      "class": "Lancer",
+      "star": 5,
+      "name": "罗穆路斯·奎里努斯",
+      "nameLink": "罗穆路斯·奎里努斯",
+      "types": [
+        6
       ]
     },
     {
@@ -1968,6 +2789,7 @@
       "name": "旅行者",
       "nameLink": "旅行者",
       "types": [
+        5,
         7
       ]
     },
@@ -1979,6 +2801,7 @@
       "nameLink": "鬼女红叶",
       "types": [
         0,
+        5,
         7
       ],
       "typeComments": {
@@ -1992,6 +2815,7 @@
       "name": "宇津见绘里濑",
       "nameLink": "宇津见绘里濑",
       "types": [
+        1,
         4
       ]
     },
@@ -2002,6 +2826,7 @@
       "name": "阿尔托莉雅·卡斯特",
       "nameLink": "阿尔托莉雅·卡斯特",
       "types": [
+        5,
         7
       ]
     },
@@ -2013,7 +2838,8 @@
       "nameLink": "杀生院祈荒(MoonCancer)",
       "types": [
         0,
-        4
+        4,
+        5
       ],
       "typeComments": {
         "0": "战斗形象3"
@@ -2047,7 +2873,8 @@
       "name": "虞美人",
       "nameLink": "虞美人(Lancer)",
       "types": [
-        4
+        4,
+        5
       ]
     },
     {
@@ -2057,7 +2884,8 @@
       "name": "阿比盖尔·威廉姆斯〔夏〕",
       "nameLink": "阿比盖尔·威廉姆斯〔夏〕",
       "types": [
-        4
+        4,
+        5
       ]
     },
     {
@@ -2097,7 +2925,18 @@
       "name": "织田信胜",
       "nameLink": "织田信胜",
       "types": [
-        3
+        3,
+        6
+      ]
+    },
+    {
+      "id": 295,
+      "class": "Foreigner",
+      "star": 5,
+      "name": "梵高",
+      "nameLink": "梵高",
+      "types": [
+        5
       ]
     },
     {
@@ -2107,7 +2946,8 @@
       "name": "尼莫",
       "nameLink": "尼莫",
       "types": [
-        3
+        3,
+        6
       ]
     },
     {
@@ -2117,7 +2957,8 @@
       "name": "芦屋道满",
       "nameLink": "芦屋道满",
       "types": [
-        3
+        3,
+        5
       ]
     },
     {
@@ -2138,7 +2979,8 @@
       "nameLink": "伊吹童子",
       "types": [
         0,
-        3
+        3,
+        6
       ]
     },
     {
@@ -2150,6 +2992,7 @@
       "types": [
         0,
         3,
+        5,
         7
       ]
     },
@@ -2170,7 +3013,28 @@
       "name": "千子村正",
       "nameLink": "千子村正",
       "types": [
-        1
+        1,
+        6
+      ]
+    },
+    {
+      "id": 303,
+      "class": "Avenger",
+      "star": 5,
+      "name": "平景清",
+      "nameLink": "平景清",
+      "types": [
+        5
+      ]
+    },
+    {
+      "id": 304,
+      "class": "Assassin",
+      "star": 4,
+      "name": "鬼一法眼",
+      "nameLink": "鬼一法眼",
+      "types": [
+        6
       ]
     },
     {
@@ -2184,6 +3048,16 @@
         2,
         3,
         4
+      ]
+    },
+    {
+      "id": 306,
+      "class": "Berserker",
+      "star": 5,
+      "name": "伽拉忒亚",
+      "nameLink": "伽拉忒亚",
+      "types": [
+        6
       ]
     },
     {
@@ -2204,6 +3078,7 @@
       "name": "谜之偶像X〔Alter〕",
       "nameLink": "谜之偶像X〔Alter〕",
       "types": [
+        5,
         7
       ]
     },
@@ -2215,7 +3090,8 @@
       "nameLink": "摩根",
       "types": [
         3,
-        4
+        4,
+        5
       ]
     },
     {
@@ -2225,7 +3101,19 @@
       "name": "妖精骑士高文",
       "nameLink": "妖精骑士高文",
       "types": [
-        0
+        0,
+        6
+      ]
+    },
+    {
+      "id": 311,
+      "class": "Archer",
+      "star": 4,
+      "name": "妖精骑士崔斯坦",
+      "nameLink": "妖精骑士崔斯坦",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -2237,6 +3125,7 @@
       "types": [
         0,
         3,
+        5,
         7
       ]
     },
@@ -2260,7 +3149,8 @@
       "types": [
         0,
         3,
-        4
+        4,
+        5
       ]
     },
     {
@@ -2280,7 +3170,8 @@
       "name": "奥伯龙",
       "nameLink": "奥伯龙",
       "types": [
-        3
+        3,
+        5
       ]
     },
     {
@@ -2291,6 +3182,26 @@
       "nameLink": "冲田总司〔Alter〕(Saber)",
       "types": [
         7
+      ]
+    },
+    {
+      "id": 318,
+      "class": "Archer",
+      "star": 4,
+      "name": "阿纳斯塔西娅＆维",
+      "nameLink": "阿纳斯塔西娅＆维",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 319,
+      "class": "Caster",
+      "star": 4,
+      "name": "夏洛特·科黛",
+      "nameLink": "夏洛特·科黛(Caster)",
+      "types": [
+        6
       ]
     },
     {
@@ -2310,6 +3221,7 @@
       "name": "迦摩",
       "nameLink": "迦摩(Avenger)",
       "types": [
+        5,
         7
       ]
     },
@@ -2324,12 +3236,23 @@
       ]
     },
     {
+      "id": 323,
+      "class": "Berserker",
+      "star": 4,
+      "name": "清少纳言",
+      "nameLink": "清少纳言(Berserker)",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 324,
       "class": "Foreigner",
       "star": 5,
       "name": "雅克·德·莫莱",
       "nameLink": "雅克·德·莫莱",
       "types": [
+        5,
         7
       ]
     },
@@ -2345,13 +3268,34 @@
       ]
     },
     {
+      "id": 326,
+      "class": "Rider",
+      "star": 4,
+      "name": "伊丽莎白·巴托里〔灰姑娘〕",
+      "nameLink": "伊丽莎白·巴托里〔灰姑娘〕",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 327,
+      "class": "Caster",
+      "star": 5,
+      "name": "出云阿国",
+      "nameLink": "出云阿国",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 328,
       "class": "Avenger",
       "star": 4,
       "name": "谜之兰丸X",
       "nameLink": "谜之兰丸X",
       "types": [
-        2
+        2,
+        5
       ]
     },
     {
@@ -2403,7 +3347,8 @@
       "name": "暗之高扬斯卡娅",
       "nameLink": "暗之高扬斯卡娅",
       "types": [
-        0
+        0,
+        5
       ]
     },
     {
@@ -2497,7 +3442,8 @@
       "nameLink": "查理曼",
       "types": [
         2,
-        3
+        3,
+        5
       ]
     },
     {
@@ -2511,13 +3457,24 @@
       ]
     },
     {
+      "id": 345,
+      "class": "Berserker",
+      "star": 4,
+      "name": "克里姆希尔德",
+      "nameLink": "克里姆希尔德",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 346,
       "class": "Ruler",
       "star": 5,
       "name": "詹姆斯·莫里亚蒂",
       "nameLink": "詹姆斯·莫里亚蒂(Ruler)",
       "types": [
-        3
+        3,
+        5
       ]
     },
     {
@@ -2529,6 +3486,16 @@
       "types": [
         0,
         2
+      ]
+    },
+    {
+      "id": 348,
+      "class": "Caster",
+      "star": 3,
+      "name": "张角",
+      "nameLink": "张角",
+      "types": [
+        6
       ]
     },
     {
@@ -2558,6 +3525,7 @@
       "name": "Archetype：Earth",
       "nameLink": "Archetype：Earth",
       "types": [
+        5,
         7
       ],
       "typeComments": {
@@ -2582,7 +3550,8 @@
       "nameLink": "伊吹童子(Berserker)",
       "types": [
         0,
-        3
+        3,
+        6
       ]
     },
     {
@@ -2613,7 +3582,8 @@
       "name": "武则天",
       "nameLink": "武则天(Caster)",
       "types": [
-        4
+        4,
+        5
       ]
     },
     {
@@ -2650,6 +3620,17 @@
       ]
     },
     {
+      "id": 362,
+      "class": "Berserker",
+      "star": 5,
+      "name": "千利休",
+      "nameLink": "千利休",
+      "types": [
+        5,
+        6
+      ]
+    },
+    {
       "id": 363,
       "class": "Saber",
       "star": 4,
@@ -2667,7 +3648,8 @@
       "nameLink": "壹与",
       "types": [
         3,
-        4
+        4,
+        5
       ]
     },
     {
@@ -2677,7 +3659,29 @@
       "name": "呼延灼",
       "nameLink": "呼延灼",
       "types": [
-        0
+        0,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 366,
+      "class": "Rider",
+      "star": 4,
+      "name": "黄飞虎",
+      "nameLink": "黄飞虎",
+      "types": [
+        6
+      ]
+    },
+    {
+      "id": 367,
+      "class": "Pretender",
+      "star": 4,
+      "name": "九纹龙伊丽莎",
+      "nameLink": "九纹龙伊丽莎",
+      "types": [
+        5
       ]
     },
     {
@@ -2692,13 +3696,35 @@
       ]
     },
     {
+      "id": 369,
+      "class": "Alterego",
+      "star": 5,
+      "name": "格里戈里·拉斯普京",
+      "nameLink": "格里戈里·拉斯普京",
+      "types": [
+        5
+      ]
+    },
+    {
+      "id": 370,
+      "class": "Avenger",
+      "star": 5,
+      "name": "尼托克丽丝〔Alter〕",
+      "nameLink": "尼托克丽丝〔Alter〕",
+      "types": [
+        5
+      ]
+    },
+    {
       "id": 371,
       "class": "Assassin",
       "star": 5,
       "name": "特斯卡特利波卡",
       "nameLink": "特斯卡特利波卡",
       "types": [
-        3
+        1,
+        3,
+        6
       ]
     },
     {
@@ -2720,7 +3746,8 @@
       "nameLink": "库库尔坎",
       "types": [
         2,
-        4
+        4,
+        5
       ]
     },
     {
@@ -2735,13 +3762,34 @@
       ]
     },
     {
+      "id": 375,
+      "class": "Archer",
+      "star": 5,
+      "name": "高杉晋作",
+      "nameLink": "高杉晋作",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 376,
       "class": "Alterego",
       "star": 5,
       "name": "幼体／提亚马特",
       "nameLink": "幼体／提亚马特",
       "types": [
-        0
+        0,
+        5
+      ]
+    },
+    {
+      "id": 378,
+      "class": "Assassin",
+      "star": 4,
+      "name": "洛库斯塔",
+      "nameLink": "洛库斯塔",
+      "types": [
+        6
       ]
     },
     {
@@ -2751,6 +3799,7 @@
       "name": "果心居士",
       "nameLink": "果心居士",
       "types": [
+        5,
         7
       ]
     },
@@ -2765,13 +3814,34 @@
       ]
     },
     {
+      "id": 382,
+      "class": "Berserker",
+      "star": 4,
+      "name": "难敌",
+      "nameLink": "难敌",
+      "types": [
+        5
+      ]
+    },
+    {
       "id": 383,
       "class": "Archer",
       "star": 5,
       "name": "杜尔伽",
       "nameLink": "杜尔伽",
       "types": [
+        1,
         4
+      ]
+    },
+    {
+      "id": 384,
+      "class": "Saber",
+      "star": 5,
+      "name": "美杜莎",
+      "nameLink": "美杜莎(Saber)",
+      "types": [
+        6
       ]
     },
     {
@@ -2795,6 +3865,7 @@
       "name": "阿尔托莉雅·卡斯特",
       "nameLink": "阿尔托莉雅·卡斯特(Berserker)",
       "types": [
+        5,
         7
       ]
     },
@@ -2824,6 +3895,16 @@
       }
     },
     {
+      "id": 389,
+      "class": "Foreigner",
+      "star": 4,
+      "name": "诺克娜蕾·雅兰杜",
+      "nameLink": "诺克娜蕾·雅兰杜",
+      "types": [
+        5
+      ]
+    },
+    {
       "id": 390,
       "class": "Ruler",
       "star": 5,
@@ -2831,6 +3912,7 @@
       "nameLink": "梅柳齐娜(Ruler)",
       "types": [
         0,
+        5,
         7
       ]
     },
@@ -2841,7 +3923,18 @@
       "name": "UDK－巴格斯特",
       "nameLink": "UDK－巴格斯特",
       "types": [
-        0
+        0,
+        6
+      ]
+    },
+    {
+      "id": 392,
+      "class": "Pretender",
+      "star": 4,
+      "name": "凯特·库·米可科尔",
+      "nameLink": "凯特·库·米可科尔",
+      "types": [
+        5
       ]
     },
     {
@@ -2875,6 +3968,16 @@
       ]
     },
     {
+      "id": 397,
+      "class": "Rider",
+      "star": 5,
+      "name": "武田晴信",
+      "nameLink": "武田晴信",
+      "types": [
+        5
+      ]
+    },
+    {
       "id": 398,
       "class": "Berserker",
       "star": 4,
@@ -2896,6 +3999,16 @@
       ]
     },
     {
+      "id": 401,
+      "class": "Rider",
+      "star": 4,
+      "name": "尼莫〔圣诞〕",
+      "nameLink": "尼莫〔圣诞〕",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 402,
       "class": "Saber",
       "star": 5,
@@ -2912,7 +4025,18 @@
       "name": "源赖光／丑御前",
       "nameLink": "源赖光／丑御前",
       "types": [
-        4
+        4,
+        5
+      ]
+    },
+    {
+      "id": 404,
+      "class": "Caster",
+      "star": 4,
+      "name": "由井正雪",
+      "nameLink": "由井正雪",
+      "types": [
+        6
       ]
     },
     {
@@ -2927,6 +4051,36 @@
       ]
     },
     {
+      "id": 407,
+      "class": "Avenger",
+      "star": 5,
+      "name": "玛丽·安托瓦内特〔Alter〕",
+      "nameLink": "玛丽·安托瓦内特〔Alter〕",
+      "types": [
+        5
+      ]
+    },
+    {
+      "id": 408,
+      "class": "Assassin",
+      "star": 4,
+      "name": "耀星哈桑",
+      "nameLink": "耀星哈桑",
+      "types": [
+        5
+      ]
+    },
+    {
+      "id": 409,
+      "class": "Avenger",
+      "star": 5,
+      "name": "岩窟王　基督山",
+      "nameLink": "岩窟王_基督山",
+      "types": [
+        5
+      ]
+    },
+    {
       "id": 413,
       "class": "Foreigner",
       "star": 5,
@@ -2935,8 +4089,12 @@
       "types": [
         1,
         2,
-        4
-      ]
+        4,
+        5
+      ],
+      "typeComments": {
+        "5": "变身为〔超级青子〕"
+      }
     },
     {
       "id": 414,
@@ -2945,8 +4103,24 @@
       "name": "静希草十郎",
       "nameLink": "静希草十郎",
       "types": [
+        1,
         7
       ]
+    },
+    {
+      "id": 415,
+      "class": "Caster",
+      "star": 5,
+      "name": "久远寺有珠",
+      "nameLink": "久远寺有珠",
+      "types": [
+        1,
+        5,
+        6
+      ],
+      "typeComments": {
+        "5": "战斗形象3"
+      }
     },
     {
       "id": 416,
@@ -2955,13 +4129,17 @@
       "name": "响＆千键",
       "nameLink": "响＆千键",
       "types": [
+        1,
         2,
         4,
+        5,
         7
       ],
       "typeComments": {
+        "1": "战斗形象1/2",
         "2": "战斗形象1/2",
         "4": "战斗形象1/2",
+        "5": "战斗形象3",
         "7": "战斗形象3"
       }
     },
@@ -2972,6 +4150,7 @@
       "name": "谜之代行者C.I.E.L",
       "nameLink": "谜之代行者C.I.E.L",
       "types": [
+        1,
         2,
         3,
         4
@@ -2995,7 +4174,8 @@
       "name": "BB迪拜",
       "nameLink": "BB迪拜",
       "types": [
-        0
+        0,
+        5
       ],
       "typeComments": {
         "0": "战斗形象3"
@@ -3015,6 +4195,16 @@
       "typeComments": {
         "0": "战斗形象3"
       }
+    },
+    {
+      "id": 423,
+      "class": "Foreigner",
+      "star": 4,
+      "name": "谜之女主角XX〔Alter〕",
+      "nameLink": "谜之女主角XX〔Alter〕",
+      "types": [
+        5
+      ]
     },
     {
       "id": 424,
@@ -3065,7 +4255,8 @@
       "name": "梵高〔矿工〕",
       "nameLink": "梵高〔矿工〕",
       "types": [
-        3
+        3,
+        6
       ]
     },
     {
@@ -3076,6 +4267,7 @@
       "nameLink": "娄希",
       "types": [
         0,
+        5,
         7
       ],
       "typeComments": {
@@ -3090,7 +4282,8 @@
       "nameLink": "Phantasmoon",
       "types": [
         2,
-        4
+        4,
+        5
       ]
     },
     {
@@ -3100,7 +4293,8 @@
       "name": "比肖内",
       "nameLink": "比肖内",
       "types": [
-        0
+        0,
+        6
       ]
     },
     {
@@ -3131,6 +4325,7 @@
       "name": "但丁·阿利吉耶里",
       "nameLink": "但丁·阿利吉耶里",
       "types": [
+        5,
         7
       ]
     },
@@ -3162,7 +4357,9 @@
       "name": "莉莉丝",
       "nameLink": "莉莉丝",
       "types": [
-        0
+        0,
+        5,
+        6
       ]
     },
     {
@@ -3173,7 +4370,8 @@
       "nameLink": "堤丰·厄斐墨洛斯",
       "types": [
         0,
-        3
+        3,
+        5
       ]
     },
     {
@@ -3196,11 +4394,13 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "typeComments": {
         "1": "战斗形象3",
-        "2": "战斗形象3"
+        "2": "战斗形象3",
+        "5": "非战斗形象3"
       }
     },
     {
@@ -3214,13 +4414,24 @@
       ]
     },
     {
+      "id": 446,
+      "class": "Rider",
+      "star": 4,
+      "name": "克里姆希尔德",
+      "nameLink": "克里姆希尔德(Rider)",
+      "types": [
+        6
+      ]
+    },
+    {
       "id": 447,
       "class": "Berserker",
       "star": 4,
       "name": "呼延灼",
       "nameLink": "呼延灼(Berserker)",
       "types": [
-        0
+        0,
+        6
       ]
     },
     {
@@ -3231,11 +4442,13 @@
       "nameLink": "玉兔",
       "types": [
         0,
+        1,
         3,
         7
       ],
       "typeComments": {
         "0": "战斗形象1/3、灵衣「隐身的太阳眼镜」",
+        "1": "战斗形象1/2、灵衣「隐身的太阳眼镜」",
         "7": "战斗形象3"
       }
     },
@@ -3246,11 +4459,14 @@
       "name": "美游·艾德费尔特",
       "nameLink": "美游·艾德费尔特(Lancer)",
       "types": [
+        1,
         2,
-        4
+        4,
+        5
       ],
       "typeComments": {
-        "2": "战斗形象1/2"
+        "2": "战斗形象1/2",
+        "5": "战斗形象3"
       }
     },
     {
@@ -3260,7 +4476,9 @@
       "name": "幼体／提亚马特",
       "nameLink": "幼体／提亚马特(Archer)",
       "types": [
-        0
+        0,
+        5,
+        6
       ]
     },
     {
@@ -3281,7 +4499,8 @@
       "name": "尼莫／诺亚",
       "nameLink": "尼莫／诺亚",
       "types": [
-        2
+        2,
+        5
       ]
     },
     {
@@ -3291,7 +4510,9 @@
       "name": "河上彦斋",
       "nameLink": "河上彦斋",
       "types": [
-        3
+        3,
+        5,
+        6
       ]
     },
     {
@@ -3321,7 +4542,19 @@
       "name": "近藤勇",
       "nameLink": "近藤勇",
       "types": [
-        3
+        3,
+        6
+      ]
+    },
+    {
+      "id": 457,
+      "class": "Lancer",
+      "star": 5,
+      "name": "伊丽莎白·巴托里",
+      "nameLink": "伊丽莎白·巴托里(SSR)",
+      "types": [
+        5,
+        6
       ]
     },
     {
@@ -3331,7 +4564,18 @@
       "name": "终结之伊丽莎白",
       "nameLink": "终结之伊丽莎白",
       "types": [
-        0
+        0,
+        5
+      ]
+    },
+    {
+      "id": 459,
+      "class": "Pretender",
+      "star": 5,
+      "name": "所罗门",
+      "nameLink": "所罗门(Pretender)",
+      "types": [
+        5
       ]
     },
     {
@@ -3342,7 +4586,8 @@
       "nameLink": "领主洛格雷斯",
       "types": [
         2,
-        4
+        4,
+        5
       ]
     },
     {
@@ -3389,8 +4634,12 @@
       "nameLink": "得墨忒耳",
       "types": [
         3,
-        4
-      ]
+        4,
+        5
+      ],
+      "typeComments": {
+        "5": "战斗形象3"
+      }
     },
     {
       "id": 466,
@@ -3409,7 +4658,9 @@
       "name": "普勒拉蒂",
       "nameLink": "普勒拉蒂",
       "types": [
-        3
+        3,
+        5,
+        6
       ]
     },
     {
@@ -3430,6 +4681,7 @@
       "name": "无地王约翰",
       "nameLink": "无地王约翰",
       "types": [
+        5,
         7
       ]
     },
@@ -3450,16 +4702,18 @@
       "name": "阿斯卡拉福斯",
       "nameLink": "阿斯卡拉福斯",
       "types": [
-        0
+        0,
+        5
       ]
     },
     {
       "id": 472,
       "class": "Saber",
       "star": 4,
-      "name": "グレイ・リリィ",
-      "nameLink": "グレイ・リリィ",
+      "name": "格蕾·Lily",
+      "nameLink": "格蕾·Lily",
       "types": [
+        1,
         2,
         4
       ]
@@ -3468,9 +4722,10 @@
       "id": 473,
       "class": "Lancer",
       "star": 4,
-      "name": "グレイ・リリィ",
-      "nameLink": "グレイ・リリィ",
+      "name": "格蕾·Lily",
+      "nameLink": "格蕾·Lily(Lancer)",
       "types": [
+        1,
         2,
         4
       ]
