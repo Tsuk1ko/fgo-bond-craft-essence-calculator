@@ -380,17 +380,6 @@
       ]
     },
     {
-      "id": 39,
-      "class": "Assassin",
-      "star": 1,
-      "name": "佐佐木小次郎",
-      "nameLink": "佐佐木小次郎",
-      "types": [
-        5,
-        7
-      ]
-    },
-    {
       "id": 40,
       "class": "Assassin",
       "star": 2,
@@ -1227,18 +1216,6 @@
       ]
     },
     {
-      "id": 124,
-      "class": "Assassin",
-      "star": 3,
-      "name": "静谧哈桑",
-      "nameLink": "静谧哈桑",
-      "types": [
-        3,
-        4,
-        5
-      ]
-    },
-    {
       "id": 125,
       "class": "Archer",
       "star": 3,
@@ -1595,17 +1572,6 @@
       "types": [
         2,
         3
-      ]
-    },
-    {
-      "id": 161,
-      "class": "Berserker",
-      "star": 5,
-      "name": "土方岁三",
-      "nameLink": "土方岁三",
-      "types": [
-        3,
-        5
       ]
     },
     {
