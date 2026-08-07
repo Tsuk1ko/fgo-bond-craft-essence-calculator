@@ -3,13 +3,16 @@ import { resolve } from 'node:path';
 import PromisePool from '@supercharge/promise-pool';
 import { write } from 'bun';
 import { load } from 'cheerio';
-import { groupBy, keyBy, pick, uniqBy } from 'es-toolkit';
+import { groupBy, keyBy, pick, retry, uniqBy } from 'es-toolkit';
 import { tinyPNG } from './utils/tinypng';
+
+const retryFetch = (...args: Parameters<typeof fetch>) =>
+  retry(() => fetch(...args), { retries: 3, delay: 2000 });
 
 const fetchCharacterListData = async () => {
   console.log('fetching character data');
   const html = await (
-    await fetch('https://fgo.wiki/w/%E8%8B%B1%E7%81%B5%E5%9B%BE%E9%89%B4')
+    await retryFetch('https://fgo.wiki/w/%E8%8B%B1%E7%81%B5%E5%9B%BE%E9%89%B4')
   ).text();
   const rawData = /var raw_str = "(.+?)";/.exec(html)![1].split('\\n');
   rawData.shift();
@@ -136,7 +139,7 @@ const parseComment = (text: string) => {
 
 const fetchData = async (url: string) => {
   console.log('fetching:', url);
-  const html = await (await fetch(url)).text();
+  const html = await (await retryFetch(url)).text();
   const $ = load(html);
   const $panel = $('.tabber__panel[id^="tabber-持有该"]').first();
   const $row = $panel.find('tbody tr:not([class])');
@@ -253,7 +256,7 @@ await PromisePool.withConcurrency(8)
   })
   .process(async ({ dist, url }) => {
     console.log('downloading image:', url);
-    const buffer = await (await fetch(url)).arrayBuffer();
+    const buffer = await (await retryFetch(url)).arrayBuffer();
     await write(dist, await tinyPNG(buffer));
   });
 
