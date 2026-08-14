@@ -4449,7 +4449,7 @@
         7
       ],
       "typeComments": {
-        "0": "战斗形象1/3、灵衣「隐身的太阳眼镜」",
+        "0": "战斗形象1/3、灵衣「隐藏身份的太阳镜」",
         "1": "战斗形象1/2、灵衣「隐藏身份的太阳镜」",
         "7": "战斗形象3"
       }
@@ -4746,9 +4746,11 @@
       "id": 475,
       "class": "Berserker",
       "star": 5,
-      "name": "紅閻魔",
-      "nameLink": "紅閻魔",
+      "name": "红阎魔",
+      "nameLink": "红阎魔(Berserker)",
       "types": [
+        0,
+        2,
         4
       ]
     },
@@ -4756,10 +4758,23 @@
       "id": 476,
       "class": "MoonCancer",
       "star": 5,
-      "name": "キングプロテア",
-      "nameLink": "キングプロテア",
+      "name": "Kingprotea",
+      "nameLink": "Kingprotea(MoonCancer)",
       "types": [
+        0,
+        2,
         4
+      ]
+    },
+    {
+      "id": 477,
+      "class": "Caster",
+      "star": 4,
+      "name": "比肖内",
+      "nameLink": "比肖内(Caster)",
+      "types": [
+        0,
+        6
       ]
     }
   ]
