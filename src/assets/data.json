@@ -4786,6 +4786,26 @@
       "types": [
         6
       ]
+    },
+    {
+      "id": 479,
+      "class": "Avenger",
+      "star": 5,
+      "name": "Kingprotea·Alter",
+      "nameLink": "Kingprotea·Alter",
+      "types": [
+        5
+      ]
+    },
+    {
+      "id": 481,
+      "class": "Pretender",
+      "star": 4,
+      "name": "哈贝特洛特",
+      "nameLink": "哈贝特洛特(Pretender)",
+      "types": [
+        3
+      ]
     }
   ]
 }
