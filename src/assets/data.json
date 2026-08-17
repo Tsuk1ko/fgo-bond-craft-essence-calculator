@@ -4784,6 +4784,7 @@
       "name": "莉莉丝",
       "nameLink": "莉莉丝(Rider)",
       "types": [
+        0,
         6
       ]
     },
@@ -4794,7 +4795,18 @@
       "name": "Kingprotea·Alter",
       "nameLink": "Kingprotea·Alter",
       "types": [
+        0,
         5
+      ]
+    },
+    {
+      "id": 480,
+      "class": "Archer",
+      "star": 4,
+      "name": "小野小町",
+      "nameLink": "小野小町(Archer)",
+      "types": [
+        7
       ]
     },
     {
@@ -4804,7 +4816,9 @@
       "name": "哈贝特洛特",
       "nameLink": "哈贝特洛特(Pretender)",
       "types": [
-        3
+        0,
+        3,
+        7
       ]
     }
   ]
