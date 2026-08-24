@@ -38,11 +38,28 @@ const classBonusIdMap = new Map<string, number>(classBonusItems.map(({ id, name 
 
 export const getTypeName = (id: number) => typeNameMap.get(id) ?? String(id);
 
-export const servantList = (data.servantList as Servant[]).map(s => {
+export const isVirtualServantId = (id: number) => id < 0;
+
+export const isVirtualServant = ({ id }: Pick<Servant, 'id'>) => isVirtualServantId(id);
+
+/** data.json 只有特性 id；Caster/Rider/Saber 的职阶加成 id 在加载时写入 types 头部。 */
+const realServantList = (data.servantList as Servant[]).map(s => {
   const classTypeId = classBonusIdMap.get(s.class);
   if (classTypeId === undefined) return s;
   return { ...s, types: [classTypeId, ...s.types] };
 });
+
+/** 代表该职阶全体从者（含未收录特性的），仅有对应职阶加成。 */
+const virtualServantList: Servant[] = classBonusItems.map(({ id, name }) => ({
+  id,
+  class: name,
+  star: -1,
+  name,
+  nameLink: '',
+  types: [id],
+}));
+
+export const servantList = [...realServantList, ...virtualServantList];
 
 export const servantMap = keyBy(servantList, ({ id }) => id);
 

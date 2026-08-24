@@ -34,6 +34,7 @@ const handleGotoWiki = () => {
 };
 
 const open = (event: MouseEvent, id: number) => {
+  if (id < 0) return;
   curContextMenuServantId = id;
   contextMenuRef.value?.open(event);
 };

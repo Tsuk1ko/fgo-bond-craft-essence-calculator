@@ -1,12 +1,16 @@
 import { groupBy, maxBy } from 'es-toolkit';
 import { defineStore } from 'pinia';
 import type { ServantForDisplay, ServantGroupForDisplay } from '@/types';
-import { classSortIndex, getTypeName, servantList } from '@/utils/data';
+import { classSortIndex, getTypeName, isVirtualServant, servantList } from '@/utils/data';
 import type { Servant } from '@/utils/data';
 import { useSettingsStore } from './settings';
 
 export const useServantStore = defineStore('servant', () => {
   const settings = useSettingsStore();
+
+  const onlySelect0Star = computed(
+    () => settings.selectedStars.has(0) && settings.selectedStars.size === 1,
+  );
 
   const filteredServantsWithoutTypes = computed<Servant[]>(() =>
     servantList.filter(s => {
@@ -18,7 +22,13 @@ export const useServantStore = defineStore('servant', () => {
         return false;
       }
       if (settings.selectedClasses.size && !settings.selectedClasses.has(s.class)) return false;
-      if (settings.selectedStars.size && !settings.selectedStars.has(s.star)) return false;
+      if (settings.selectedStars.size) {
+        if (isVirtualServant(s)) {
+          if (onlySelect0Star.value) return false;
+        } else if (!settings.selectedStars.has(s.star)) {
+          return false;
+        }
+      }
       return true;
     }),
   );
@@ -69,11 +79,14 @@ export const useServantStore = defineStore('servant', () => {
     );
     groups.sort(([a], [b]) => classSortIndex[a]! - classSortIndex[b]!);
     groups.forEach(([, servants]) => {
-      servants.sort((a, b) =>
-        a.selectedTypes.length === b.selectedTypes.length
+      servants.sort((a, b) => {
+        const aVirtual = isVirtualServant(a);
+        const bVirtual = isVirtualServant(b);
+        if (aVirtual !== bVirtual) return aVirtual ? 1 : -1;
+        return a.selectedTypes.length === b.selectedTypes.length
           ? b.star - a.star
-          : b.selectedTypes.length - a.selectedTypes.length,
-      );
+          : b.selectedTypes.length - a.selectedTypes.length;
+      });
     });
     return groups;
   });

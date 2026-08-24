@@ -23,23 +23,26 @@
             >
               <template #content>
                 <div class="type-title">{{ s.name }}</div>
-                <div
-                  v-for="{ text, comment, disabled } in s.typeTooltip"
-                  :key="text"
-                  :class="{ 'type-disabled': disabled }"
-                >
-                  {{ text }}<span v-if="comment" class="type-comment">{{ comment }}</span>
-                </div>
+                <template v-if="!isVirtualServant(s)">
+                  <div
+                    v-for="{ text, comment, disabled } in s.typeTooltip"
+                    :key="text"
+                    :class="{ 'type-disabled': disabled }"
+                  >
+                    {{ text }}<span v-if="comment" class="type-comment">{{ comment }}</span>
+                  </div>
+                </template>
               </template>
               <ServantImg
                 :id="s.id"
+                :class="{ 'is-virtual': isVirtualServant(s) }"
                 :name="s.name"
-                @click="handleClickServant(s.id)"
-                @contextmenu.prevent="emit('itemContextmenu', $event, s.id)"
+                @click="handleClickServant(s)"
+                @contextmenu.prevent="handleContextmenu(s, $event)"
               />
             </el-tooltip>
             <el-checkbox
-              v-if="multiSelectMode"
+              v-if="multiSelectMode && !isVirtualServant(s)"
               class="servant-checkbox"
               :model-value="selected.has(s.id)"
               size="large"
@@ -52,8 +55,9 @@
 </template>
 
 <script setup lang="ts">
-import type { ServantGroupForDisplay } from '@/types';
+import type { ServantForDisplay, ServantGroupForDisplay } from '@/types';
 import { toggleSet } from '@/utils/common';
+import { isVirtualServant } from '@/utils/data';
 import ClassIcon from './ClassIcon.vue';
 import ServantImg from './ServantImg.vue';
 
@@ -75,9 +79,14 @@ const emit = defineEmits<{
   (e: 'itemContextmenu', event: MouseEvent, id: number): void;
 }>();
 
-const handleClickServant = (id: number) => {
-  if (!multiSelectMode) return;
-  toggleSet(selected, id);
+const handleClickServant = (s: ServantForDisplay) => {
+  if (!multiSelectMode || isVirtualServant(s)) return;
+  toggleSet(selected, s.id);
+};
+
+const handleContextmenu = (s: ServantForDisplay, event: MouseEvent) => {
+  if (isVirtualServant(s)) return;
+  emit('itemContextmenu', event, s.id);
 };
 </script>
 
@@ -157,7 +166,7 @@ const handleClickServant = (id: number) => {
 }
 
 .multi-select-mode {
-  .servant-img {
+  .servant-img:not(.is-virtual) {
     cursor: pointer;
     transition: opacity 0.2s;
 
