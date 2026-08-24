@@ -1,7 +1,7 @@
 import { groupBy, maxBy } from 'es-toolkit';
 import { defineStore } from 'pinia';
 import type { ServantForDisplay, ServantGroupForDisplay } from '@/types';
-import { classSortIndex, servantList, typeList } from '@/utils/data';
+import { classSortIndex, getTypeName, servantList } from '@/utils/data';
 import type { Servant } from '@/utils/data';
 import { useSettingsStore } from './settings';
 
@@ -37,7 +37,7 @@ export const useServantStore = defineStore('servant', () => {
         : s.types;
       const { firstTypeTooltip = [], secondTypeTooltip = [] } = groupBy(
         s.types.map(i => ({
-          text: typeList[i]!,
+          text: getTypeName(i),
           comment: s.typeComments?.[i],
           disabled: hasSelectedTypes ? !settings.selectedTypes.has(i) : false,
         })),

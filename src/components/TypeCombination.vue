@@ -23,7 +23,7 @@
               <span>
                 <template v-for="(id, i) in comb" :key="id">
                   <el-text v-if="i" type="info">&nbsp;&&nbsp;</el-text>
-                  <el-text class="type-name" type="primary" tag="b">{{ typeList[id] }}</el-text>
+                  <el-text class="type-name" type="primary" tag="b">{{ getTypeName(id) }}</el-text>
                 </template>
               </span>
               <el-tag class="type-item-num" type="success" size="small" round>{{ num }}</el-tag>
@@ -38,7 +38,7 @@
 <script setup lang="ts">
 import { ArrowDown } from '@element-plus/icons-vue';
 import { maxBy } from 'es-toolkit';
-import { typeList } from '@/utils/data';
+import { getTypeName } from '@/utils/data';
 import type { Servant } from '@/utils/data';
 import { generateCombinations } from '@/utils/math';
 

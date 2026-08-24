@@ -22,6 +22,7 @@
         </el-form-item>
         <el-form-item class="options-label" label="属性">
           <TypeFilter
+            :items="typeItems"
             :selected="selectedTypes"
             :filtered-servants="servantStore.filteredServantsForDisplayWithMinTypeNum"
           />
@@ -53,7 +54,7 @@
             </el-popconfirm>
             <div class="min-type-num">
               <span class="font-size-base no-wrap">只看≥</span>
-              <el-input-number v-model="minTypeNum" :min="1" :max="typeList.length" />
+              <el-input-number v-model="minTypeNum" :min="1" :max="allTypeCount" />
             </div>
           </div>
         </el-form-item>
@@ -86,7 +87,7 @@
 import { ArrowDown, ArrowUp, Setting } from '@element-plus/icons-vue';
 import { storeToRefs } from 'pinia';
 import IconGithub from '@/assets/github.svg';
-import { typeList } from '@/utils/data';
+import { allTypeCount, typeItems } from '@/utils/data';
 import ClassFilter from './components/ClassFilter.vue';
 import ServantContextMenu from './components/ServantContextMenu.vue';
 import ServantSelector from './components/ServantSelector.vue';

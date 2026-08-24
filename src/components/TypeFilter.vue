@@ -1,15 +1,15 @@
 <template>
   <div class="type-filter">
     <el-badge
-      v-for="(name, i) in typeList"
-      :key="name"
+      v-for="({ id, name }, i) in items"
+      :key="id"
       :value="numbers[i] ?? 0"
       :show-zero="false"
       :max="Infinity"
       type="primary"
       badge-class="type-filter-badge"
     >
-      <el-check-tag :checked="selected.has(i)" @change="toggleSet(selected, i)">{{
+      <el-check-tag :checked="selected.has(id)" @change="toggleSet(selected, id)">{{
         name
       }}</el-check-tag>
     </el-badge>
@@ -19,23 +19,27 @@
 
 <script setup lang="ts">
 import { toggleSet } from '@/utils/common';
-import { servantMap, typeList } from '@/utils/data';
-import type { Servant } from '@/utils/data';
+import type { Servant, TypeItem } from '@/utils/data';
 import ClearBtn from './ClearBtn.vue';
 
-const { selected, filteredServants = [] } = defineProps<{
+const {
+  selected,
+  items,
+  filteredServants = [],
+} = defineProps<{
   selected: Set<number>;
+  items: TypeItem[];
   filteredServants?: Servant[];
 }>();
 
 const numbers = computed(() => {
-  const data = Array.from<number>({ length: typeList.length }).fill(0);
-  filteredServants.forEach(({ id }) => {
-    servantMap[id]!.types.forEach(t => {
-      data[t]!++;
+  const counts = new Map(items.map(({ id }) => [id, 0]));
+  filteredServants.forEach(s => {
+    s.types.forEach(t => {
+      if (counts.has(t)) counts.set(t, counts.get(t)! + 1);
     });
   });
-  return data;
+  return items.map(({ id }) => counts.get(id) ?? 0);
 });
 </script>
 
