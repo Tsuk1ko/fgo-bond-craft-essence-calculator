@@ -10,6 +10,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "update-data": "bun run ./scripts/updateData.ts",
+    "test": "bun test src/lib/auto-team",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --write src/"
