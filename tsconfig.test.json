@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.app.json",
+  "include": ["src/lib/auto-team/**/*.ts"],
+  "exclude": [],
+  "compilerOptions": {
+    "composite": false,
+    "types": ["bun"],
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.test.tsbuildinfo"
+  }
+}
