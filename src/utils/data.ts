@@ -18,7 +18,7 @@ export const { typeList } = data;
 
 const CLASS_BONUS_ID_START = -99;
 
-export const classBonusList = ['Caster', 'Rider', 'Saber'] as const;
+export const classBonusList = ['Caster', 'Rider', 'Saber', 'Assassin'] as const;
 
 const classBonusItems: TypeItem[] = classBonusList.map((name, i) => ({
   id: CLASS_BONUS_ID_START + i,
