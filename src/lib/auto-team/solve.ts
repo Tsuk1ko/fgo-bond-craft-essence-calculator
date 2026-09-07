@@ -1,309 +1,285 @@
-import { CE_COST, DEFAULT_QUOTA, servantCost } from './constants';
-import { knapsackSelect, type KnapItem } from './knapsack';
-import { lockedLocalCount, localSlotCount, occupyLocalSlotIndices } from './occupy';
-import { addCopy, emptyCopies, packCraftEssences } from './pack';
+import {
+  BASE_YIELD,
+  BOND15_RATE,
+  CE_COST,
+  CLASS_CE_RATE,
+  DEFAULT_QUOTA,
+  GENERIC_5_RATE,
+  GENERIC_10_RATE,
+  GENERIC_15_RATE,
+  servantCost,
+  TRAIT_CE_RATE,
+} from './constants';
+import { prepareKnapsack } from './knapsack';
+import type { KnapItem, KnapResult } from './knapsack';
+import { localSlotCount, lockedLocalCount, occupyLocalSlotIndices } from './occupy';
+import { ceKey, generic5, placeEquipment, prepareEquipment } from './pack';
+import type { Equipment } from './pack';
 import { buildVirtualPool } from './pool';
 import { getResources } from './resources';
-import { cmpStar, computeStarVector, pickByStar, sameStar, starVecOf, type StarVec } from './star';
-import type {
-  AuraCopies,
-  CeKind,
-  PlannedSlot,
-  PlannerInput,
-  PlannerResult,
-  PlannerServant,
-} from './types';
-import { auraCountFromSlots, canGainFromLock, servantYield, totalYield } from './yield';
+import { computeStarVector, prepareStarPicks } from './star';
+import type { CeKind, PlannerInput, PlannerResult, PlannerServant } from './types';
+import { auraCountFromSlots, canGainFromLock, totalYield } from './yield';
 
-const subsets = <T>(arr: T[]): T[][] => {
-  const out: T[][] = [[]];
-  for (const x of arr) {
+const subsets = (items: CeKind[], limit: number) => {
+  const out: CeKind[][] = [[]];
+  for (const item of items) {
     const n = out.length;
-    for (let i = 0; i < n; i++) out.push([...out[i]!, x]);
+    for (let i = 0; i < n; i++) if (out[i]!.length < limit) out.push([...out[i]!, item]);
   }
   return out;
 };
 
-const copiesOf = (s: PlannerServant, input: PlannerInput) => {
-  if (s.kind === 'real') return 1;
-  if (s.kind === 'classVirtual' && s.class) {
-    return input.quotaClass?.[s.class]?.[s.star] ?? DEFAULT_QUOTA;
-  }
-  return input.quotaGeneric?.[s.star] ?? DEFAULT_QUOTA;
-};
-
-const toCopies = (ces: CeKind[]): AuraCopies => {
-  const c = emptyCopies();
-  ces.forEach(ce => addCopy(c, ce));
-  return c;
-};
-
-const mergeCopies = (a: AuraCopies, extra5: number): AuraCopies => ({
-  trait: { ...a.trait },
-  class: { ...a.class },
-  generic5: a.generic5 + extra5,
-  generic10: a.generic10,
-  generic15: a.generic15,
-});
-
-const resolveLocked = (input: PlannerInput): PlannerServant[] => {
-  const { servants } = getResources();
-  return input.slots
-    .filter(s => !s.isSupport && s.lockedServantId !== undefined)
-    .map(s => {
-      const cat = servants.find(x => x.id === s.lockedServantId);
-      if (!cat) throw new Error(`auto-team: 锁定从者 ${s.lockedServantId} 不在图鉴中`);
-      const commentTypes = cat.typeComments ? Object.keys(cat.typeComments).map(Number) : [];
-      return {
-        id: cat.id,
-        kind: 'real' as const,
-        class: cat.class,
-        star: cat.star,
-        types: [...new Set([...cat.types, ...commentTypes])],
-        canGainBond: canGainFromLock(s.bond15, s.bondCap16),
-      };
-    });
-};
-
-const seatBudget = (input: PlannerInput, occupiedLocal: number[]) => {
-  const occupied = new Set(occupiedLocal);
-  let free = 0;
-  let paid = 0;
-  input.slots.forEach((slot, i) => {
-    if (slot.isSupport) {
-      const n = slot.isCrown ? 2 : 1;
-      free += n;
-      return;
-    }
-    if (!occupied.has(i)) return;
-    if (slot.isCrown) {
-      free += 1;
-      paid += 1;
-    } else {
-      paid += 1;
-    }
-  });
-  return { free, paid, total: free + paid };
-};
-
-const ceKindKey = (ce: CeKind) =>
-  ce.kind === 'trait'
-    ? `trait:${ce.typeId}`
-    : ce.kind === 'class'
-      ? `class:${ce.className}`
-      : `g:${ce.rate}`;
-
-const localPremium = (input: PlannerInput): CeKind[] => [
-  ...input.ownedTraitCes.map((typeId): CeKind => ({ kind: 'trait', typeId })),
-  ...input.ownedClassCes.map((className): CeKind => ({ kind: 'class', className })),
-  ...(input.ownedGeneric10 ? [{ kind: 'generic' as const, rate: 10 as const }] : []),
-];
-
-const supportOptions = (input: PlannerInput, pool: PlannerServant[]): CeKind[] => {
-  const traits = new Set<number>(input.ownedTraitCes);
-  pool.forEach(s => s.types.forEach(t => traits.add(t)));
-  const list: CeKind[] = [
-    { kind: 'generic', rate: 15 },
-    { kind: 'generic', rate: 10 },
-    { kind: 'generic', rate: 5 },
-  ];
-  traits.forEach(typeId => list.push({ kind: 'trait', typeId }));
-  getResources().classCeClasses.forEach(className => list.push({ kind: 'class', className }));
-  return list;
-};
-
-const supportAssignments = (input: PlannerInput, pool: PlannerServant[]): CeKind[][] => {
-  const support = input.slots.find(s => s.isSupport);
-  if (!support) return [[]];
-  const opts = supportOptions(input, pool);
-  if (!support.isCrown) return opts.map(c => [c]);
+const supportAssignments = (equipment: Equipment) => {
+  const n = equipment.support.length;
+  if (!n) return [[]];
+  const options = equipment.supportOptions;
+  if (n === 1) return options.map(c => [c]);
   const pairs: CeKind[][] = [];
-  for (const a of opts) {
-    for (const b of opts) {
-      if (a.kind === 'generic' && a.rate === 15 && b.kind === 'generic' && b.rate === 15) continue;
-      if (ceKindKey(a) === ceKindKey(b) && !(a.kind === 'generic' && a.rate === 5)) continue;
+  for (let i = 0; i < options.length; i++) {
+    for (let j = i; j < options.length; j++) {
+      const a = options[i]!;
+      const b = options[j]!;
+      if (i === j && !(a.kind === 'generic' && a.rate === 5)) continue;
       pairs.push([a, b]);
     }
   }
   return pairs;
 };
 
-const toItems = (
-  pool: PlannerServant[],
-  input: PlannerInput,
-  copies: AuraCopies,
-  A: number,
-  excludeIds: Set<number>,
-): KnapItem[] =>
-  pool
-    .filter(s => s.kind !== 'real' || !excludeIds.has(s.id))
-    .map(s => ({
-      servant: s,
-      value: servantYield(s, copies, A),
-      cost: servantCost(s),
-      copies: copiesOf(s, input),
-    }));
+const copiesOf = (s: PlannerServant, input: PlannerInput) =>
+  Math.min(
+    6,
+    s.kind === 'real'
+      ? 1
+      : s.kind === 'classVirtual' && s.class
+        ? (input.quotaClass?.[s.class]?.[s.star] ?? DEFAULT_QUOTA)
+        : (input.quotaGeneric?.[s.star] ?? DEFAULT_QUOTA),
+  );
 
-interface Cand {
-  yield: number;
-  cost: number;
-  stars: StarVec;
-  result: PlannerResult;
-}
-
-const better = (a: Cand, b: Cand, starPriority: boolean) => {
-  if (starPriority) {
-    const c = cmpStar(a.stars, b.stars);
-    if (c !== 0) return c > 0;
+const validateInput = (input: PlannerInput) => {
+  if (
+    !Number.isInteger(input.costCap) ||
+    input.costCap < 0 ||
+    input.costCap > 118 ||
+    input.slots.length < 1 ||
+    input.slots.length > 6 ||
+    input.slots.filter(s => s.isSupport).length > 1
+  )
+    throw new Error('auto-team: 非法队伍范围或 cost');
+  for (const quota of [input.quotaGeneric, ...Object.values(input.quotaClass ?? {})]) {
+    for (const n of Object.values(quota ?? {}))
+      if (n !== undefined && (!Number.isInteger(n) || n < 0))
+        throw new Error('auto-team: 配额须为非负整数');
   }
-  if (a.yield !== b.yield) return a.yield > b.yield;
-  return a.cost > b.cost;
+  const localIds = input.slots
+    .filter(s => !s.isSupport && s.lockedServantId !== undefined)
+    .map(s => s.lockedServantId!);
+  if (new Set(localIds).size !== localIds.length)
+    throw new Error('auto-team: 同一真从者不能重复锁定');
+  if (input.slots.some(s => (s.bond15 || s.bondCap16) && s.lockedServantId === undefined))
+    throw new Error('auto-team: 羁绊状态需要锁定从者');
 };
 
-const trySwapMashToFit = (
-  rest: PlannerServant[],
-  items: KnapItem[],
-  budget: number,
-): PlannerServant[] => {
-  const mashId = getResources().mashId;
-  const mash = items.find(i => i.servant.id === mashId)?.servant;
-  if (!mash || rest.some(s => s.id === mashId)) return rest;
-  const idx = rest.findIndex(s => s.star === 4 && servantCost(s) > 0);
-  if (idx < 0) return rest;
-  const next = [...rest];
-  next[idx] = mash;
-  return next.reduce((s, x) => s + servantCost(x), 0) <= budget ? next : rest;
-};
-
-const placeTeam = (
-  input: PlannerInput,
-  occupied: number[],
-  locked: PlannerServant[],
-  rest: PlannerServant[],
-): PlannedSlot[] => {
-  const lockedById = new Map(locked.map(s => [s.id, s]));
-  const queue = [...rest];
-  return input.slots.map((slot, slotIndex) => {
-    if (slot.isSupport) return { slotIndex, servant: null, ces: [] as CeKind[] };
-    if (!occupied.includes(slotIndex)) return { slotIndex, servant: null, ces: [] as CeKind[] };
-    if (slot.lockedServantId !== undefined) {
-      return { slotIndex, servant: lockedById.get(slot.lockedServantId) ?? null, ces: [] };
-    }
-    return { slotIndex, servant: queue.shift() ?? null, ces: [] };
-  });
-};
-
-/**
- * 精确求解：枚举光环配置 → 从者分数线性化 → 背包或按星级取 top → 对入选队伍再打包一次礼装。
- *
- * 再打包是为了按「这支具体队伍」把高价值光环放到免费位，并补 5%。
- * 枚举扫到最优配置 C* 时，背包选出的队伍不差于最优队伍；再打包不会变差。
- */
+/** 合法光环枚举 + 精确人数选人。固定光环的配置保留放置见证，不再逐候选重新打包。 */
 export const solve = (input: PlannerInput): PlannerResult => {
-  getResources();
-  const A = auraCountFromSlots(input.slots);
-  const locked = resolveLocked(input);
+  const resources = getResources();
+  validateInput(input);
+  const lockedBySlot = new Map<number, PlannerServant>();
+  input.slots.forEach((slot, index) => {
+    if (slot.isSupport || slot.lockedServantId === undefined) return;
+    const s = resources.servants.find(s => s.id === slot.lockedServantId);
+    if (!s) throw new Error('auto-team: 锁定从者不在图鉴');
+    lockedBySlot.set(index, {
+      id: s.id,
+      kind: 'real',
+      class: s.class,
+      star: s.star,
+      types: [...new Set([...s.types, ...Object.keys(s.typeComments ?? {}).map(Number)])],
+      canGainBond: canGainFromLock(slot.bond15, slot.bondCap16),
+    });
+  });
+  const locked = [...lockedBySlot.values()];
   const lockedIds = new Set(locked.map(s => s.id));
   const pool = buildVirtualPool(input).filter(s => s.kind !== 'real' || !lockedIds.has(s.id));
-
+  if ([...pool, ...locked].some(s => !Number.isInteger(s.star) || s.star < 0 || s.star > 5))
+    throw new Error('auto-team: 非法从者星级');
   const Kmax = localSlotCount(input.slots);
   const Kmin = lockedLocalCount(input.slots);
-  const lockedCost = locked.reduce((s, x) => s + servantCost(x), 0);
-
-  const baseItems = toItems(pool, input, emptyCopies(), A, lockedIds);
-  const targetStars = input.starPriority
-    ? (() => {
-        const lockedStars = starVecOf(locked);
-        const filled = computeStarVector(
-          baseItems,
-          Kmax - locked.length,
-          input.costCap - lockedCost,
-        );
-        return filled.map((n, i) => n + lockedStars[i]!) as StarVec;
-      })()
+  const maxRest = Kmax - locked.length;
+  const fullEquipment = prepareEquipment({
+    ...input,
+    occupiedLocalIndices: occupyLocalSlotIndices(input.slots, Kmax),
+  });
+  const lockedCost = locked.reduce((sum, s) => sum + servantCost(s), 0);
+  const remaining = input.costCap - lockedCost - fullEquipment.ceCost;
+  if (remaining < 0) throw new Error('auto-team: 锁定配置超出 cost 上限');
+  const baseItems: KnapItem[] = pool.map(servant => ({
+    servant,
+    cost: servantCost(servant),
+    copies: copiesOf(servant, input),
+    value: 0,
+  }));
+  const target = input.starPriority
+    ? computeStarVector(baseItems, maxRest, remaining, Kmin - locked.length)
     : null;
-
-  let best: Cand | null = null;
-
+  if (input.starPriority && !target) throw new Error('auto-team: 无法满足锁定条件');
+  const layouts: Array<{ K: number; occupied: number[]; equipment: Equipment }> = [];
   for (let K = Kmin; K <= Kmax; K++) {
-    if (targetStars && K !== targetStars.reduce((a, b) => a + b, 0)) continue;
-
+    if (target && K !== locked.length + target.reduce((sum, n) => sum + n, 0)) continue;
     const occupied = occupyLocalSlotIndices(input.slots, K);
-    const { free, total } = seatBudget(input, occupied);
+    layouts.push({
+      K,
+      occupied,
+      equipment: prepareEquipment({ ...input, occupiedLocalIndices: occupied }),
+    });
+  }
 
-    for (const local of subsets(localPremium(input))) {
-      for (const support of supportAssignments(input, [...pool, ...locked])) {
-        const premium = [...local, ...support];
-        if (premium.length > total) continue;
-        const remainSeats = Math.max(0, total - premium.length);
-        for (let extra5 = 0; extra5 <= remainSeats; extra5++) {
-          const placed = premium.length + extra5;
-          const paid = Math.max(0, placed - free);
-          const ceCost = paid * CE_COST;
-          const budget = input.costCap - lockedCost - ceCost;
-          if (budget < 0) continue;
-
-          const copies = mergeCopies(toCopies(premium), extra5);
-          const items = toItems(pool, input, copies, A, lockedIds);
-          const needRest = K - locked.length;
-
-          let rest: PlannerServant[] = [];
-          if (needRest > 0) {
-            if (targetStars) {
-              const lockedStars = starVecOf(locked);
-              const need = targetStars.map((n, i) => n - lockedStars[i]!) as StarVec;
-              rest = pickByStar(items, need);
-              if (rest.length !== needRest) continue;
-              const restCost = rest.reduce((s, x) => s + servantCost(x), 0);
-              if (restCost > budget) {
-                rest = trySwapMashToFit(rest, items, budget);
-                if (rest.reduce((s, x) => s + servantCost(x), 0) > budget) continue;
-              }
-            } else {
-              const picked = knapsackSelect(items, needRest, budget);
-              rest = picked.servants;
-            }
-          }
-
-          const team = [...locked, ...rest];
-          if (targetStars && !sameStar(starVecOf(team), targetStars)) continue;
-
-          const actualOccupied = occupyLocalSlotIndices(input.slots, team.length);
-          const packed = packCraftEssences({
-            slots: input.slots,
-            occupiedLocalIndices: actualOccupied,
-            servantCostSum: team.reduce((s, x) => s + servantCost(x), 0),
-            costCap: input.costCap,
-            ownedTraitCes: input.ownedTraitCes,
-            ownedClassCes: input.ownedClassCes,
-            ownedGeneric10: input.ownedGeneric10,
-            team,
-          });
-          const yieldSum = totalYield(team, packed.copies, A);
-          const usedCost = team.reduce((s, x) => s + servantCost(x), 0) + packed.ceCost;
-
-          const slots = placeTeam(input, actualOccupied, locked, rest).map((row, i) => ({
-            ...row,
-            ces: packed.placements[i] ?? [],
-          }));
-
-          const cand: Cand = {
-            yield: yieldSum,
-            cost: usedCost,
-            stars: starVecOf(team),
-            result: { slots, totalYield: yieldSum, usedCost },
-          };
-          if (!best || better(cand, best, input.starPriority)) best = cand;
+  // 相同选择性光环分组处理一次，通用光环只改变常量及预算，避免缓存大量背包表。
+  const selective = new Map<string, CeKind>();
+  for (const ce of [
+    ...fullEquipment.localOptions,
+    ...fullEquipment.supportOptions,
+    ...fullEquipment.placements.flat().filter((c): c is CeKind => c !== null),
+  ]) {
+    if (ce.kind !== 'generic') selective.set(ceKey(ce), ce);
+  }
+  const kinds = [...selective.values()];
+  const indexOf = new Map(kinds.map((ce, i) => [ceKey(ce), i]));
+  const fixed = kinds.map(ce =>
+    ce.kind === 'trait'
+      ? (fullEquipment.copies.trait[ce.typeId] ?? 0)
+      : ce.kind === 'class'
+        ? (fullEquipment.copies.class[ce.className] ?? 0)
+        : 0,
+  );
+  interface Variant {
+    local: CeKind[];
+    support: CeKind[];
+    generic: number;
+  }
+  const configurations = new Map<string, { counts: number[]; variants: Variant[] }>();
+  const localOptions = fullEquipment.localOptions.filter(
+    ce => !(ce.kind === 'generic' && ce.rate === 5),
+  );
+  const supports = supportAssignments(fullEquipment);
+  const maxLocal = Math.max(
+    ...layouts.map(
+      l =>
+        l.equipment.localFree.length +
+        Math.min(l.equipment.localPaid.length, Math.floor(remaining / CE_COST)),
+    ),
+  );
+  for (const local of subsets(localOptions, maxLocal)) {
+    for (const support of supports) {
+      const counts = [...fixed];
+      let generic = 0;
+      for (const ce of [...local, ...support]) {
+        if (ce.kind === 'generic') generic += ce.rate;
+        else counts[indexOf.get(ceKey(ce))!]++;
+      }
+      const key = counts.join(',');
+      let config = configurations.get(key);
+      if (!config) {
+        config = { counts, variants: [] };
+        configurations.set(key, config);
+      }
+      config.variants.push({ local, support, generic });
+    }
+  }
+  const matches = kinds.map(ce =>
+    [...pool, ...locked].map(
+      s =>
+        Number(
+          s.canGainBond &&
+            (ce.kind === 'trait'
+              ? s.types.includes(ce.typeId)
+              : ce.kind === 'class' && s.class === ce.className),
+        ) * (ce.kind === 'trait' ? TRAIT_CE_RATE : CLASS_CE_RATE),
+    ),
+  );
+  const A = auraCountFromSlots(input.slots);
+  const fixedGeneric =
+    fullEquipment.copies.generic5 * GENERIC_5_RATE +
+    fullEquipment.copies.generic10 * GENERIC_10_RATE +
+    fullEquipment.copies.generic15 * GENERIC_15_RATE;
+  const capped = locked.filter(s => !s.canGainBond).length;
+  interface Best {
+    value: number;
+    cost: number;
+    picked: KnapResult;
+    layout: (typeof layouts)[number];
+    variant: Variant;
+    extra5: number;
+  }
+  let best: Best | undefined;
+  for (const config of configurations.values()) {
+    const scores = new Float64Array(pool.length + locked.length);
+    config.counts.forEach((count, c) => {
+      if (count)
+        matches[c]!.forEach((value, i) => {
+          scores[i] += count * value;
+        });
+    });
+    const items = baseItems.map((item, i) => ({ ...item, value: scores[i]! }));
+    const lockedValue = scores.slice(pool.length).reduce((sum, v) => sum + v, 0);
+    const pickNormal = target ? null : prepareKnapsack(items, maxRest, remaining);
+    const pickStar = target ? prepareStarPicks(items, target) : null;
+    for (const variant of config.variants) {
+      for (const layout of layouts) {
+        const { equipment, K } = layout;
+        const free = equipment.localFree.length;
+        for (
+          let paid = Math.max(0, variant.local.length - free);
+          paid <= equipment.localPaid.length;
+          paid++
+        ) {
+          const budget = remaining - paid * CE_COST;
+          if (budget < 0) break;
+          const picked = pickStar ? pickStar(budget) : pickNormal!(K - locked.length, budget);
+          if (!picked) continue;
+          const extra5 = free + paid - variant.local.length;
+          const value =
+            picked.value +
+            lockedValue +
+            (K - capped) *
+              (BASE_YIELD +
+                BOND15_RATE * A +
+                fixedGeneric +
+                variant.generic +
+                GENERIC_5_RATE * extra5);
+          const cost = lockedCost + picked.cost + equipment.ceCost + paid * CE_COST;
+          if (!best || value > best.value || (value === best.value && cost > best.cost))
+            best = { value, cost, picked, layout, variant, extra5 };
         }
       }
     }
   }
-
-  return (
-    best?.result ?? {
-      slots: input.slots.map((_, slotIndex) => ({ slotIndex, servant: null, ces: [] })),
-      totalYield: 0,
-      usedCost: 0,
-    }
+  if (!best) throw new Error('auto-team: 无法满足锁定条件');
+  const { picked, layout, variant, extra5 } = best;
+  const packed = placeEquipment(
+    layout.equipment,
+    [...variant.local, ...Array.from<CeKind>({ length: extra5 }).fill(generic5)],
+    variant.support,
   );
+  let next = 0;
+  const slots = input.slots.map((slot, slotIndex) => ({
+    slotIndex,
+    servant:
+      slot.isSupport || !layout.occupied.includes(slotIndex)
+        ? null
+        : (lockedBySlot.get(slotIndex) ?? picked.servants[next++]!),
+    ces: packed.placements[slotIndex]!,
+  }));
+  const team = slots.flatMap(s => (s.servant ? [s.servant] : []));
+  const usedCost = team.reduce((sum, s) => sum + servantCost(s), 0) + packed.ceCost;
+  const yieldSum = totalYield(team, packed.copies, A);
+  if (
+    usedCost > input.costCap ||
+    usedCost !== best.cost ||
+    yieldSum !== best.value ||
+    team.length !== layout.K
+  )
+    throw new Error('auto-team: 求解结果校验失败');
+  return { slots, usedCost, totalYield: yieldSum };
 };

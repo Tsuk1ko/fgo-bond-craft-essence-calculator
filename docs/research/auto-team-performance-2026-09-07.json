@@ -1,0 +1,1080 @@
+{
+  "runtime": "1.3.14",
+  "cpu": "Apple M4",
+  "rows": [
+    {
+      "inventory": 0,
+      "crown": "none",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        2.470165999999999, 1.9754170000000002, 1.8254999999999981, 1.544125000000001,
+        1.8164590000000018
+      ],
+      "medianMs": 1.8254999999999981,
+      "result": {
+        "totalYield": 650,
+        "usedCost": 56
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "none",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        1.5692080000000033, 2.8239170000000016, 1.2062910000000002, 1.0550840000000008,
+        1.0299169999999975
+      ],
+      "medianMs": 1.2062910000000002,
+      "result": {
+        "totalYield": 600,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "support",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        10.554167000000007, 7.266708000000008, 7.692916000000011, 4.338959000000003,
+        4.3985409999999945
+      ],
+      "medianMs": 7.266708000000008,
+      "result": {
+        "totalYield": 750,
+        "usedCost": 56
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "support",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        5.488499999999988, 6.342749999999995, 6.9375, 5.121292000000011, 6.251874999999984
+      ],
+      "medianMs": 6.251874999999984,
+      "result": {
+        "totalYield": 700,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "all",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        4.605917000000005, 5.58529200000001, 5.483374999999995, 4.526832999999982, 6.78287499999999
+      ],
+      "medianMs": 5.483374999999995,
+      "result": {
+        "totalYield": 875,
+        "usedCost": 56
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "all",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        6.631665999999996, 4.2065000000000055, 3.5929590000000076, 3.8608750000000214,
+        3.636957999999993
+      ],
+      "medianMs": 3.8608750000000214,
+      "result": {
+        "totalYield": 825,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "none",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        0.8425829999999905, 0.8144589999999994, 0.7662919999999929, 0.750124999999997,
+        0.7831249999999841
+      ],
+      "medianMs": 0.7831249999999841,
+      "result": {
+        "totalYield": 700,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "none",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        1.3307499999999948, 0.8547499999999957, 0.7780419999999992, 0.5887500000000045,
+        0.5720000000000027
+      ],
+      "medianMs": 0.7780419999999992,
+      "result": {
+        "totalYield": 600,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "support",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        3.0791250000000048, 3.102833000000004, 3.106790999999987, 3.8336669999999913,
+        3.015083000000004
+      ],
+      "medianMs": 3.102833000000004,
+      "result": {
+        "totalYield": 775,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "support",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        2.1708749999999952, 2.1012090000000114, 2.1314999999999884, 2.134083000000004,
+        3.5131250000000023
+      ],
+      "medianMs": 2.134083000000004,
+      "result": {
+        "totalYield": 700,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "all",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        3.1159999999999854, 3.1109170000000006, 3.110083000000003, 4.186374999999998,
+        2.9969169999999963
+      ],
+      "medianMs": 3.1109170000000006,
+      "result": {
+        "totalYield": 900,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "all",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        2.341415999999981, 2.1735419999999976, 2.1884999999999764, 2.2463750000000005,
+        2.413082999999972
+      ],
+      "medianMs": 2.2463750000000005,
+      "result": {
+        "totalYield": 825,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "none",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        0.8392089999999826, 0.7631250000000023, 0.7682910000000334, 0.7565420000000245,
+        0.781708999999978
+      ],
+      "medianMs": 0.7682910000000334,
+      "result": {
+        "totalYield": 725,
+        "usedCost": 118
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "none",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        1.0111249999999927, 0.6396669999999745, 0.580791999999974, 0.5528340000000185,
+        0.5770420000000058
+      ],
+      "medianMs": 0.580791999999974,
+      "result": {
+        "totalYield": 650,
+        "usedCost": 112
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "support",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        3.414707999999962, 3.5314579999999864, 3.0347080000000233, 3.0693330000000287,
+        2.990957999999978
+      ],
+      "medianMs": 3.0693330000000287,
+      "result": {
+        "totalYield": 825,
+        "usedCost": 118
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "support",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        2.3343750000000227, 2.661833999999999, 2.1940419999999676, 2.2499579999999924,
+        2.1496250000000146
+      ],
+      "medianMs": 2.2499579999999924,
+      "result": {
+        "totalYield": 750,
+        "usedCost": 112
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "all",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        3.582292000000052, 3.6214580000000183, 2.979959000000008, 2.967708000000016,
+        2.9771670000000086
+      ],
+      "medianMs": 2.979959000000008,
+      "result": {
+        "totalYield": 950,
+        "usedCost": 118
+      }
+    },
+    {
+      "inventory": 0,
+      "crown": "all",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        2.173833000000002, 2.170084000000031, 3.0511659999999665, 2.121291000000042,
+        2.108957999999973
+      ],
+      "medianMs": 2.170084000000031,
+      "result": {
+        "totalYield": 875,
+        "usedCost": 112
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "none",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        3.671459000000027, 3.594374999999957, 4.113749999999982, 3.643957999999998,
+        4.500583000000006
+      ],
+      "medianMs": 3.671459000000027,
+      "result": {
+        "totalYield": 740,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "none",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        5.5448749999999905, 7.846167000000037, 6.679750000000013, 9.621542000000034,
+        6.36062499999997
+      ],
+      "medianMs": 6.679750000000013,
+      "result": {
+        "totalYield": 600,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "support",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        21.253332999999998, 18.789334000000053, 19.206916999999976, 18.869792000000018,
+        18.83420799999999
+      ],
+      "medianMs": 18.869792000000018,
+      "result": {
+        "totalYield": 815,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "support",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        29.580333999999993, 23.77758300000005, 31.660041999999976, 27.585833999999977,
+        24.915333999999916
+      ],
+      "medianMs": 27.585833999999977,
+      "result": {
+        "totalYield": 700,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "all",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        23.12733300000002, 19.862499999999955, 20.801665999999955, 19.732124999999996,
+        21.68404099999998
+      ],
+      "medianMs": 20.801665999999955,
+      "result": {
+        "totalYield": 980,
+        "usedCost": 56
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "all",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        20.46191699999997, 23.00025000000005, 21.89737500000001, 22.513624999999934,
+        25.692000000000007
+      ],
+      "medianMs": 22.513624999999934,
+      "result": {
+        "totalYield": 955,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "none",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        4.921124999999961, 4.492209000000003, 5.193583999999987, 4.102791000000025,
+        5.183208000000036
+      ],
+      "medianMs": 4.921124999999961,
+      "result": {
+        "totalYield": 800,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "none",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        3.225832999999966, 2.9317910000000893, 2.830874999999992, 3.235292000000072,
+        3.4188749999999573
+      ],
+      "medianMs": 3.225832999999966,
+      "result": {
+        "totalYield": 600,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "support",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        31.386334000000033, 20.216042000000016, 20.036458999999923, 20.80837499999984,
+        19.542500000000018
+      ],
+      "medianMs": 20.216042000000016,
+      "result": {
+        "totalYield": 900,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "support",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        13.139207999999826, 13.737542000000076, 15.084333999999899, 14.853667000000087,
+        14.528500000000122
+      ],
+      "medianMs": 14.528500000000122,
+      "result": {
+        "totalYield": 700,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "all",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        20.24045799999999, 21.412958000000117, 24.540333000000146, 26.627250000000004,
+        21.19316600000002
+      ],
+      "medianMs": 21.412958000000117,
+      "result": {
+        "totalYield": 1025,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "all",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        14.56724999999983, 19.52129200000013, 14.454540999999836, 15.019125000000031,
+        14.055290999999897
+      ],
+      "medianMs": 14.56724999999983,
+      "result": {
+        "totalYield": 975,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "none",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        4.116582999999991, 4.318457999999964, 3.9502090000000862, 4.839582999999948,
+        4.066125000000056
+      ],
+      "medianMs": 4.116582999999991,
+      "result": {
+        "totalYield": 850,
+        "usedCost": 116
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "none",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        2.7478749999997945, 2.8161250000000564, 2.7421659999999974, 3.3581669999998667,
+        2.7999589999999444
+      ],
+      "medianMs": 2.7999589999999444,
+      "result": {
+        "totalYield": 800,
+        "usedCost": 112
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "support",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        20.935375000000022, 20.881042000000207, 20.630125000000135, 22.20337500000005,
+        23.54866600000014
+      ],
+      "medianMs": 20.935375000000022,
+      "result": {
+        "totalYield": 950,
+        "usedCost": 116
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "support",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        15.416791000000103, 13.763667000000169, 14.834999999999809, 13.953457999999955,
+        14.249749999999949
+      ],
+      "medianMs": 14.249749999999949,
+      "result": {
+        "totalYield": 900,
+        "usedCost": 112
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "all",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        20.576041999999916, 20.471000000000004, 20.07804199999987, 21.26149999999984,
+        22.75004100000001
+      ],
+      "medianMs": 20.576041999999916,
+      "result": {
+        "totalYield": 1075,
+        "usedCost": 116
+      }
+    },
+    {
+      "inventory": 3,
+      "crown": "all",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        24.419999999999845, 18.709041999999954, 23.608083999999963, 28.729500000000144,
+        16.57766700000002
+      ],
+      "medianMs": 23.608083999999963,
+      "result": {
+        "totalYield": 1025,
+        "usedCost": 112
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "none",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        42.44695800000022, 33.68662499999982, 32.83545800000002, 30.720458999999664,
+        30.66387500000019
+      ],
+      "medianMs": 32.83545800000002,
+      "result": {
+        "totalYield": 800,
+        "usedCost": 56
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "none",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        34.3454999999999, 32.16370800000004, 35.413750000000164, 31.96304199999986,
+        31.14804200000026
+      ],
+      "medianMs": 32.16370800000004,
+      "result": {
+        "totalYield": 600,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "support",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        135.72262500000033, 122.25670800000034, 163.53187500000013, 120.72416699999985,
+        109.55016599999999
+      ],
+      "medianMs": 122.25670800000034,
+      "result": {
+        "totalYield": 900,
+        "usedCost": 56
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "support",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        132.50320899999997, 128.33512500000006, 123.98454200000015, 123.40641600000026,
+        121.98266699999976
+      ],
+      "medianMs": 123.98454200000015,
+      "result": {
+        "totalYield": 700,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "all",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        404.5749170000008, 405.168541, 448.2586659999997, 447.92612499999996, 443.96445799999947
+      ],
+      "medianMs": 443.96445799999947,
+      "result": {
+        "totalYield": 1120,
+        "usedCost": 56
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "all",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        429.50054100000034, 430.18766700000015, 481.33237499999905, 477.7953750000015,
+        432.25945800000045
+      ],
+      "medianMs": 432.25945800000045,
+      "result": {
+        "totalYield": 1100,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "none",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        89.81750000000102, 97.09908299999915, 97.06133300000147, 96.80912499999977,
+        101.72533300000032
+      ],
+      "medianMs": 97.06133300000147,
+      "result": {
+        "totalYield": 880,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "none",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        63.830958000000464, 68.27645800000028, 79.56720900000073, 84.11741600000096,
+        61.466707999999926
+      ],
+      "medianMs": 68.27645800000028,
+      "result": {
+        "totalYield": 600,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "support",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        314.2928749999992, 329.23941699999887, 337.9970830000002, 429.74262499999895,
+        405.0433749999993
+      ],
+      "medianMs": 337.9970830000002,
+      "result": {
+        "totalYield": 980,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "support",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        255.27458300000035, 241.7859580000004, 248.72437499999978, 245.1919170000001,
+        250.38387499999953
+      ],
+      "medianMs": 248.72437499999978,
+      "result": {
+        "totalYield": 700,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "all",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        469.91420800000014, 450.0147079999988, 481.5778329999994, 414.6255000000001,
+        417.41133400000035
+      ],
+      "medianMs": 450.0147079999988,
+      "result": {
+        "totalYield": 1150,
+        "usedCost": 76
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "all",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        312.07095800000025, 318.55437500000335, 309.85925000000134, 311.49645899999814,
+        329.2299579999999
+      ],
+      "medianMs": 312.07095800000025,
+      "result": {
+        "totalYield": 1120,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "none",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        87.75941699999748, 84.32554200000232, 150.46516699999847, 85.36770800000158,
+        98.28112500000134
+      ],
+      "medianMs": 87.75941699999748,
+      "result": {
+        "totalYield": 960,
+        "usedCost": 118
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "none",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        64.1785000000018, 61.66254200000185, 62.515625, 61.85008399999788, 62.36091700000179
+      ],
+      "medianMs": 62.36091700000179,
+      "result": {
+        "totalYield": 800,
+        "usedCost": 112
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "support",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        337.6422500000008, 373.0488750000004, 427.5663749999985, 341.99012500000026,
+        355.2853329999998
+      ],
+      "medianMs": 355.2853329999998,
+      "result": {
+        "totalYield": 1060,
+        "usedCost": 116
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "support",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        238.18174999999974, 238.97350000000006, 303.3769169999978, 270.34508300000016,
+        263.9203749999979
+      ],
+      "medianMs": 263.9203749999979,
+      "result": {
+        "totalYield": 900,
+        "usedCost": 112
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "all",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        429.92904100000305, 463.4392909999988, 452.64250000000175, 484.11266700000124,
+        470.716124999999
+      ],
+      "medianMs": 463.4392909999988,
+      "result": {
+        "totalYield": 1200,
+        "usedCost": 116
+      }
+    },
+    {
+      "inventory": 8,
+      "crown": "all",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        315.93966699999874, 315.4987089999995, 309.1052920000002, 324.11366700000144,
+        355.00858399999925
+      ],
+      "medianMs": 315.93966699999874,
+      "result": {
+        "totalYield": 1170,
+        "usedCost": 112
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "none",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        55.66029100000014, 58.52854199999638, 63.510833000000275, 57.44129199999952,
+        56.51287500000035
+      ],
+      "medianMs": 57.44129199999952,
+      "result": {
+        "totalYield": 800,
+        "usedCost": 56
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "none",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        68.89337499999965, 64.80004100000224, 64.5111250000009, 62.64170899999954,
+        61.890583999997034
+      ],
+      "medianMs": 64.5111250000009,
+      "result": {
+        "totalYield": 600,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "support",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        206.2298329999976, 177.322833000002, 183.9562500000029, 197.32962500000212,
+        200.06212500000038
+      ],
+      "medianMs": 197.32962500000212,
+      "result": {
+        "totalYield": 900,
+        "usedCost": 56
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "support",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        207.04020799999853, 199.23270799999955, 207.53504099999918, 204.55145900000207,
+        206.33883400000195
+      ],
+      "medianMs": 206.33883400000195,
+      "result": {
+        "totalYield": 700,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "all",
+      "costCap": 56,
+      "starPriority": false,
+      "samplesMs": [
+        2675.9397919999974, 2797.3327500000014, 3581.066083999998, 2531.1312499999985,
+        2511.535791000002
+      ],
+      "medianMs": 2675.9397919999974,
+      "result": {
+        "totalYield": 1135,
+        "usedCost": 53
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "all",
+      "costCap": 56,
+      "starPriority": true,
+      "samplesMs": [
+        2759.1465830000016, 2798.6868749999994, 2574.8253750000003, 2955.4226659999986,
+        2590.705084000001
+      ],
+      "medianMs": 2759.1465830000016,
+      "result": {
+        "totalYield": 1110,
+        "usedCost": 55
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "none",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        291.50199999999313, 295.5194590000028, 305.27970800000185, 327.15170899999794,
+        303.49037499999395
+      ],
+      "medianMs": 303.49037499999395,
+      "result": {
+        "totalYield": 880,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "none",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        292.5214159999887, 270.91358399999444, 279.6929999999993, 266.9411670000118,
+        249.0194579999952
+      ],
+      "medianMs": 270.91358399999444,
+      "result": {
+        "totalYield": 600,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "support",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        1114.2955840000068, 967.6360830000049, 1035.864499999996, 992.1046670000069,
+        1036.6184169999906
+      ],
+      "medianMs": 1035.864499999996,
+      "result": {
+        "totalYield": 980,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "support",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        701.8360829999874, 726.1381249999977, 789.315208, 716.9894169999898, 731.0634169999976
+      ],
+      "medianMs": 726.1381249999977,
+      "result": {
+        "totalYield": 700,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "all",
+      "costCap": 80,
+      "starPriority": false,
+      "samplesMs": [
+        2750.830999999991, 2727.33583299999, 2776.7557909999887, 2829.703333000012,
+        2793.6246249999967
+      ],
+      "medianMs": 2776.7557909999887,
+      "result": {
+        "totalYield": 1175,
+        "usedCost": 76
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "all",
+      "costCap": 80,
+      "starPriority": true,
+      "samplesMs": [
+        2273.745458000005, 2220.6426250000077, 2908.221583000006, 2270.8063339999935,
+        2134.187957999995
+      ],
+      "medianMs": 2270.8063339999935,
+      "result": {
+        "totalYield": 1120,
+        "usedCost": 80
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "none",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        314.6607079999958, 673.6112499999872, 304.56524999999965, 318.6994169999962,
+        287.0992089999927
+      ],
+      "medianMs": 314.6607079999958,
+      "result": {
+        "totalYield": 1010,
+        "usedCost": 117
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "none",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        226.68270800000755, 241.17366700001003, 283.762791000001, 260.08550000000105,
+        221.2021250000107
+      ],
+      "medianMs": 241.17366700001003,
+      "result": {
+        "totalYield": 800,
+        "usedCost": 112
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "support",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        895.3605000000098, 890.3783330000006, 923.7559159999946, 990.0586250000051,
+        898.3762080000015
+      ],
+      "medianMs": 898.3762080000015,
+      "result": {
+        "totalYield": 1110,
+        "usedCost": 117
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "support",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        674.1264169999922, 664.63341699999, 677.7244999999966, 698.5206659999967, 729.2250409999979
+      ],
+      "medianMs": 677.7244999999966,
+      "result": {
+        "totalYield": 900,
+        "usedCost": 112
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "all",
+      "costCap": 118,
+      "starPriority": false,
+      "samplesMs": [
+        2638.0936669999937, 2732.767082999999, 3320.6504159999895, 3633.626833999995,
+        2449.201166999992
+      ],
+      "medianMs": 2732.767082999999,
+      "result": {
+        "totalYield": 1235,
+        "usedCost": 117
+      }
+    },
+    {
+      "inventory": 12,
+      "crown": "all",
+      "costCap": 118,
+      "starPriority": true,
+      "samplesMs": [
+        1932.4967499999912, 1942.3969579999975, 1969.2939579999947, 2114.7008750000095,
+        2215.075125000003
+      ],
+      "medianMs": 1969.2939579999947,
+      "result": {
+        "totalYield": 1195,
+        "usedCost": 112
+      }
+    }
+  ]
+}

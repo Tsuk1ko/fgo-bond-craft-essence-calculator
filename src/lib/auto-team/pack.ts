@@ -1,12 +1,7 @@
-import {
-  CE_COST,
-  CLASS_CE_RATE,
-  GENERIC_10_RATE,
-  GENERIC_15_RATE,
-  GENERIC_5_RATE,
-  TRAIT_CE_RATE,
-} from './constants';
+import { BASE_YIELD, CE_COST } from './constants';
+import { getResources } from './resources';
 import type { AuraCopies, CeKind, PlannerServant, SlotInput } from './types';
+import { servantYield } from './yield';
 
 export interface PackArgs {
   slots: SlotInput[];
@@ -18,19 +13,24 @@ export interface PackArgs {
   ownedGeneric10: boolean;
   team: PlannerServant[];
 }
-
 export interface PackResult {
-  /** 与 slots 等长，每格 1～2 个礼装位 */
   placements: Array<Array<CeKind | null>>;
   copies: AuraCopies;
   ceCost: number;
 }
-
 interface CeSeat {
   slotIndex: number;
   pos: number;
-  free: boolean;
-  support: boolean;
+}
+export interface Equipment {
+  placements: PackResult['placements'];
+  copies: AuraCopies;
+  ceCost: number;
+  localFree: CeSeat[];
+  localPaid: CeSeat[];
+  support: CeSeat[];
+  localOptions: CeKind[];
+  supportOptions: CeKind[];
 }
 
 export const emptyCopies = (): AuraCopies => ({
@@ -40,167 +40,171 @@ export const emptyCopies = (): AuraCopies => ({
   generic10: 0,
   generic15: 0,
 });
-
 export const addCopy = (copies: AuraCopies, ce: CeKind) => {
-  if (ce.kind === 'trait') {
-    copies.trait[ce.typeId] = (copies.trait[ce.typeId] ?? 0) + 1;
-  } else if (ce.kind === 'class') {
-    copies.class[ce.className] = (copies.class[ce.className] ?? 0) + 1;
-  } else if (ce.rate === 5) copies.generic5 += 1;
-  else if (ce.rate === 10) copies.generic10 += 1;
-  else copies.generic15 += 1;
+  if (ce.kind === 'trait') copies.trait[ce.typeId] = (copies.trait[ce.typeId] ?? 0) + 1;
+  else if (ce.kind === 'class') copies.class[ce.className] = (copies.class[ce.className] ?? 0) + 1;
+  else if (ce.rate === 5) copies.generic5++;
+  else if (ce.rate === 10) copies.generic10++;
+  else copies.generic15++;
 };
-
-const ceKey = (ce: CeKind) =>
+export const ceKey = (ce: CeKind) =>
   ce.kind === 'trait'
-    ? `trait:${ce.typeId}`
+    ? `t:${ce.typeId}`
     : ce.kind === 'class'
-      ? `class:${ce.className}`
+      ? `c:${ce.className}`
       : `g:${ce.rate}`;
+export const generic5: CeKind = { kind: 'generic', rate: 5 };
+const unlimited = (ce: CeKind) => ce.kind === 'generic' && ce.rate === 5;
 
-/** 这张礼装对当前本队的百分点价值（全队光环 × 吃到的人数）。 */
-const ceValue = (ce: CeKind, team: PlannerServant[]): number => {
-  const G = team.filter(s => s.canGainBond).length;
-  if (ce.kind === 'generic') {
-    const rate =
-      ce.rate === 5 ? GENERIC_5_RATE : ce.rate === 10 ? GENERIC_10_RATE : GENERIC_15_RATE;
-    return rate * G;
-  }
-  if (ce.kind === 'class') {
-    return CLASS_CE_RATE * team.filter(s => s.canGainBond && s.class === ce.className).length;
-  }
-  return TRAIT_CE_RATE * team.filter(s => s.canGainBond && s.types.includes(ce.typeId)).length;
-};
+type EquipmentArgs = Pick<
+  PackArgs,
+  'slots' | 'occupiedLocalIndices' | 'ownedTraitCes' | 'ownedClassCes' | 'ownedGeneric10'
+>;
 
-const capacity = (slot: SlotInput, occupied: boolean) => {
-  if (slot.isSupport) return slot.isCrown ? 2 : 1;
-  if (!occupied) return 0;
-  return slot.isCrown ? 2 : 1;
-};
-
-const isFreeSeat = (slot: SlotInput, pos: number) => {
-  if (slot.isSupport) return true;
-  return slot.isCrown && pos === 0;
-};
-
-/**
- * 列出已占格上的礼装位：助战全免费；冠位第一张免费；其余付费 16。
- */
-const listSeats = (slots: SlotInput[], occupiedLocal: Set<number>): CeSeat[] => {
-  const seats: CeSeat[] = [];
-  slots.forEach((slot, slotIndex) => {
-    const occupied = slot.isSupport || occupiedLocal.has(slotIndex);
-    const n = capacity(slot, occupied);
-    for (let pos = 0; pos < n; pos++) {
-      seats.push({
-        slotIndex,
-        pos,
-        free: isFreeSeat(slot, pos),
-        support: slot.isSupport,
-      });
-    }
-  });
-  return seats;
-};
-
-/**
- * 固定队伍后的最优打包。
- * 价值高的光环优先进免费位，再进付费位；付费位受剩余 cost 约束。
- * 5% 填所有仍空着的位（免费位也填）。锁定礼装先钉死。
- */
-export const packCraftEssences = ({
-  slots,
-  occupiedLocalIndices,
-  servantCostSum,
-  costCap,
-  ownedTraitCes,
-  ownedClassCes,
-  ownedGeneric10,
-  team,
-}: PackArgs): PackResult => {
-  const occupiedLocal = new Set(occupiedLocalIndices);
-  const seats = listSeats(slots, occupiedLocal);
-  const placed: Array<Array<CeKind | null>> = slots.map((slot, i) => {
-    const n = capacity(slot, slot.isSupport || occupiedLocal.has(i));
-    return Array.from({ length: n }, () => null);
-  });
-
-  const copies = emptyCopies();
-  let ceCost = 0;
-  let budget = costCap - servantCostSum;
-
-  const localUsed = new Set<string>();
-  const supportUsed = new Set<string>();
-  let used15 = false;
-
-  const occupySeat = (seat: CeSeat, ce: CeKind) => {
-    placed[seat.slotIndex]![seat.pos] = ce;
-    addCopy(copies, ce);
-    if (!seat.free) {
-      ceCost += CE_COST;
-      budget -= CE_COST;
-    }
-    if (seat.support) supportUsed.add(ceKey(ce));
-    else localUsed.add(ceKey(ce));
-    if (ce.kind === 'generic' && ce.rate === 15) used15 = true;
-  };
-
-  // 锁定礼装先占位
-  for (const seat of seats) {
-    const locked = slots[seat.slotIndex]?.lockedCes?.[seat.pos];
-    if (!locked) continue;
-    occupySeat(seat, locked);
-  }
-
-  const canUse = (ce: CeKind, seat: CeSeat): boolean => {
-    if (ce.kind === 'generic' && ce.rate === 15) {
-      return seat.support && !used15;
-    }
-    if (ce.kind === 'generic' && ce.rate === 10) {
-      if (seat.support) return !supportUsed.has(ceKey(ce));
-      return ownedGeneric10 && !localUsed.has(ceKey(ce));
-    }
-    if (ce.kind === 'generic' && ce.rate === 5) return true;
-    if (seat.support) return !supportUsed.has(ceKey(ce));
-    if (ce.kind === 'trait') {
-      return ownedTraitCes.includes(ce.typeId) && !localUsed.has(ceKey(ce));
-    }
-    if (ce.kind === 'class') {
-      return ownedClassCes.includes(ce.className) && !localUsed.has(ceKey(ce));
-    }
-    return false;
-  };
-
-  const catalog: CeKind[] = [
-    ...ownedTraitCes.map((typeId): CeKind => ({ kind: 'trait', typeId })),
-    ...ownedClassCes.map((className): CeKind => ({ kind: 'class', className })),
-    ...(ownedGeneric10 ? [{ kind: 'generic' as const, rate: 10 as const }] : []),
-    { kind: 'generic', rate: 15 },
-    { kind: 'generic', rate: 5 },
+/** 锁定先消耗各自来源的库存和实际位置；枚举与固定队伍打包共用。 */
+export const prepareEquipment = (args: EquipmentArgs): Equipment => {
+  const { traitCeTypes, classCeClasses } = getResources();
+  if (
+    args.ownedClassCes.some(c => !classCeClasses.includes(c)) ||
+    args.ownedTraitCes.some(t => !Number.isInteger(t) || t < 0 || !traitCeTypes.includes(t))
+  )
+    throw new Error('auto-team: 非法礼装库存');
+  const traits = [...new Set(traitCeTypes)].map((typeId): CeKind => ({ kind: 'trait', typeId }));
+  const classes = [...new Set(classCeClasses)].map((className): CeKind => ({
+    kind: 'class',
+    className,
+  }));
+  const localOptions: CeKind[] = [
+    ...[...new Set(args.ownedTraitCes)].map((typeId): CeKind => ({ kind: 'trait', typeId })),
+    ...[...new Set(args.ownedClassCes)].map((className): CeKind => ({ kind: 'class', className })),
+    ...(args.ownedGeneric10 ? [{ kind: 'generic' as const, rate: 10 as const }] : []),
+    generic5,
   ];
+  const supportOptions: CeKind[] = [
+    ...traits,
+    ...classes,
+    { kind: 'generic', rate: 15 },
+    { kind: 'generic', rate: 10 },
+    generic5,
+  ];
+  const occupied = new Set(args.occupiedLocalIndices);
+  const equipment: Equipment = {
+    placements: [],
+    copies: emptyCopies(),
+    ceCost: 0,
+    localFree: [],
+    localPaid: [],
+    support: [],
+    localOptions,
+    supportOptions,
+  };
+  const usedLocal = new Set<string>();
+  const usedSupport = new Set<string>();
+  args.slots.forEach((slot, slotIndex) => {
+    const capacity = slot.isCrown ? 2 : 1;
+    if ((slot.lockedCes?.length ?? 0) > capacity)
+      throw new Error('auto-team: 锁定礼装超出位置容量');
+    const active = slot.isSupport || occupied.has(slotIndex);
+    if (!active && (slot.lockedServantId !== undefined || slot.lockedCes?.some(Boolean)))
+      throw new Error('auto-team: 锁定格必须有从者');
+    const row: Array<CeKind | null> = [];
+    equipment.placements.push(row);
+    if (!active) return;
+    for (let pos = 0; pos < capacity; pos++) {
+      const ce = slot.lockedCes?.[pos] ?? null;
+      row.push(ce);
+      const free = slot.isSupport || (slot.isCrown && pos === 0);
+      if (ce) {
+        const options = slot.isSupport ? supportOptions : localOptions;
+        const used = slot.isSupport ? usedSupport : usedLocal;
+        const key = ceKey(ce);
+        if (!options.some(c => ceKey(c) === key) || (!unlimited(ce) && used.has(key)))
+          throw new Error('auto-team: 锁定礼装库存冲突');
+        used.add(key);
+        addCopy(equipment.copies, ce);
+        if (!free) equipment.ceCost += CE_COST;
+      } else {
+        const target = slot.isSupport
+          ? equipment.support
+          : free
+            ? equipment.localFree
+            : equipment.localPaid;
+        target.push({ slotIndex, pos });
+      }
+    }
+  });
+  equipment.localOptions = localOptions.filter(c => unlimited(c) || !usedLocal.has(ceKey(c)));
+  equipment.supportOptions = supportOptions.filter(c => unlimited(c) || !usedSupport.has(ceKey(c)));
+  return equipment;
+};
 
-  const emptySeats = () => seats.filter(s => placed[s.slotIndex]![s.pos] === null);
-  const byValue = [...catalog].sort((a, b) => ceValue(b, team) - ceValue(a, team));
-
-  // 免费位先填高价值（不含 5%，留给最后铺满）
-  const premium = byValue.filter(ce => !(ce.kind === 'generic' && ce.rate === 5));
-  for (const seat of emptySeats().filter(s => s.free)) {
-    const ce = premium.find(c => canUse(c, seat) && ceValue(c, team) > 0);
-    if (ce) occupySeat(seat, ce);
+/** 恢复已验证的张数配置；本队先免费后付费，锁定位置始终不移动。 */
+export const placeEquipment = (
+  equipment: Equipment,
+  local: CeKind[],
+  support: CeKind[],
+): PackResult => {
+  const seats = [...equipment.localFree, ...equipment.localPaid];
+  if (
+    local.length < equipment.localFree.length ||
+    local.length > seats.length ||
+    support.length !== equipment.support.length
+  )
+    throw new Error('auto-team: 礼装配置容量不符');
+  const placements = equipment.placements.map(row => [...row]);
+  const copies: AuraCopies = {
+    ...equipment.copies,
+    trait: { ...equipment.copies.trait },
+    class: { ...equipment.copies.class },
+  };
+  for (const [ces, positions] of [
+    [local, seats],
+    [support, equipment.support],
+  ] as const) {
+    ces.forEach((ce, i) => {
+      const seat = positions[i]!;
+      placements[seat.slotIndex]![seat.pos] = ce;
+      addCopy(copies, ce);
+    });
   }
+  return {
+    placements,
+    copies,
+    ceCost: equipment.ceCost + (local.length - equipment.localFree.length) * CE_COST,
+  };
+};
 
-  // 付费位：剩余 cost 够 16 且价值 > 0
-  for (const seat of emptySeats().filter(s => !s.free)) {
-    if (budget < CE_COST) break;
-    const ce = premium.find(c => canUse(c, seat) && ceValue(c, team) > 0);
-    if (ce) occupySeat(seat, ce);
-  }
-
-  // 剩余空位（含免费）一律 5%
-  for (const seat of emptySeats()) {
-    if (!seat.free && budget < CE_COST) continue;
-    occupySeat(seat, { kind: 'generic', rate: 5 });
-  }
-
-  return { placements: placed, copies, ceCost };
+/** 固定队伍下，各来源独立取最高全队价值；5%同样参与排序，零收益也填免费位。 */
+export const packCraftEssences = (args: PackArgs): PackResult => {
+  const equipment = prepareEquipment(args);
+  const remaining = args.costCap - args.servantCostSum - equipment.ceCost;
+  if (remaining < 0) throw new Error('auto-team: 锁定配置超出 cost 上限');
+  const count =
+    equipment.localFree.length +
+    Math.min(equipment.localPaid.length, Math.floor(remaining / CE_COST));
+  const choose = (options: CeKind[], n: number) => {
+    const scores = options
+      .map(ce => {
+        const copies = emptyCopies();
+        addCopy(copies, ce);
+        const value = args.team.reduce(
+          (sum, s) => sum + servantYield(s, copies, 0) - (s.canGainBond ? BASE_YIELD : 0),
+          0,
+        );
+        return { ce, value };
+      })
+      .sort((a, b) => b.value - a.value);
+    const chosen: CeKind[] = [];
+    for (const { ce } of scores) {
+      const copies = unlimited(ce) ? n - chosen.length : Math.min(1, n - chosen.length);
+      for (let i = 0; i < copies; i++) chosen.push(ce);
+      if (chosen.length === n) break;
+    }
+    return chosen;
+  };
+  return placeEquipment(
+    equipment,
+    choose(equipment.localOptions, count),
+    choose(equipment.supportOptions, equipment.support.length),
+  );
 };

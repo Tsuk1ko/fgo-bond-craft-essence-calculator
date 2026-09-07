@@ -15,6 +15,8 @@ export interface CatalogServant {
 export interface PlannerResources {
   /** 图鉴真从者 */
   servants: CatalogServant[];
+  /** 完整特性礼装目录，来自 typeList 的索引，不依赖当前图鉴是否命中 */
+  traitCeTypes: number[];
   /** 有职阶礼装的职阶，如 Caster / Rider / Saber */
   classCeClasses: string[];
   /** 全职阶表：职阶筛选为空时的「当前职阶范围」 */
@@ -33,7 +35,8 @@ export interface SlotInput {
   isSupport: boolean;
   isCrown: boolean;
   lockedServantId?: number;
-  lockedCes?: CeKind[];
+  /** null 表示该礼装位置未锁定。 */
+  lockedCes?: Array<CeKind | null>;
   /** 仅锁定从者可设：是否提供羁绊15光环 */
   bond15?: boolean;
   /** 仅锁定从者可设：是否开放 16 上限（可获羁绊） */
@@ -44,8 +47,9 @@ export interface SlotInput {
  * 单次规划变量。筛选与库存都从这里进，不进全局。
  */
 export interface PlannerInput {
-  /** 队伍位置 3～6，至多一个助战格 */
+  /** 产品队伍位置 3～6；内核也接受 1～2，至多一个助战格 */
   slots: SlotInput[];
+  /** 产品上限 56～118；内核接受 0～118 的整数以支持小实例 */
   costCap: number;
   starPriority: boolean;
   /** 真从者库存名单（图鉴 id）；锁定 id 即使不在名单内也强制上场 */

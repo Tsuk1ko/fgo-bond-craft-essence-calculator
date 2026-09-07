@@ -13,6 +13,7 @@ export const FIXTURE_CLASS_LIST = [
 
 export const fixtureResources = (servants: CatalogServant[]): PlannerResources => ({
   servants,
+  traitCeTypes: [0, 1, 2, 3, 4, 5, 6, 7],
   classCeClasses: ['Caster', 'Rider', 'Saber'],
   classList: FIXTURE_CLASS_LIST,
   mashId: 1,
