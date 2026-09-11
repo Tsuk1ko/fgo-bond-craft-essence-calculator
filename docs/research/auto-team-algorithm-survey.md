@@ -2,7 +2,7 @@
 
 Research note mapping the FGO bond-farming auto-team planner onto named combinatorial problems, and scoring algorithm families for this instance. No implementation.
 
-**Problem source (this repo):** `docs/自动配队计算算法需求.md`, `src/assets/data.json` (436 servants, 8 attribute CE types), `src/utils/data.ts` (3 extra class CE types: Caster / Rider / Saber). Catalog snapshot used for scale estimates: 436 real servants; rarity mix 5★=186, 4★=184, 3★=40, 2★=13, 1★=12, 0★=1.
+**Problem source (this repo):** `docs/自动配队计算算法需求.md`, `src/assets/data.json` (436 servants, 8 attribute CE types), `src/utils/data.ts` (4 extra class CE types: Caster / Rider / Saber / Assassin). Catalog snapshot used for scale estimates: 436 real servants; rarity mix 5★=186, 4★=184, 3★=40, 2★=13, 1★=12, 0★=1.
 
 Wikipedia pages are used only as named-algorithm pointers; claims below are followed to the cited originals.
 

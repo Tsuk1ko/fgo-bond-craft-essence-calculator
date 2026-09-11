@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 420" width="280" height="420" role="img" aria-labelledby="title desc">
+  <title id="title">配队格位解剖</title>
+  <desc id="desc">格位由序号与状态、从者区、礼装区组成。从者区为正方形，礼装区同宽、高度约三分之一。</desc>
+  <rect x="8" y="8" width="160" height="404" rx="6" fill="#fff" stroke="#dcdfe6"/>
+  <rect x="8" y="8" width="160" height="32" rx="6" fill="#f5f7fa"/>
+  <rect x="8" y="24" width="160" height="16" fill="#f5f7fa"/>
+  <text x="20" y="29" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#303133">1</text>
+  <rect x="36" y="16" width="36" height="16" rx="2" fill="#e6a23c"/>
+  <text x="54" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#fff">冠位</text>
+  <rect x="76" y="16" width="48" height="16" rx="2" fill="#f56c6c"/>
+  <text x="100" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#fff">羁绊15</text>
+  <circle cx="150" cy="24" r="9" fill="none" stroke="#409eff" stroke-width="1.5"/>
+  <path d="M147 24h6M150 21v6" stroke="#409eff" stroke-width="1.2" fill="none"/>
+  <rect x="20" y="48" width="136" height="136" fill="#c0c4cc"/>
+  <text x="88" y="118" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#fff">从者头像</text>
+  <polygon points="148,52 152,64 140,60" fill="#303133"/>
+  <text x="176" y="62" font-family="system-ui, sans-serif" font-size="11" fill="#303133">锁定角标</text>
+  <rect x="20" y="192" width="136" height="45" fill="#79bbff"/>
+  <text x="88" y="218" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#fff">礼装 1 · 同宽 1/3 高</text>
+  <rect x="20" y="245" width="136" height="45" fill="#95d475"/>
+  <text x="88" y="271" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#fff">礼装 2 · 仅冠位</text>
+  <text x="88" y="318" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#909399">点击从者区 → 选择 Dialog</text>
+  <text x="88" y="336" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#909399">点击礼装区 → 礼装浮层</text>
+  <text x="88" y="354" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#909399">点击设置 → 格位设置</text>
+  <line x1="156" y1="192" x2="168" y2="192" stroke="#c45656" stroke-width="1"/>
+  <line x1="156" y1="237" x2="168" y2="237" stroke="#c45656" stroke-width="1"/>
+  <line x1="168" y1="192" x2="168" y2="237" stroke="#c45656" stroke-width="1"/>
+  <text x="176" y="228" font-family="system-ui, sans-serif" font-size="11" fill="#c45656">h ≈ w/3</text>
+  <line x1="20" y1="400" x2="156" y2="400" stroke="#409eff" stroke-width="1"/>
+  <line x1="20" y1="396" x2="20" y2="404" stroke="#409eff"/>
+  <line x1="156" y1="396" x2="156" y2="404" stroke="#409eff"/>
+  <text x="88" y="396" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#409eff">w = 从者头像边长</text>
+</svg>
