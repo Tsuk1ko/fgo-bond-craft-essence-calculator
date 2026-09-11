@@ -44,7 +44,7 @@ export default defineConfig({
     }),
     VueDevTools({
       componentInspector: {
-        toggleComboKey: 'alt-s',
+        toggleComboKey: process.platform === 'darwin' ? 'meta-shift-s' : 'alt-s',
       },
     }),
     vue(),
