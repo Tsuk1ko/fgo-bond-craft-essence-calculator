@@ -42,7 +42,7 @@ export const isVirtualServantId = (id: number) => id < 0;
 
 export const isVirtualServant = ({ id }: Pick<Servant, 'id'>) => isVirtualServantId(id);
 
-/** data.json 只有特性 id；Caster/Rider/Saber 的职阶加成 id 在加载时写入 types 头部。 */
+/** data.json 只有特性 id；职阶加成 id 在加载时写入 types 头部。 */
 const realServantList = (data.servantList as Servant[]).map(s => {
   const classTypeId = classBonusIdMap.get(s.class);
   if (classTypeId === undefined) return s;

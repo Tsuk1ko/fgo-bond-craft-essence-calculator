@@ -17,7 +17,7 @@ export interface PlannerResources {
   servants: CatalogServant[];
   /** 完整特性礼装目录，来自 typeList 的索引，不依赖当前图鉴是否命中 */
   traitCeTypes: number[];
-  /** 有职阶礼装的职阶，如 Caster / Rider / Saber */
+  /** 有职阶礼装的职阶，与 classBonusList 一致 */
   classCeClasses: string[];
   /** 全职阶表：职阶筛选为空时的「当前职阶范围」 */
   classList: string[];
