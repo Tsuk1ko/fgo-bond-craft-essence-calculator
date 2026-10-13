@@ -87,3 +87,19 @@ body,
 .font-size-base {
   font-size: var(--el-font-size-base);
 }
+
+button:focus-visible,
+[tabindex]:focus-visible,
+.el-check-tag:focus-visible {
+  outline: 2px solid var(--el-color-primary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

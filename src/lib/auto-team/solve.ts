@@ -12,7 +12,12 @@ import {
 } from './constants';
 import { prepareKnapsack } from './knapsack';
 import type { KnapItem, KnapResult } from './knapsack';
-import { localSlotCount, lockedLocalCount, occupyLocalSlotIndices } from './occupy';
+import {
+  localSlotCount,
+  lockedLocalCount,
+  occupiedLayouts,
+  occupyLocalSlotIndices,
+} from './occupy';
 import { ceKey, generic5, placeEquipment, prepareEquipment } from './pack';
 import type { Equipment } from './pack';
 import { buildVirtualPool } from './pool';
@@ -127,12 +132,13 @@ export const solve = (input: PlannerInput): PlannerResult => {
   const layouts: Array<{ K: number; occupied: number[]; equipment: Equipment }> = [];
   for (let K = Kmin; K <= Kmax; K++) {
     if (target && K !== locked.length + target.reduce((sum, n) => sum + n, 0)) continue;
-    const occupied = occupyLocalSlotIndices(input.slots, K);
-    layouts.push({
-      K,
-      occupied,
-      equipment: prepareEquipment({ ...input, occupiedLocalIndices: occupied }),
-    });
+    for (const occupied of occupiedLayouts(input.slots, K)) {
+      layouts.push({
+        K,
+        occupied,
+        equipment: prepareEquipment({ ...input, occupiedLocalIndices: occupied }),
+      });
+    }
   }
 
   // 相同选择性光环分组处理一次，通用光环只改变常量及预算，避免缓存大量背包表。

@@ -1,4 +1,5 @@
 import { BASE_YIELD, CE_COST } from './constants';
+import { isOccupiedByLock } from './occupy';
 import { getResources } from './resources';
 import type { AuraCopies, CeKind, PlannerServant, SlotInput } from './types';
 import { servantYield } from './yield';
@@ -105,13 +106,16 @@ export const prepareEquipment = (args: EquipmentArgs): Equipment => {
     if ((slot.lockedCes?.length ?? 0) > capacity)
       throw new Error('auto-team: 锁定礼装超出位置容量');
     const active = slot.isSupport || occupied.has(slotIndex);
-    if (!active && (slot.lockedServantId !== undefined || slot.lockedCes?.some(Boolean)))
-      throw new Error('auto-team: 锁定格必须有从者');
+    if (!active && isOccupiedByLock(slot)) throw new Error('auto-team: 锁定格必须有从者');
     const row: Array<CeKind | null> = [];
     equipment.placements.push(row);
     if (!active) return;
     for (let pos = 0; pos < capacity; pos++) {
       const ce = slot.lockedCes?.[pos] ?? null;
+      if (ce === 'empty') {
+        row.push(null);
+        continue;
+      }
       row.push(ce);
       const free = slot.isSupport || (slot.isCrown && pos === 0);
       if (ce) {

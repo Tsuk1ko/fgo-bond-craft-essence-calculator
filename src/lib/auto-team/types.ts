@@ -31,12 +31,14 @@ export type CeKind =
   | { kind: 'class'; className: string }
   | { kind: 'generic'; rate: 5 | 10 | 15 };
 
+/** null 为自动，empty 为锁定空置；求解结果中的空置仍使用 null。 */
+export type CeLock = CeKind | 'empty' | null;
+
 export interface SlotInput {
   isSupport: boolean;
   isCrown: boolean;
   lockedServantId?: number;
-  /** null 表示该礼装位置未锁定。 */
-  lockedCes?: Array<CeKind | null>;
+  lockedCes?: CeLock[];
   /** 仅锁定从者可设：是否提供羁绊15光环 */
   bond15?: boolean;
   /** 仅锁定从者可设：是否开放 16 上限（可获羁绊） */

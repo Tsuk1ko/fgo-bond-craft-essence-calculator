@@ -9,15 +9,14 @@
       type="primary"
       badge-class="type-filter-badge"
     >
-      <el-check-tag :checked="selected.has(id)" @change="toggleSet(selected, id)">{{
-        name
-      }}</el-check-tag>
+      <CheckTag :checked="selected.has(id)" @change="toggleSet(selected, id)">{{ name }}</CheckTag>
     </el-badge>
     <ClearBtn @click="selected.clear()" />
   </div>
 </template>
 
 <script setup lang="ts">
+import CheckTag from '@/components/CheckTag.vue';
 import { toggleSet } from '@/utils/common';
 import type { Servant, TypeItem } from '@/utils/data';
 import ClearBtn from './ClearBtn.vue';

@@ -1,5 +1,8 @@
 <template>
-  <div class="servant-selector" :class="{ 'multi-select-mode': multiSelectMode }">
+  <div
+    class="servant-selector"
+    :class="{ 'multi-select-mode': multiSelectMode || singleSelectMode }"
+  >
     <el-scrollbar>
       <div v-for="[className, group] in data" :key="className" class="servant-group">
         <div class="servant-group-title">
@@ -37,7 +40,12 @@
                 :id="s.id"
                 :class="{ 'is-virtual': isVirtualServant(s) }"
                 :name="s.name"
+                :role="singleSelectMode || multiSelectMode ? 'button' : undefined"
+                :tabindex="singleSelectMode || multiSelectMode ? 0 : undefined"
+                :aria-label="singleSelectMode ? `选择${s.name}` : undefined"
                 @click="handleClickServant(s)"
+                @keydown.enter.prevent="handleClickServant(s)"
+                @keydown.space.prevent="handleClickServant(s)"
                 @contextmenu.prevent="handleContextmenu(s, $event)"
               />
             </el-tooltip>
@@ -66,20 +74,27 @@ const {
   disableBadge = false,
   disableTooltip = false,
   multiSelectMode = false,
+  singleSelectMode = false,
   selected = new Set(),
 } = defineProps<{
   data: ServantGroupForDisplay[];
   disableBadge?: boolean;
   disableTooltip?: boolean;
   multiSelectMode?: boolean;
+  singleSelectMode?: boolean;
   selected?: Set<number>;
 }>();
 
 const emit = defineEmits<{
   (e: 'itemContextmenu', event: MouseEvent, id: number): void;
+  (e: 'select', id: number): void;
 }>();
 
 const handleClickServant = (s: ServantForDisplay) => {
+  if (singleSelectMode && !isVirtualServant(s)) {
+    emit('select', s.id);
+    return;
+  }
   if (!multiSelectMode || isVirtualServant(s)) return;
   toggleSet(selected, s.id);
 };

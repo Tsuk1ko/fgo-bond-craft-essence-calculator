@@ -1,18 +1,19 @@
 <template>
   <div class="star-filter">
-    <el-check-tag
+    <CheckTag
       v-for="i in 6"
       :key="i"
       class="star-filter-check-tag"
       :checked="selected.has(i - 1)"
       @change="toggleSet(selected, i - 1)"
-      >{{ i - 1 }}</el-check-tag
+      >{{ i - 1 }}</CheckTag
     >
     <ClearBtn @click="selected.clear()" />
   </div>
 </template>
 
 <script setup lang="ts">
+import CheckTag from '@/components/CheckTag.vue';
 import { toggleSet } from '@/utils/common';
 import ClearBtn from './ClearBtn.vue';
 

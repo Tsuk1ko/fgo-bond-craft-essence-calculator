@@ -1,7 +1,12 @@
 <template>
   <div class="servant-img">
     <img class="servant-img__img" :src="src" :alt="name" />
-    <ClassIcon v-if="isVirtual" class="servant-img__class-icon" :name="className" />
+    <ClassIcon
+      v-if="isVirtual && className"
+      class="servant-img__class-icon"
+      :name="className"
+      aria-hidden="true"
+    />
   </div>
 </template>
 
@@ -9,14 +14,17 @@
 import { getTypeName, isVirtualServantId } from '@/utils/data';
 import ClassIcon from './ClassIcon.vue';
 
-const { id, name } = defineProps<{
+const { id, name, virtualClass } = defineProps<{
   id: number;
   name?: string;
+  virtualClass?: string | null;
 }>();
 
 const isVirtual = computed(() => isVirtualServantId(id));
 
-const className = computed(() => (isVirtual.value ? getTypeName(id) : ''));
+const className = computed(() =>
+  virtualClass !== undefined ? virtualClass : isVirtual.value ? getTypeName(id) : '',
+);
 
 const src = computed(() =>
   isVirtual.value

@@ -20,6 +20,7 @@
     "@supercharge/promise-pool": "^3.3.0",
     "@vueuse/core": "^14.4.0",
     "cheerio": "^1.2.0",
+    "comlink": "^4.4.2",
     "element-plus": "^2.14.5",
     "es-toolkit": "^1.51.0",
     "pinia": "^4.0.3",

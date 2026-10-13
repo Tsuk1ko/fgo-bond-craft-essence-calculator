@@ -10,12 +10,12 @@
       :popper-options="popoverOptions"
       @command="handleMenuItemClick"
     >
-      <el-check-tag class="type-combination-button" :checked="false">
+      <CheckTag class="type-combination-button" :checked="false">
         {{ group.k }} 个特性
         <el-icon class="el-icon--right">
           <ArrowDown />
         </el-icon>
-      </el-check-tag>
+      </CheckTag>
       <template #dropdown>
         <el-dropdown-menu>
           <el-dropdown-item v-for="{ key, num, comb } in group.combs" :key :command="comb">
@@ -38,6 +38,7 @@
 <script setup lang="ts">
 import { ArrowDown } from '@element-plus/icons-vue';
 import { maxBy } from 'es-toolkit';
+import CheckTag from '@/components/CheckTag.vue';
 import { getTypeName } from '@/utils/data';
 import type { Servant } from '@/utils/data';
 import { generateCombinations } from '@/utils/math';

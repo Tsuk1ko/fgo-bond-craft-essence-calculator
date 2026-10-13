@@ -141,7 +141,7 @@ const exhaustive = (resources: PlannerResources, input: PlannerInput): number[] 
     }
     const slot = input.slots[slotIndex]!;
     if (!slot.isSupport && !team[slotIndex]) {
-      if (slot.lockedCes?.some(Boolean)) return;
+      if (slot.lockedCes?.some(ce => ce && ce !== 'empty')) return;
       equipment[slotIndex] = [];
       equip(slotIndex + 1, 0, spent, local, support);
       return;
@@ -152,9 +152,12 @@ const exhaustive = (resources: PlannerResources, input: PlannerInput): number[] 
     }
     const free = slot.isSupport || (slot.isCrown && pos === 0);
     const locked = slot.lockedCes?.[pos];
-    const options: Array<CeKind | null> = locked
-      ? [locked]
-      : [...(slot.isSupport ? supportCes : localCes), ...(free ? [] : [null])];
+    const options: Array<CeKind | null> =
+      locked === 'empty'
+        ? [null]
+        : locked
+          ? [locked]
+          : [...(slot.isSupport ? supportCes : localCes), ...(free ? [] : [null])];
     const used = slot.isSupport ? support : local;
     for (const ce of options) {
       const finite = ce && !(ce.kind === 'generic' && ce.rate === 5);
@@ -228,12 +231,16 @@ const validate = (resources: PlannerResources, input: PlannerInput, result: Plan
     } else expect(slot.lockedServantId).toBeUndefined();
     if (!slot.isSupport && !actual.servant) {
       expect(actual.ces.every(ce => ce === null)).toBe(true);
-      expect(slot.lockedCes?.some(Boolean) ?? false).toBe(false);
+      expect(slot.lockedCes?.some(ce => ce && ce !== 'empty') ?? false).toBe(false);
       return;
     }
     expect(actual.ces).toHaveLength(slot.isCrown ? 2 : 1);
     const permitted = ceInventory(resources, input, slot.isSupport).map(ceKey);
     actual.ces.forEach((ce, pos) => {
+      if (slot.lockedCes?.[pos] === 'empty') {
+        expect(ce).toBeNull();
+        return;
+      }
       if (slot.lockedCes?.[pos]) expect(ce).toEqual(slot.lockedCes[pos]);
       if (slot.isSupport || (slot.isCrown && pos === 0)) expect(ce).not.toBeNull();
       if (!ce) return;
@@ -307,16 +314,32 @@ describe('solve 独立小池穷举', () => {
       quotaGeneric: { ...zeroQuota, 2: caseIndex % 7 === 0 ? 1 : 0 },
     });
     for (const starPriority of [false, true]) {
-      test(`固定种子样例 ${caseIndex}，星级优先 ${starPriority}`, () => {
-        const scenario = { ...input, starPriority };
-        init(resources);
-        const expected = exhaustive(resources, scenario);
-        if (expected.at(-1) === -1) {
-          expect(() => solve(scenario)).toThrow();
-        } else {
-          expect(validate(resources, scenario, solve(scenario))).toEqual(expected);
-        }
-      });
+      for (const emptyLock of [false, true]) {
+        test(`固定种子样例 ${caseIndex}，星级优先 ${starPriority}，空置锁定 ${emptyLock}`, () => {
+          const scenario: PlannerInput = {
+            ...input,
+            starPriority,
+            slots: input.slots.map((slot, index) =>
+              emptyLock && index === caseIndex % 3
+                ? {
+                    ...slot,
+                    lockedCes: [
+                      slot.lockedCes?.[0] ?? 'empty',
+                      ...(slot.isCrown ? ['empty' as const] : []),
+                    ],
+                  }
+                : slot,
+            ),
+          };
+          init(resources);
+          const expected = exhaustive(resources, scenario);
+          if (expected.at(-1) === -1) {
+            expect(() => solve(scenario)).toThrow();
+          } else {
+            expect(validate(resources, scenario, solve(scenario))).toEqual(expected);
+          }
+        });
+      }
     }
   }
 

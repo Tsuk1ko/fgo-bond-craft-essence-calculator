@@ -6,6 +6,7 @@ export type {
   AuraCopies,
   CatalogServant,
   CeKind,
+  CeLock,
   PlannedSlot,
   PlannerInput,
   PlannerResources,
